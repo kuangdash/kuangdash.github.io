@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="obj_bg.css" type="text/css" rel="stylesheet"/>
+<script src="action.js" type="text/javascript" ></script>
+</head>
+<body bgcolor="linen" text="black" onkeydown=“return moon_rabbit.move(event);”>
+<div class="movediv">
+<img id="typemoon" src="moon_rabbit.jpg"/>
+</div>
+<table class="controlcenter" border=1>
+<tr><td colspan="3">游戏键盘</td></tr>
+<tr><td></td>
+<td><input type="button" value="向上走" onClick="moon_rabbit.move(this);"></td>
+<td></td></tr>
+<tr>
+<td><input type="button" value="向左走" onClick="moon_rabbit.move(this);"/></td>
+<td></td>
+<td><input type="button" value="向右走" onClick="moon_rabbit.move(this);" /></td>
+</tr>
+<tr><td></td>
+<td><input type="button" value="向下走" onClick="moon_rabbit.move(this);"/></td>
+<td></td></tr>
+</table>
+<span id="mytime">现在给您报时~zzz</span>
+<input type="button" id="but0" value="页面刷新"/>
+<input type="text" onkeypress="return keyTest(event);" id="text0" value="请输入数字："/>
+<input type="button" onclick="testCreate();" value="动态创建超链接"/>
+<script language="javascript">
+function eventTest(){
+	document.write("hello");
+}//注意元素的出现时间
+document.getElementById("but0").onclick = eventTest;
+</script>
+</body>
+</html>		

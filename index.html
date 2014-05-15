@@ -1,7 +1,74 @@
-<!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ball-crash</title>
+	<script language="javascript">
+		directX=1;
+		directY=1;
+		function picMove(){
+			picX=parseInt(picdiv.style.left.substr(0, picdiv.style.left.length-2));
+			picY=parseInt(picdiv.style.top.substr(0, picdiv.style.top.length-2));
+			picX+=directX;
+			picY+=directY;
+			picdiv.style.top=picY+"px";
+			picdiv.style.left=picX+"px";
+			//x方法 （offsetWidth能返回对象的实际宽度，而width属性需事先给定）
+			if(picX+picdiv.offsetWidth>=document.body.clientWidth||picX<=0)
+			{directX=-directX;}
+			if(picY+picdiv.offsetHeight>=document.body.clientHeight||picY<=0)
+			{directY=-directY;}
+		}
+		setInterval("picMove()",10);
+		
+		function window_scroll(){
+			picdiv.style.top=document.body.scrollTop+"px";
+			picdiv.style.left=document.body.scrollLeft+"px";
+		}
+	</script>
+	<script language="javascript" for=document event=onselect>
+	alert("what a fuck");
+	</script>
+</head>
+<body bgcolor="linen" fgcolor="pink" onscroll="return window_scroll()" >
+	<TEXTAREA id="textarea0" rows="500" cols="500">
+	Not included in this book is the important but somewhat more sophisticated
+topic of spectral sequences. It was very tempting to include something about this
+marvelous tool here, but spectral sequences are such a big topic that it seemed best
+to start with themafresh in a new volume. This is tentatively titled ‘Spectral Sequences
+in Algebraic Topology’ and is referred to herein as [SSAT]. There is also a third book in
+progress, on vector bundles, characteristic classes, and K–theory, which will be largely
+independent of [SSAT] and also of much of the present book. This is referred to as
+[VBKT], its provisional title being ‘Vector Bundles and K–Theory.’
+In terms of prerequisites, the present book assumes the reader has some familiarity
+with the content of the standard undergraduate courses in algebra and point-set
+topology. In particular, the reader should know about quotient spaces, or identification
+spaces as they are sometimes called, which are quite important for algebraic
+topology. Good sources for this concept are the textbooks [Armstrong 1983] and
+[J¨anich 1984] listed in the Bibliography.
+A book such as this one, whose aim is to present classical material from a rather
+classical viewpoint, is not the place to indulge in wild innovation. There is, however,
+one small novelty in the exposition that may be worth commenting upon, even though
+in the book as a whole it plays a relatively minor role. This is the use of what we call
+Δ complexes, which are a mild generalization of the classical notion of a simplicial
+complex. The idea is to decompose a space into simplices allowing different faces of
+a simplex to coincide and dropping the requirement that simplices are uniquely determined
+by their vertices. For example, if one takes the standard picture of the torus
+as a square with opposite edges identified and divides the square into two triangles
+by cutting along a diagonal, then the result is a Δ complex structure on the torus
+having 2 triangles, 3 edges, and 1 vertex. By contrast, a simplicial complex structure
+on the torus must have at least 14 triangles, 21 edges, and 7 vertices. So Δ complexes
+provide a significant improvement in efficiency, which is nice froma pedagogical viewpoint
+since it cuts down on tedious calculations in examples. A more fundamental
+reason for considering Δ complexes is that they seem to be very natural objects from
+the viewpoint of algebraic topology. They are the natural domain of definition for
+simplicial homology, and a number of standard constructions produce Δ complexes
+rather than simplicial complexes, for instance the singular complex of a space, or the
+classifying space of a discrete group or category. Historically, Δ complexes were first
+introduced by Eilenberg and Zilber in 1950 under the name of semisimplicial complexes.
+This term later came to mean something different
+	</TEXTAREA>
+	<div id="picdiv" style="position:absolute">
+	<img src="moon_rabbit.jpg"/> 
+	</div>
 </body>
 </html>
