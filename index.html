@@ -1,9 +1,36 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>403 Forbidden</title>
+<script language="javascript">
+		directX=1;
+		directY=1;
+		function picMove(){
+			picX=parseInt(picdiv.style.left.substr(0, picdiv.style.left.length-2));
+			picY=parseInt(picdiv.style.top.substr(0, picdiv.style.top.length-2));
+			picX+=directX;
+			picY+=directY;
+			picdiv.style.top=picY+"px";
+			picdiv.style.left=picX+"px";
+			//x方法 （offsetWidth能返回对象的实际宽度，而width属性需事先给定）
+			if(picX+picdiv.offsetWidth>=document.body.clientWidth||picX<=0)
+			{directX=-directX;}
+			if(picY+picdiv.offsetHeight>=document.body.clientHeight||picY<=0)
+			{directY=-directY;}
+		}
+		setInterval("picMove()",10);
+		
+		function window_scroll(){
+			picdiv.style.top=document.body.scrollTop+"px";
+			picdiv.style.left=document.body.scrollLeft+"px";
+		}
+	</script>
 </head>
 <body bgcolor="linen" text="black">
-<div style="font-size: 400px; text-align: center;">403</div>
-<div style="font-size: 128px; text-align: center; font-variant: small-caps;">Forbidden</div>
+  <div style="font-size: 400px; text-align: center;">403</div>
+  <div style="font-size: 128px; text-align: center; font-variant: small-caps;">Forbidden</div>
+  <div id="picdiv" style="position:absolute">
+    <img src="./pictures/pic.jpg"/> 
+  </div>
 </body>
 </html>
