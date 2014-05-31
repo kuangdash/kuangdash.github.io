@@ -45,10 +45,14 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 		if(Math.random()<(0.5*Math.exp(-0.3*window.m)+0.5))
 		{takeAction();window.m++;}
 		else
-		{alert("the page will be closed");
-		 window.m = 0;
-		 window.n = 4;
-		 bannerInfo="<br/>あれ？もう一度…";
+		{if(window.confirm("permitted to close the page? ")){
+			window.close();
+		 }
+		 else{
+			window.m = 0;
+			window.n = 4;
+			bannerInfo="<br/>あれ？もう一度…";
+		 }
 		 }
 	}
 	else
