@@ -5,7 +5,7 @@ function init_web(){
 }
 
 window.m=0;//you will use the two variables in setInterval, 
-window.n=4;//so, let them be the attributes of window
+window.n=3;//so, let them be the attributes of window
 var bannerInfo="<br/>あれ？もう一度…";
 //process the context of "banner" for liberating labors
 function bannerX(){//window.m window.n "banner" will be changed in this function.
@@ -17,7 +17,7 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 	}
 	else if(window.m==1)
 	{
-		if(window.n>4){
+		if(window.n>3){
 		$("banner").innerHTML = bannerInfo;
 		}
 		else
@@ -25,14 +25,14 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 	}
 	else
 	{
-		if(window.n==6)
+		if(window.n==5)
 		{
 			bannerInfo = bannerInfo.substr(0,bannerInfo.length-6)+"れ"+
 			bannerInfo.substr(bannerInfo.length-6,bannerInfo.length);
 			$("banner").innerHTML=bannerInfo;
 			
 		}
-		else if(window.n>4)
+		else if(window.n>3)
 		{$("banner").innerHTML = bannerInfo;}
 		else
 		$("banner").innerHTML = "<br/>The page will be closed in "+window.n+" seconds";
@@ -41,7 +41,7 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 	//deal with the moving picture
 	if(window.n==0)
 	{
-		window.n = 6;
+		window.n = 5;
 		if(Math.random()<(0.5*Math.exp(-0.3*window.m)+0.5))
 		{takeAction();window.m++;}
 		else
@@ -50,7 +50,7 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 		 }
 		 else{
 			window.m = 0;
-			window.n = 4;
+			window.n = 3;
 			bannerInfo="<br/>あれ？もう一度…";
 		 }
 		 }
