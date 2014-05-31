@@ -88,7 +88,7 @@ function PicObj(inputX, inputY){
 	
 	this.directX=2*Math.round(Math.random())-1;//generate the stochastic number from {1,-1}
 	this.directY=2*Math.round(Math.random())-1;
-	this.speed=10*Math.random();
+	this.speed=4+6*Math.random();
 	
 	var picdiv=document.createElement("div");
 	picdiv.style.top=this.picY+"px";//determined the style of document
