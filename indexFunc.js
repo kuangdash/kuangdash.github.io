@@ -45,7 +45,7 @@ function bannerX(){//window.m window.n "banner" will be changed in this function
 		if(Math.random()<(0.5*Math.exp(-0.3*window.m)+0.5))
 		{takeAction();window.m++;}
 		else
-		{if(window.confirm("Am I Permitted to close the page? ")){
+		{if(window.confirm("Am I permitted to close the page? ")){
 			window.close();
 		 }
 		 else{
