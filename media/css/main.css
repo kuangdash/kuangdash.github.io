@@ -289,6 +289,7 @@ table th.right, table td.right {
     margin-top: -1px;
     color: #ccc;
 }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
 .footer {
     margin: 80px 0 0;
     text-align: center;
