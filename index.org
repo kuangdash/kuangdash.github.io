@@ -1,13 +1,13 @@
 # #+STARTUP: latexpreview
 # #+STARTUP: content
 
-#+title: 伊吕波歌
+#+title: 色は匂へど…
 #+author: 皐月中二
 #+LATEX_CLASS: cn-article
 #+LaTeX_header: \numberwithin{equation}{section}
 #+LaTeX: \newtheorem{proof}{证明}[section]
 #+LaTeX: \newpage
-* 色は匂へど…
+
 #+BEGIN_verse
 花虽芬芳终须落
 此世岂谁可常留
