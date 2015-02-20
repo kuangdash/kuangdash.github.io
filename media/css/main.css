@@ -39,8 +39,8 @@ body {
     font-family: Menlo, Monaco, monospace;
     font-size: 14px;
     line-height: 1.5;
-    color: #666;
-    background-color: #fff;
+    color: #f0fff0;
+    background-color: #10103f;
 }
 p {
     margin: 0 0 20px;
@@ -51,13 +51,13 @@ h1, h2, h3 {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.1;
-    color: #111;
+    color: #ffff00;
     text-rendering: optimizeLegibility;
 }
 h1:before, h2:before, h3:before {
     position: absolute;
     top: auto;
-    color: #ccc;
+    color: #cfc;
     display: none;
 }
 h1:before {
@@ -78,7 +78,7 @@ i, em, b, strong {
 }
 b, strong {
     font-weight: bold;
-    color: #333;
+    color: #f0fff0;
 }
 b:before, b:after, strong:before, strong:after {
     content: "*";
@@ -94,7 +94,7 @@ hr:after {
     display: block;
     margin: 20px 0;
     content: "----------------------------------------------------------------";
-    color: #ccc;
+    color: #cfc;
 }
 ul, ol {
     padding: 0;
@@ -108,7 +108,7 @@ code {
 }
 code:before, code:after {
     content: "=";
-    color: #ccc;
+    color: #cfc;
 }
 pre {
     display: block;
@@ -117,7 +117,7 @@ pre {
     border-radius: 3px 3px 3px 3px;
     font-size: 18px;
     line-height: 28px;
-    background-color: #f5f5f5;
+    background-color: #336633;
     white-space: pre;
     white-space: pre-wrap;
     word-break: break-all;
@@ -181,7 +181,7 @@ table th.right, table td.right {
     display: block;
     content: '----------------------------------------------------------------';
     margin: 10px 0;
-    color: #ccc;
+    color: #cfc;
 }
 .masthead a {
     color: #333;
@@ -195,7 +195,7 @@ table th.right, table td.right {
 .masthead li + li:before {
     display: inline-block;
     content: "\00B7 \00a0";
-    color: #ccc;
+    color: #cfc;
 }
 /* searchform*/
 #searchform {
@@ -242,7 +242,7 @@ table th.right, table td.right {
 .post:after {
     display: block;
     content: "----------------------------------------------------------------";
-    color: #ccc;
+    color: #cfc;
 }
 .post img {
     max-width: 100%;
@@ -253,7 +253,7 @@ table th.right, table td.right {
 .post ul > li:before {
     content: "- ";
     margin-left: -1.25em;
-    color: #ccc;
+    color: #cfc;
 }
 .post ol {
     counter-reset: o-list;
@@ -262,7 +262,7 @@ table th.right, table td.right {
     content: counter(o-list) ") ";
     counter-increment: o-list;
     margin-left: -1.85em;
-    color: #ccc;
+    color: #cfc;
 }
 
 /* special for li in pre */
@@ -287,7 +287,7 @@ table th.right, table td.right {
     content: "----------------------------------------------------------------";
     display: block;
     margin-top: -1px;
-    color: #ccc;
+    color: #cfc;
 }
 .center { margin-left: auto; margin-right: auto; text-align: center; }
 
