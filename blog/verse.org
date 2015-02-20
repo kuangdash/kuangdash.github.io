@@ -1,0 +1,26 @@
+# #+STARTUP: latexpreview
+#+STARTUP: content
+
+#+title: 个人诗集
+#+author: 皐月中二
+
+#+LATEX_CLASS: cn-article
+#+LaTeX_header: \numberwithin{equation}{section}
+#+LaTeX: \newtheorem{proof}{证明}[section]
+
+#+LaTeX: \newpage
+
+* 改唐寅《花月》句                                                     :poem:
+#+begin_center
+#+begin_verse
+花正开时月正明
+花如罗绮月如银
+月里落花抚弦琴
+湖月花眠听我心
+
+月下花零漫天地
+月中花镜照古今
+羡却人间花月意
+慕此花香与月阴
+#+end_verse
+#+end_center
