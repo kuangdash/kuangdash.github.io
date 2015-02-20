@@ -3,6 +3,7 @@
 
 #+title: 色は匂へど…
 #+author: 皐月中二
+#+email: kuangdash@163.com
 #+LATEX_CLASS: cn-article
 #+LaTeX_header: \numberwithin{equation}{section}
 #+LaTeX: \newtheorem{proof}{证明}[section]
