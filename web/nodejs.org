@@ -3,7 +3,7 @@
 
 #+title: nodejs学习笔记
 #+author: 皐月中二
-
+#+tags: web
 #+LATEX_CLASS: cn-article
 #+LaTeX_header: \numberwithin{equation}{section}
 #+LaTeX: \newtheorem{proof}{证明}[section]
