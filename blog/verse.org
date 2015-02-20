@@ -3,14 +3,14 @@
 
 #+title: 个人诗集
 #+author: 皐月中二
-
+#+tags: poem
 #+LATEX_CLASS: cn-article
 #+LaTeX_header: \numberwithin{equation}{section}
 #+LaTeX: \newtheorem{proof}{证明}[section]
 
 #+LaTeX: \newpage
 
-* 改唐寅《花月》句                                                     :poem:
+* 改唐寅《花月》句                                                
 #+begin_center
 #+begin_verse
 花正开时月正明
