@@ -75,9 +75,7 @@
     <span title="tags" class="post-info"><a href="/tags/poem/">poem</a></span>
     <span title="author" class="post-info">皐月中二</span>
   </div>
-  <script src="/media/js/jquery-2.1.3.min.js">
-   var preempt_signal=false;
-  </script>
+  <script src="/media/js/jquery-2.1.3.min.js"></script>
   <section>
     <h1>Comments</h1>
     <div id="comment-wrap">
@@ -87,6 +85,7 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
      //var disqus_developer = 1;
+     var preempt_signal=false;
      var disqus_identifier = "/blog/2015/03/12/个人诗集/";
      var disqus_url = "http://kuangdash.github.io/blog/2015/03/12/个人诗集/";
      var disqus_shortname = 'kuangdash';
@@ -97,10 +96,10 @@
        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
        if(preempt_signal==false){
          preempt_signal=true;
-         $('.ds-thread').css("display","none");
+         $('.ds-thread').css('display','none');
        }
        else{
-         $('#disqus_thread').css("display","none");
+         $('#disqus_thread').css('display','none');
        }
      })();
     </script>
@@ -118,10 +117,10 @@
         || document.getElementsByTagName('body')[0]).appendChild(ds);
        if(preempt_signal==false){
          preempt_signal=true;
-         $('#disqus_thread').css("display","none");
+         $('#disqus_thread').css('display','none');
        }
        else{
-         $('.ds-thread').css("display","none");
+         $('.ds-thread').css('display','none');
        }
      })();
     </script>
