@@ -3,9 +3,9 @@
 #+EMAIL:       kuangdash@163.com
 
 #+URI:     /about/
-#+TAGS:     ???
+#+TAGS:     aboutMe
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
-#+DESCRIPTION:  ???
+#+DESCRIPTION:  aboutMe
 
 向着未来而生
