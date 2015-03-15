@@ -1,13 +1,6 @@
-# #+STARTUP: latexpreview
-# #+STARTUP: content
-
 #+title: 色は匂へど…
 #+author: 皐月中二
 #+email: kuangdash@163.com
-#+LATEX_CLASS: cn-article
-#+LaTeX_header: \numberwithin{equation}{section}
-#+LaTeX: \newtheorem{proof}{证明}[section]
-#+LaTeX: \newpage
 
 #+BEGIN_center
 花虽芬芳终须落\\
