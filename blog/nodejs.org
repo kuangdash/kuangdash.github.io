@@ -1,0 +1,19 @@
+# #+STARTUP: latexpreview
+#+STARTUP: content
+
+#+title: nodejs学习笔记
+#+author: 皐月中二
+#+tags: web
+#+LATEX_CLASS: cn-article
+#+LaTeX_header: \numberwithin{equation}{section}
+#+LaTeX: \newtheorem{proof}{证明}[section]
+
+#+LaTeX: \newpage
+* 设置服务器
+测试footnote功能[fn:1]
+再来一个[fn:2]
+* Footnotes
+
+[fn:1] 测试footnote功能
+
+[fn:2] 这个真的会有用么？
