@@ -318,6 +318,10 @@ table th.right, table td.right {
     padding-bottom: 0.05em; 
 }
 
+#table-of-contents h2 :before{    
+    display: none;
+}
+
 #table-of-contents ul {
     margin-left: 14pt; 
     margin-bottom: 10pt;
@@ -345,36 +349,6 @@ table th.right, table td.right {
     margin-top: -1.5em; 
 }
 
-/* Margin */
-.page span.margin-note-marker {
-display:block;
-overflow:hidden;
-width:0;
-height:0
-}
-.page span.margin-div-inner {
-display:block;
-overflow:hidden;
-width:0;
-height:0
-}
-span.block {
-display:block
-}
-span.margin-div-outer {
-float:right;
-width:0
-}
-span.margin-div-inner {
-border-left:5px solid #bce72d
-}
-span.margin-note-marker {
-color: #d14;
-font-weight:bold
-}
-span.margin-note span.margin-note-marker {
-padding-right:5px
-}
 
 /* footer */
 .footer {

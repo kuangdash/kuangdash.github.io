@@ -4,30 +4,44 @@
     <title>有为山深</title>
     <link>http://kuangdash.github.io</link>
     <description>It&#39;s only when it is truly dark that we can see the stars</description>
-    <pubDate>周四, 12 3月 2015 05:24:16 中国标准时间</pubDate>
-    <lastBuildDate>周四, 12 3月 2015 05:24:16 中国标准时间</lastBuildDate>
+    <pubDate>周一, 16 3月 2015 03:02:45 中国标准时间</pubDate>
+    <lastBuildDate>周一, 16 3月 2015 03:02:45 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
     <item>
+      <title>关于</title>
+      <link>http://kuangdash.github.io/about/</link>
+      <description>aboutMe</description>
+      <pubDate>2015-03-16</pubDate>
+      <guid>http://kuangdash.github.io/about/</guid>
+    </item>
+    <item>
       <title>个人诗集</title>
-      <link>http://kuangdash.github.io/blog/2015/03/12/个人诗集/</link>
+      <link>http://kuangdash.github.io/blog/2015/03/16/个人诗集/</link>
       <description>No Description</description>
-      <pubDate>2015-03-12</pubDate>
-      <guid>http://kuangdash.github.io/blog/2015/03/12/个人诗集/</guid>
+      <pubDate>2015-03-16</pubDate>
+      <guid>http://kuangdash.github.io/blog/2015/03/16/个人诗集/</guid>
     </item>
     <item>
-      <title>Quick Guide for Org-page</title>
-      <link>http://kuangdash.github.io/blog/2013/08/24/quick-guide-for-org-page/</link>
+      <title>Untitled</title>
+      <link>http://kuangdash.github.io/blog/2015/03/16/untitled/</link>
       <description>No Description</description>
-      <pubDate>2015-03-12</pubDate>
-      <guid>http://kuangdash.github.io/blog/2013/08/24/quick-guide-for-org-page/</guid>
+      <pubDate>2015-03-16</pubDate>
+      <guid>http://kuangdash.github.io/blog/2015/03/16/untitled/</guid>
     </item>
     <item>
-      <title>nodejs学习笔记</title>
-      <link>http://kuangdash.github.io/blog/2015/03/12/nodejs学习笔记/</link>
+      <title>色は匂へど…</title>
+      <link>http://kuangdash.github.io/blog/2015/03/16/色は匂へど…/</link>
       <description>No Description</description>
-      <pubDate>2015-03-12</pubDate>
-      <guid>http://kuangdash.github.io/blog/2015/03/12/nodejs学习笔记/</guid>
+      <pubDate>2015-03-16</pubDate>
+      <guid>http://kuangdash.github.io/blog/2015/03/16/色は匂へど…/</guid>
+    </item>
+    <item>
+      <title>Untitled</title>
+      <link>http://kuangdash.github.io/blog/2015/03/16/untitled/</link>
+      <description>No Description</description>
+      <pubDate>2015-03-16</pubDate>
+      <guid>http://kuangdash.github.io/blog/2015/03/16/untitled/</guid>
     </item>
   </channel>
 </rss>
