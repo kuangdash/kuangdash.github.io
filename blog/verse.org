@@ -42,8 +42,9 @@
 #+END_CENTER
 
 * 《醉花月》
-#+BEGIN_VERSE
+
 #+BEGIN_CENTER
+#+BEGIN_VERSE
 今日醉，今日醉
 行云流水倒一杯
 眼看窗外花纷飞
@@ -55,6 +56,6 @@
 银河漫天星光翠
 
 月光下澈浸入酒中杯，哎呀诶？
-#+END_CENTER
 #+END_VERSE
+#+END_CENTER
 
