@@ -5,8 +5,19 @@
 #+URI:         /blog/%y/%m/%d/org-page的配置与使用
 #+TAGS:        org-page
 #+LANGUAGE:    zh-CN
-#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+OPTIONS:     H:3 num:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: org-page的配置与使用
 
-* org-page的安装
+* org-page的特点
+这是一个基于 org-mode 和 emacs 自身的静态站点生成器，实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。
 
+* org-page的安装
+使用命令 =M-x package-list-packages= 找到 =org-page= 安装即可，或者去这个链接 [[https://github.com/kelvinh/org-page][org-page]] 下载（下载完的安装步骤请看这个 repository 的 doc 文件夹下的 quick-guide）。
+
+* org-page的主题定制
++ 正常定制法 :: 使用命令 =M-x customize-group= 再输入 org-page 即可
++ hack定制法 :: 参看 themes 文件夹，里面的 template 文件夹使用了 mustache 模板，关于这个模板还请各位参阅其他资料。而另外一个 source 文件夹有 css、js 等文件，这个各位也懂的……
+
+以下讲解使用 org-page 的正常定制法时，custom页面里各个选项的含义。
+
+** 突然觉得很麻烦，还请各位在评论区提问吧，一般一天内回复
