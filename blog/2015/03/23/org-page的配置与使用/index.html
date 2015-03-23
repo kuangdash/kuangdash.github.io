@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>org-page的配置与使用 - 有为山深</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="皐月中二" />
+  <meta name="description" content="org-page的配置与使用" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" media="screen" href="/media/css/font.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+  <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  <link rel="stylesheet" href="/media/css/kdComment.css" type="text/css">
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</head>
+
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">有为山深</a></h1>
+        <p>It&#39;s only when it is truly dark that we can see the stars</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/kuangdash">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.gfsoso.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="q" value="site:kuangdash.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>org-page的配置与使用</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">org-page的特点</a></li>
+<li><a href="#sec-2">org-page的安装</a></li>
+<li><a href="#sec-3">org-page的主题定制</a>
+<ul>
+<li><a href="#sec-3-1">突然觉得很麻烦，还请各位在评论区提问吧，一般一天内回复</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">org-page的特点</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+这是一个基于 org-mode 和 emacs 自身的静态站点生成器，实现了 <i>org文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">org-page的安装</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+使用命令 <code>M-x package-list-packages</code> 找到 <code>org-page</code> 安装即可，或者去这个链接 <a href="https://github.com/kelvinh/org-page">org-page</a> 下载（下载完的安装步骤请看这个 repository 的 doc 文件夹下的 quick-guide）。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">org-page的主题定制</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt> 正常定制法 </dt><dd>使用命令 <code>M-x customize-group</code> 再输入 org-page 即可
+</dd>
+<dt> hack定制法 </dt><dd>参看 themes 文件夹，里面的 template 文件夹使用了 mustache 模板，关于这个模板还请各位参阅其他资料。而另外一个 source 文件夹有 css、js 等文件，这个各位也懂的……
+</dd>
+</dl>
+
+<p>
+以下讲解使用 org-page 的正常定制法时，custom页面里各个选项的含义。
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">突然觉得很麻烦，还请各位在评论区提问吧，一般一天内回复</h3>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+  <div class="post-meta">
+    <span title="post date" class="post-info">2015-03-23</span>
+    <span title="last modification date" class="post-info">2015-03-24</span>
+    <span title="tags" class="post-info"><a href="/tags/org-page/">org-page</a></span>
+    <span title="author" class="post-info">皐月中二</span>
+  </div>
+  <script src="/media/js/jquery-2.1.3.min.js"></script>
+  <section>
+    <h1>Comments</h1>
+    <div id="comment-wrap">
+      <a class="disqus_label">使用Disqus评论</a>
+      <a class="ds-label">使用多说评论</a>
+    </ul>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+     //var disqus_developer = 1;
+     var preempt_signal=false;
+     var disqus_identifier = "/blog/2015/03/23/org-page的配置与使用";
+     var disqus_url = "http://kuangdash.github.io/blog/2015/03/23/org-page的配置与使用";
+     var disqus_shortname = 'kuangdash';
+     /* * * DON'T EDIT BELOW THIS LINE * * */
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       $('#disqus_thread').css('display','none');
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <div class="ds-thread"></div>
+    <script type="text/javascript">
+     var duoshuoQuery = {short_name:'kuangdash'};
+     (function() {
+       var ds = document.createElement('script');
+       ds.type = 'text/javascript';ds.async = true;
+       ds.src = 'http://static.duoshuo.com/embed.js';
+       ds.charset = 'UTF-8';
+       (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+       $('.ds-thread').css('display','block');
+     })();
+    </script>
+  </section>
+  <script src="/media/js/prettify.js"></script>
+  <script src="/media/js/main.js"></script>
+  <script src="/media/js/kdComment.js"></script>
+  <div class="footer">
+    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+    <p>
+      Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:kuangdash@163.com">皐月中二</a>
+      &nbsp;&nbsp;-&nbsp;&nbsp;
+      Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+      <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+    </p>
+  </div>
+    </div>
+
+  </body>
+</html>
