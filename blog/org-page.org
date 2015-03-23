@@ -1,0 +1,12 @@
+#+TITLE:       org-page的配置与使用
+#+AUTHOR:      皐月中二
+#+EMAIL:       kuangdash@163.com
+#+DATE:        2015-03-23 周一
+#+URI:         /blog/%y/%m/%d/org-page的配置与使用
+#+TAGS:        org-page
+#+LANGUAGE:    zh-CN
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: org-page的配置与使用
+
+* org-page的安装
+
