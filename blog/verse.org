@@ -1,14 +1,8 @@
-# #+STARTUP: latexpreview
-#+STARTUP: content
-
 #+title: 个人诗集
 #+author: 皐月中二
+#+email: kuangdash@163.com
 #+tags: poem
-#+LATEX_CLASS: cn-article
-#+LaTeX_header: \numberwithin{equation}{section}
-#+LaTeX: \newtheorem{proof}{证明}[section]
-
-#+LaTeX: \newpage
+#+OPTIONS: num:nil
 
 * 改唐寅《花月》句
 
