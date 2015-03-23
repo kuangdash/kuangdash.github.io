@@ -4,30 +4,16 @@
     <title>有为山深</title>
     <link>http://kuangdash.github.io</link>
     <description>It&#39;s only when it is truly dark that we can see the stars</description>
-    <pubDate>周一, 16 3月 2015 03:39:27 中国标准时间</pubDate>
-    <lastBuildDate>周一, 16 3月 2015 03:39:27 中国标准时间</lastBuildDate>
+    <pubDate>周一, 23 三月 2015 10:18:18 中国标准时间</pubDate>
+    <lastBuildDate>周一, 23 三月 2015 10:18:18 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
     <item>
-      <title>关于</title>
-      <link>http://kuangdash.github.io/about/</link>
-      <description>aboutMe</description>
-      <pubDate>2015-03-16</pubDate>
-      <guid>http://kuangdash.github.io/about/</guid>
-    </item>
-    <item>
       <title>个人诗集</title>
-      <link>http://kuangdash.github.io/blog/2015/03/16/个人诗集/</link>
+      <link>http://kuangdash.github.io/blog/2015/03/23/个人诗集/</link>
       <description>No Description</description>
-      <pubDate>2015-03-16</pubDate>
-      <guid>http://kuangdash.github.io/blog/2015/03/16/个人诗集/</guid>
-    </item>
-    <item>
-      <title>色は匂へど…</title>
-      <link>http://kuangdash.github.io/</link>
-      <description>aboutMe</description>
-      <pubDate>2015-03-16</pubDate>
-      <guid>http://kuangdash.github.io/</guid>
+      <pubDate>2015-03-23</pubDate>
+      <guid>http://kuangdash.github.io/blog/2015/03/23/个人诗集/</guid>
     </item>
   </channel>
 </rss>
