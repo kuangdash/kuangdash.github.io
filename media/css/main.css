@@ -89,13 +89,9 @@ i:before, i:after, em:before, em:after {
 hr {
     margin: 0;
     border: 0;
+    border-bottom: 1px solid #e2e3e4;
 }
-hr:after {
-    display: block;
-    margin: 20px 0;
-    content: "----------------------------------------------------------------";
-    color: #cfc;
-}
+
 ul, ol {
     padding: 0;
     margin: 0 0 20px;
@@ -176,13 +172,9 @@ table th.right, table td.right {
 /* head */
 .masthead {
     color: #ada;
+    border-bottom: 1px solid #e2e3e4;
 }
-.masthead:after {
-    display: block;
-    content: '----------------------------------------------------------------';
-    margin: 10px 0;
-    color: #cfc;
-}
+
 .masthead a {
     color: #ffff00;
 }
@@ -238,12 +230,9 @@ table th.right, table td.right {
 /* post */
 .post {
     position: relative;
+    border-bottom: 1px solid #e2e3e4;
 }
-.post:after {
-    display: block;
-    content: "----------------------------------------------------------------";
-    color: #cfc;
-}
+
 .post img {
     max-width: 100%;
 }
@@ -283,11 +272,8 @@ table th.right, table td.right {
 .post-info + .post-info:before {
     content: "\2223 \00a0";
 }
-.post-meta:after {
-    content: "----------------------------------------------------------------";
-    display: block;
-    margin-top: -1px;
-    color: #cfc;
+.post-meta {
+    border-bottom: 1px solid #e2e3e4;
 }
 .center { margin-left: auto; margin-right: auto; text-align: center; }
 
