@@ -99,15 +99,15 @@ ul, ol {
 code, pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-underline {
+.underline {
     text-decoration: underline;
     color: green;     
 }
-underline:before, underline:after {
+.underline:before, underline:after {
     content: "_";
     color: green;
 }
-underline:hover {
+.underline:hover {
     color: red;
 }
 code {
