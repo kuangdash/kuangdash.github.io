@@ -172,6 +172,10 @@ table th.left, table td.left {
 table th.right, table td.right {
     text-align: right;
 }
+.figure p + p {
+    text-align: center;
+}
+
 /******************************************************/
 /* body */
 .container {
