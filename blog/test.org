@@ -4,7 +4,7 @@
 #+DATE:    2015-04-07 WED
 #+URI:     /blog/tests/
 #+TAGS:     test
-#+LANGUAGE:    en
+#+LANGUAGE:    zh-CN
 #+OPTIONS:     H:4 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+DESCRIPTION:  ???
 
