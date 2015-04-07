@@ -5,6 +5,10 @@
 #+tags: poem
 #+OPTIONS: num:nil
 
+#+CAPTION: 个人logo
+#+ATTR_HTML: :class center
+[[./img/dragon2.svg]]
+
 * 改唐寅《花月》句
 
 #+BEGIN_VERSE
