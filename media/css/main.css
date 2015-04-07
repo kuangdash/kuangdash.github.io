@@ -101,14 +101,11 @@ code, pre {
 }
 .underline {
     text-decoration: underline;
-    color: green;     
+    color: #3aff3a;     
 }
-.underline:before, underline:after {
+.underline:before, .underline:after {
     content: "_";
-    color: green;
-}
-.underline:hover {
-    color: red;
+    color: #3aff3a;
 }
 code {
     color: #d14;
