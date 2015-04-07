@@ -111,8 +111,7 @@
 * Footnotes
 
 [fn:1] 人生就是悲剧呢阿鲁，
-#+CAPTION: 麻烦
-#+NAME: fig:真麻烦
-#+ATTR_HTML: :style text_align:center;
-[[./imgs/dragon2.svg]]
+#+CAPTION: fig:麻烦
+#+ATTR_HTML: :class center
+[[./img/dragon2.svg]]
 
