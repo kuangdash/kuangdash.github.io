@@ -145,7 +145,7 @@ sup a:before {
 sup a:after {
     content: "]";
 }
-a:hover {
+a :hover {
     text-decoration: underline;
     color: color:#00ffff;
 }
