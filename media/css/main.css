@@ -179,6 +179,10 @@ table th.right, table td.right {
 .masthead a {
     color: #ffff00;
 }
+.masthead a:hover {
+    text-decoration: underline;
+    color: #00ffff;
+}
 .masthead ul {
     list-style: none;
 }
