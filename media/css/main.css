@@ -147,6 +147,7 @@ sup a:after {
 }
 a:hover {
     text-decoration: underline;
+    color: color:#00ffff;
 }
 table {
     line-height: 2.5;
