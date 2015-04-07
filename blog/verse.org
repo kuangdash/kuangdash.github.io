@@ -5,7 +5,6 @@
 #+tags: poem
 #+OPTIONS: num:nil
 
-#+CAPTION: 个人logo
 #+ATTR_HTML: :class center
 [[./img/dragon2.svg]]
 
