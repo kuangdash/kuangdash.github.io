@@ -20,12 +20,15 @@
 胧[fn:1]
 
 * 四
-
+\( \frac{1}{2} \)
 * 五
+:PROPERTIES:
+:CUSTOM_ID: kuangdash
+:END:
 
 * 六
 
-* 七
+* 七                                                                     :乱来:
 
 * a
 
@@ -107,5 +110,9 @@
 
 * Footnotes
 
-[fn:1] 人生就是悲剧呢阿鲁，[[./img/dragon2.svg]]
+[fn:1] 人生就是悲剧呢阿鲁，
+#+CAPTION: 麻烦
+#+NAME: fig:真麻烦
+#+ATTR_HTML: :style text_align:center;
+[[./imgs/dragon2.svg]]
 
