@@ -29,7 +29,7 @@
 
 * org-page效果举例
 
-+ 点对列表 :: +删除线+ _下划线_ *强调* [[#][链接]] ~代码一型~ =代码二型= 
++ 点对列表 :: +删除线+ _下划线_ *强调* ~代码一型~ =代码二型= 
 + 一般列表
 + 数学公式 :: $X(f)=\int{x(t)e^{i 2\pi ft}dt}$ 
 
@@ -43,9 +43,6 @@
 下面讲解使用 hack定制法时，一些有用的hack手法（如果不想自己 hack ，请点我右上角[fn:1]）：
 
 ** 使用 org-page 管理多个站点
-:PROPERTIES:
-:CUSTOM_ID: multi
-:END:
 
 在 emacs 的配置文件中定义如下函数：
 
@@ -86,9 +83,6 @@
 在 =kd/custom-org-page= 的 =cond= 里面我们还可以写一些其他代码，以方便对 org-page 生成的站点进行测试。
 
 ** 对 org-page 生成的站点进行测试
-:PROPERTIES:
-:CUSTOM_ID: multi2
-:END:
 
 本人使用基于emacs的 [[https://github.com/skeeto/emacs-web-server][simple-httpd]] 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
 
