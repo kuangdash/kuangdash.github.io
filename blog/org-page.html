@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+<title>org-page的配置与使用</title>
+<!-- 2015-04-15 周三 15:59 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="皐月中二" />
+<meta  name="description" content="org-page的配置与使用"
+ />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<style type="text/css">
+     /* table of content */
+     #table-of-contents {
+       position: fixed;
+       right: 0em;
+       top: 0em;
+       background: black;
+       border:1px solid #e1e1e8;
+       -webkit-box-shadow: 0 0 1em #777777;
+       -moz-box-shadow: 0 0 1em #777777;
+       -webkit-border-bottom-left-radius: 5px;
+       -moz-border-radius-bottomleft: 5px;
+       text-align: right;
+       /* ensure doesn't flow off the screen when expanded */
+       max-height: 80%;
+       overflow: auto;
+       z-index: 200;
+     }
+
+     #table-of-contents h2 {
+       color: #ffff00;
+       max-width: 8em;
+       font-weight: normal;
+       padding-left: 0.5em;
+       padding-top: 0.05em;
+       padding-bottom: 0.05em;
+     }
+
+     #table-of-contents ul {
+       margin-left: 14pt;
+       margin-bottom: 10pt;
+       padding: 0
+     }
+
+     #table-of-contents li {
+       padding: 0;
+       margin: 1px;
+       list-style: none;
+     }
+     #table-of-contents li a{
+       color: white;
+     }
+
+     #table-of-contents ul>:first-child {
+       color: blue;
+     }
+
+     #table-of-contents #text-table-of-contents {
+       display: none;
+       text-align: left;
+     }
+
+     #table-of-contents:hover #text-table-of-contents {
+       display: block;
+       padding: 0.5em;
+       margin-top: -1.5em;
+     }
+    </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "%LINEBREAKS" },
+                        webFont: "%FONT"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "%LINEBREAKS" },
+              font: "%FONT"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "%AUTONUMBER"},
+               MultLineWidth: "%MULTLINEWIDTH",
+               TagSide: "%TAGSIDE",
+               TagIndent: "%TAGINDENT"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">org-page的配置与使用</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">org-page的特点</a></li>
+<li><a href="#orgheadline2">org-page的安装</a></li>
+<li><a href="#orgheadline3">org-page的用法</a></li>
+<li><a href="#orgheadline4">org-page效果举例</a></li>
+<li><a href="#orgheadline5">org-page的主题定制</a>
+<ul>
+<li><a href="#orgheadline6">使用 org-page 管理多个站点</a></li>
+<li><a href="#orgheadline7">对 org-page 生成的站点进行测试</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline8">本人在org-page和org-mode间周旋的记录</a>
+<ul>
+<li><a href="#orgheadline9">插入 svg 图片的问题</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">org-page的特点</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍得起来）的静态站点生成器（static site senerator），实现了 <i>org文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2">org-page的安装</h2>
+<div class="outline-text-2" id="text-orgheadline2">
+<p>
+使用命令 <code>M-x package-list-packages</code> 找到 <code>org-page</code> 安装即可，或者去这个链接 <a href="https://github.com/kelvinh/org-page">org-page</a> 下载。
+</p>
+
+<p>
+下载完的安装步骤请看那个链接的代码目录下的 doc 目录之下的 <a href="https://github.com/kelvinh/org-page/blob/master/doc/quick-guide.org">quick-guide.org</a> 。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">org-page的用法</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+<p>
+首先，在想写 blog 的文件夹下用 <code>git init</code> 建立一个 git repository ，然后创建并进入 source 分支，再新建三个基本文件： 
+</p>
+<dl class="org-dl">
+<dt>blog 文件夹</dt><dd>主要的 blog 文件放里面。</dd>
+<dt>about.org 文件</dt><dd>在这里介绍自己。</dd>
+<dt>index.org 文件</dt><dd>在这里写自己博客的首页。</dd>
+</dl>
+
+<p>
+剩下的交给 <code>M-x op/do-publication</code> 命令。
+</p>
+
+<p>
+接下来，英语好的话，参考之前提到的 <b>quick-guide.org</b> ，英语不好，请 <b>慎用</b> emacs 。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">org-page效果举例</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+<dl class="org-dl">
+<dt>列表</dt><dd><del>删除线</del> <span class="underline">下划线</span> <b>强调</b> <code>代码一型</code> <code>代码二型</code></dd>
+<dt>数学公式</dt><dd>\(X(f)=\int{x(t)e^{i 2\pi ft}dt}\)</dd>
+</dl>
+
+<p>
+中断之
+</p>
+
+<ol class="org-ol">
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5">org-page的主题定制</h2>
+<div class="outline-text-2" id="text-orgheadline5">
+<dl class="org-dl">
+<dt>正常定制法</dt><dd>使用命令 <code>M-x customize-group</code> 再输入 <code>org-page</code> 即可。（这种定制法定制能力有限）</dd>
+<dt>hack定制法</dt><dd>参看 themes 文件夹，里面的 template 文件夹使用了 <a href="http://mustache.github.io/">mustache模板</a> 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。</dd>
+</dl>
+
+<p>
+关于 org-page 的正常定制法以及 custom 页面里各个选项的含义，还请各位参照英文字典分析……
+</p>
+
+<p>
+下面讲解使用 hack 定制法时，一些有用的 hack 手法（如果不想自己 hack ，请点我右上角<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>）：
+</p>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6">使用 org-page 管理多个站点</h3>
+<div class="outline-text-3" id="text-orgheadline6">
+<p>
+在 emacs 的配置文件中定义如下函数：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="color: #7fffd4; font-style: italic;">"~/github/org-page"</span>)
+(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">org-page</span>)
+(<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/custom-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
+  <span style="font-weight: bold;">"choose the org-page's main repository"</span>
+  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+                 (list sitet)))
+  (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
+         (setq op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/kuangdash.github.io"</span>
+               op/site-domain <span style="color: #7fffd4; font-style: italic;">"kuangdash.github.io"</span>
+               op/theme 'kd_mdo
+               op/personal-github-link <span style="color: #7fffd4; font-style: italic;">"https://github.com/kuangdash"</span>
+               op/personal-disqus-shortname <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>
+               op/personal-duoshuo-shortname <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>
+               op/site-main-title <span style="color: #7fffd4; font-style: italic;">"&#26377;&#20026;&#23665;&#28145;"</span>
+               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"It's only when it is truly dark that we can see the stars"</span>)
+         )
+
+        <span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">emacs-china</span>
+        ((equal site <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
+         (setq op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/emacs-china.github.io"</span>
+               op/site-domain <span style="color: #7fffd4; font-style: italic;">"emacs-china.github.io"</span>
+               op/theme 'emacs_love
+               op/personal-github-link <span style="color: #7fffd4; font-style: italic;">"https://github.com/emacs-china"</span>
+               op/personal-disqus-shortname <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>
+               op/personal-duoshuo-shortname <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>
+               op/site-main-title <span style="color: #7fffd4; font-style: italic;">"EMACS-CHINA"</span>
+               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"=============&gt;&#38598;&#24605;&#24191;&#30410;"</span>)
+         )
+        (t nil)))
+</pre>
+</div>
+
+<p>
+那个 <code>kd/custom-org-page</code> 函数才是代码的主体， <code>add-to-list</code> 和 <code>require</code> 则用来导入本函数对 <code>org-page</code> 的依赖关系。实际上，该 <b>交互</b> 函数是每次都重新定义了正常定制法的内容，看懂它然后使用吧（做个填空题就行）。
+</p>
+
+<p>
+在 <code>kd/custom-org-page</code> 的 <code>cond</code> 里面我们还可以写一些其他代码，以方便对 org-page 生成的站点进行测试。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7">对 org-page 生成的站点进行测试</h3>
+<div class="outline-text-3" id="text-orgheadline7">
+<p>
+本人使用基于emacs的 <a href="https://github.com/skeeto/emacs-web-server">simple-httpd</a> 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
+</p>
+
+<p>
+在 <code>kd/custom-org-page</code> 的 <code>cond</code> 里面我们还可以写一些其他代码，这样就能起到测试的效果了：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">simple-httpd</span>)
+(<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/test-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
+  <span style="font-weight: bold;">"test the org-page's main repository"</span>
+  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#27979;&#35797;&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+                 (list sitet)))
+  (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
+         (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/kuangdash.github.io"</span>)
+         (httpd-serve-directory <span style="color: #7fffd4; font-style: italic;">"~/webRoot/kuangdash.github.io"</span>)
+         )
+
+        <span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">emacs-china</span>
+        ((equal site <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
+         (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
+         (httpd-serve-directory <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
+         )
+        (t nil)))
+</pre>
+</div>
+
+<p>
+这里也是填空题，修改字符串部分的内容就可以了。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8">本人在org-page和org-mode间周旋的记录</h2>
+<div class="outline-text-2" id="text-orgheadline8">
+<p>
+由于我一直用 git 更新 org-page 和 org-mode 的源，所以这里会写一些两者遇上冲突的地方：
+</p>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9">插入 svg 图片的问题</h3>
+<div class="outline-text-3" id="text-orgheadline9">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
+</p>
+
+<p>
+如果你在 org-mode 文档里使用了 svg 图片，那么恭喜你，你用 org-page 导出的网页不会显示该图片。那么以下是我解决该问题的方法，写在配置文件里：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">ox</span>)
+(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">ox-html</span>)
+
+(<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/org-html--format-image</span> (source attributes info)
+  <span style="font-weight: bold;">"Return \"img\" tag with given SOURCE and ATTRIBUTES.</span>
+<span style="font-weight: bold;">SOURCE is a string specifying the location of the image.</span>
+<span style="font-weight: bold;">ATTRIBUTES is a plist, as returned by</span>
+<span style="font-weight: bold;">`</span><span style="color: #7fffd4; font-weight: bold;">org-export-read-attribute</span><span style="font-weight: bold;">'.  INFO is a plist used as</span>
+<span style="font-weight: bold;">a communication channel."</span>
+  (org-html-close-tag
+   <span style="color: #7fffd4; font-style: italic;">"img"</span>
+   (org-html--make-attribute-string
+    (org-combine-plists
+     (list <span style="color: #b0c4de; font-weight: bold;">:src</span> source
+           <span style="color: #b0c4de; font-weight: bold;">:alt</span> (<span style="color: #00ffff; font-weight: bold;">if</span> (string-match-p <span style="color: #7fffd4; font-style: italic;">"^ltxpng/"</span> source)
+                    (org-html-encode-plain-text
+                     (org-find-text-property-in-string 'org-latex-src source))
+                  (file-name-nondirectory source)))
+     attributes))
+   info))
+
+(advice-add 'org-html--format-image <span style="color: #b0c4de; font-weight: bold;">:override</span> #'kd/org-html--format-image)
+</pre>
+</div>
+
+<p>
+相信聪明的人已经看懂了，傻的人还没反应过来<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>。
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">&#33050;&#27880;: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+……如果你是前端工程师的话。
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+（新手提示：想回去继续阅读博客本体，请点本句最左边）如果不想自己 hack 一个主题，可以使用博主自己的主题 <a href="http://pan.baidu.com/s/1jGFx5Wy">emacs_love</a> ，下载后放置于 org-page 的 themes 文件夹下，再用 <code>M-x customize-group</code> 修改 <code>op/themes</code> 为 emacs_love 即可。
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+参见 emacs manual 的 <code>advice-add</code> 函数。
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">&#26085;&#26399;: 2015-03-23 周一</p>
+<p class="author">&#20316;&#32773;: 皐月中二</p>
+<p class="date">Created: 2015-04-15 周三 15:59</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
