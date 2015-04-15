@@ -31,7 +31,7 @@
 
 * org-page 效果举例
 
-+ 列表 :: +删除线+ _下划线_ *强调* ~代码一型~ src_emacs-lisp{(setq aaa "aaa")} 
++ 列表 :: +删除线+ _下划线_ *强调* ~代码一型~  src_emacs-lisp{(setq aaa "aaa")} 
 + 数学公式 :: $X(f)=\int{x(t)e^{i 2\pi ft}dt}$ 
 
 中断之
