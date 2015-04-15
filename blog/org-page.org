@@ -10,17 +10,19 @@
 
 * org-page的特点
 
-这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍得起来）的静态站点生成器（static site senerator），实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。它本身具有高度的可定制性。（……如果你是前端工程师的话）
+这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍得起来）的静态站点生成器（static site senerator），实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。它本身具有高度的可定制性[fn:2]。
 
 * org-page的安装
 
-使用命令 ~M-x package-list-packages~ 找到 =org-page= 安装即可，或者去这个链接 [[https://github.com/kelvinh/org-page][org-page]] 下载（下载完的安装步骤请看那个链接的代码目录下的 doc 目录之下的 [[https://github.com/kelvinh/org-page/blob/master/doc/quick-guide.org][quick-guide.org]] ）。
+使用命令 ~M-x package-list-packages~ 找到 =org-page= 安装即可，或者去这个链接 [[https://github.com/kelvinh/org-page][org-page]] 下载。
+
+下载完的安装步骤请看那个链接的代码目录下的 doc 目录之下的 [[https://github.com/kelvinh/org-page/blob/master/doc/quick-guide.org][quick-guide.org]] 。
 
 * org-page的用法
 
 首先，在想写 blog 的文件夹下用 ~git init~ 建立一个 git repository ，然后创建并进入 source 分支，再新建三个基本文件： 
 + blog 文件夹 :: 主要的 blog 文件放里面。
-+ about.org 文件:: 在这里介绍自己。
++ about.org 文件 :: 在这里介绍自己。
 + index.org 文件 :: 在这里写自己博客的首页。
 
 剩下的交给 ~M-x op/do-publication~ 命令。
@@ -112,4 +114,6 @@
 * Footnotes
 
 [fn:1] （新手提示：想回去继续阅读博客本体，请点本句最左边）如果不想自己hack一个主题，可以使用博主自己的主题 [[http://pan.baidu.com/s/1jGFx5Wy][emacs_love]] ，下载后放置于 org-page 的 themes 文件夹下，再用 ~M-x customize-group~ 修改 =op/themes= 为 emacs_love 即可。
+
+[fn:2] ……如果你是前端工程师的话
 
