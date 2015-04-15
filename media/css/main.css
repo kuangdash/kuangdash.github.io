@@ -78,7 +78,7 @@ i, em, b, strong {
 }
 b, strong {
     font-weight: bold;
-    color: #ffaa00;
+    color: #00ffff;
 }
 b:before, b:after, strong:before, strong:after {
     content: "*";
@@ -118,8 +118,8 @@ pre {
     display: block;
     margin: 0 0 14px;
     padding: 15px;
+    border: 1px solid #e1e1e8;
     border-radius: 3px 3px 3px 3px;
-    font-size: 18px;
     line-height: 28px;
     background-color: #000000;
     white-space: pre;
@@ -127,6 +127,32 @@ pre {
     word-break: break-all;
     word-wrap: break-word;
 }
+pre.src {
+    padding-top: 1.2em;
+    position: relative;
+}
+pre.src:before {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: -10px;
+  right: 10px;
+  padding: 3px;
+  border: 1px solid black;
+}
+pre.src:hover:before {
+  display: inline;
+  background-color: #000000;
+  border: 1px solid #e1e1e8;
+}
+pre.src-sh:before    { content: 'sh'; }
+pre.src-bash:before  { content: 'sh'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-C:before     { content: 'C/C++'; }
+pre.src-matlab:before  { content: 'matlab'; }
+pre.src-maxima:before  { content: 'maxima'; }
+pre.src-lisp:before   { content: 'common lisp'; }
+
 blockquote {
     padding: 0 0 0 20px;
     margin: 0 30px 20px -22.5px;
