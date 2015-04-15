@@ -165,7 +165,7 @@
   (advice-add 'org-export-solidify-link-text :override #'kd/org-export-solidify-link-text)
 #+END_SRC
 
-** org-mode 的 "src_emacs-lisp{<body>}"
+** org-mode 的 "src_C{<body>}"
 <2015-04-15 周三>
 
 这个还真没法用……
