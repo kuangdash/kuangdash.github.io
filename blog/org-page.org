@@ -31,7 +31,7 @@
 
 * org-page 效果举例
 
-+ 列表 :: +删除线+ _下划线_ *强调* ~代码~  src_emacs-lisp[:tangle no]{(setq aaa "aaa")}
++ 列表 :: +删除线+ _下划线_ *强调* ~代码~ 
 + 数学公式 :: $X(f)=\int{x(t)e^{i 2\pi ft}dt}$ 
 
 中断之
@@ -164,6 +164,11 @@
 
   (advice-add 'org-export-solidify-link-text :override #'kd/org-export-solidify-link-text)
 #+END_SRC
+
+** org-mode 的 src_<language>{<body>}
+<2015-04-15 周三>
+
+这个还真没法用……
 
 * Footnotes
 
