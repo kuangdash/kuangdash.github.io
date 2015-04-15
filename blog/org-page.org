@@ -46,7 +46,7 @@
 
 在 emacs 的配置文件中定义如下函数：
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
   (add-to-list 'load-path "~/github/org-page")
   (require 'org-page)
   (defun kd/custom-org-page (&optional site)
@@ -88,7 +88,7 @@
 
 在 =kd/custom-org-page= 的 =cond= 里面我们还可以写一些其他代码，这样就能起到测试的效果了：
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
   (require 'simple-httpd)
   (defun kd/test-org-page (&optional site)
     "test the org-page's main repository"
