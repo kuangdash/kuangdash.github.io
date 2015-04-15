@@ -9,15 +9,107 @@
 #+DESCRIPTION: org-page的配置与使用
 
 * org-page的特点
-这是一个基于 org-mode 和 emacs 自身的静态站点生成器，实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。
+
+这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍得起来）的静态站点生成器（static site senerator），实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。它本身具有高度的可定制性。（……如果你是前端工程师的话）
 
 * org-page的安装
-使用命令 =M-x package-list-packages= 找到 =org-page= 安装即可，或者去这个链接 [[https://github.com/kelvinh/org-page][org-page]] 下载（下载完的安装步骤请看这个 repository 的 doc 文件夹下的 quick-guide）。
+
+使用命令 ~M-x package-list-packages~ 找到 =org-page= 安装即可，或者去这个链接 [[https://github.com/kelvinh/org-page][org-page]] 下载（下载完的安装步骤请看那个链接的代码目录下的 doc 目录之下的 [[https://github.com/kelvinh/org-page/blob/master/doc/quick-guide.org][quick-guide.org]] ）。
+
+* org-page的用法
+
+首先，在想写 blog 的文件夹下用 ~git init~ 建立一个 git repository ，然后创建并进入 source 分支，再新建三个基本文件： 
++ blog 文件夹 :: 主要的 blog 文件放里面。
++ about.org 文件:: 在这里介绍自己。
++ index.org 文件 :: 在这里写自己博客的首页。
+
+剩下的交给 ~M-x op/do-publication~ 命令。
+
+接下来，英语好的话，参考之前提到的 *quick-guide.org* ，英语不好，请 *慎用* emacs 。
+
+* org-page效果举例
+
++ 点对列表 :: +删除线+ _下划线_ *强调* [[#][链接]] ~代码一型~ =代码二型= 
++ 一般列表
++ 数学公式 :: $X(f)=\int{x(t)e^{i 2\pi ft}dt}$ 
 
 * org-page的主题定制
-+ 正常定制法 :: 使用命令 =M-x customize-group= 再输入 org-page 即可
-+ hack定制法 :: 参看 themes 文件夹，里面的 template 文件夹使用了 mustache 模板，关于这个模板还请各位参阅其他资料。而另外一个 source 文件夹有 css、js 等文件，这个各位也懂的……
 
-以下讲解使用 org-page 的正常定制法时，custom页面里各个选项的含义。
++ 正常定制法 :: 使用命令 ~M-x customize-group~ 再输入 =org-page= 即可。（这种定制法定制能力有限）
++ hack定制法 :: 参看 themes 文件夹，里面的 template 文件夹使用了 [[http://mustache.github.io/][mustache模板]] 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。
 
-** 突然觉得很麻烦，还请各位在评论区提问吧，一般一天内回复
+关于 org-page 的正常定制法以及 custom 页面里各个选项的含义，还请各位参照英文字典分析……
+
+下面讲解使用 hack定制法时，一些有用的hack手法（如果不想自己 hack ，请点我右上角[fn:1]）：
+
+** 使用 org-page 管理多个站点
+
+在 emacs 的配置文件中定义如下函数：
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "~/github/org-page")
+  (require 'org-page)
+  (defun kd/custom-org-page (&optional site)
+    "choose the org-page's main repository"
+    (interactive (let ((sitet (read-string "静态站点名：")))
+                   (list sitet)))
+    (cond ((equal site "kuangdash")
+           (setq op/repository-directory "~/github/kuangdash.github.io"
+                 op/site-domain "kuangdash.github.io"
+                 op/theme 'kd_mdo
+                 op/personal-github-link "https://github.com/kuangdash"
+                 op/personal-disqus-shortname "kuangdash"
+                 op/personal-duoshuo-shortname "kuangdash"
+                 op/site-main-title "有为山深"
+                 op/site-sub-title "It's only when it is truly dark that we can see the stars")
+           )
+
+          ;;emacs-china
+          ((equal site "emacs-china")
+           (setq op/repository-directory "~/github/emacs-china.github.io"
+                 op/site-domain "emacs-china.github.io"
+                 op/theme 'emacs_love
+                 op/personal-github-link "https://github.com/emacs-china"
+                 op/personal-disqus-shortname "emacs-china"
+                 op/personal-duoshuo-shortname "emacs-china"
+                 op/site-main-title "EMACS-CHINA"
+                 op/site-sub-title "=============>集思广益")
+           )
+          (t nil)))
+#+END_SRC
+
+那个 =kd/custom-org-page= 函数才是代码的主体， =add-to-list= 和 =require= 则用来导入本函数对 =org-page= 的依赖关系。实际上，该 *交互* 函数是每次都重新定义了正常定制法的内容，看懂它然后使用吧（做个填空题就行）。
+
+在 =kd/custom-org-page= 的 =cond= 里面我们还可以写一些其他代码，以方便对 org-page 生成的站点进行测试。
+
+** 对 org-page 生成的站点进行测试
+
+本人使用基于emacs的 [[https://github.com/skeeto/emacs-web-server][simple-httpd]] 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
+
+在 =kd/custom-org-page= 的 =cond= 里面我们还可以写一些其他代码，这样就能起到测试的效果了：
+
+#+BEGIN_SRC emacs-lisp
+  (require 'simple-httpd)
+  (defun kd/test-org-page (&optional site)
+    "test the org-page's main repository"
+    (interactive (let ((sitet (read-string "测试静态站点名：")))
+                   (list sitet)))
+    (cond ((equal site "kuangdash")
+           (op/do-publication t nil "~/webRoot/kuangdash.github.io")
+           (httpd-serve-directory "~/webRoot/kuangdash.github.io")
+           )
+
+          ;;emacs-china
+          ((equal site "emacs-china")
+           (op/do-publication t nil "~/webRoot/emacs-china.github.io")
+           (httpd-serve-directory "~/webRoot/emacs-china.github.io")
+           )
+          (t nil)))
+#+END_SRC
+
+* 本人在org-page和org-mode间周旋的记录
+
+* Footnotes
+
+[fn:1] （新手提示：想回去继续阅读博客本体，请点本句最左边）如果不想自己hack一个主题，可以使用博主自己的主题 [[http://pan.baidu.com/s/1jGFx5Wy][emacs_love]] ，下载后放置于 org-page 的 themes 文件夹下，再用 ~M-x customize-group~ 修改 =op/themes= 为 emacs_love 即可。
+
