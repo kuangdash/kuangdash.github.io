@@ -135,7 +135,7 @@ pre.src:before {
   display: none;
   position: absolute;
   background-color: white;
-  top: -10px;
+  top: -18px;
   right: 10px;
   padding: 3px;
   border: 1px solid black;
@@ -293,7 +293,6 @@ table th.right, table td.right {
 .post ol > li:before {
     content: counter(o-list) ") ";
     counter-increment: o-list;
-    margin-left: -1.85em;
     color: #cfc;
 }
 
@@ -385,6 +384,9 @@ table th.right, table td.right {
 .footer > p {
     margin: 0;
     line-height: 1.5;
+}
+.footdef {
+    margin: 0 0 20px;
 }
 .footpara {
     display: inline;
