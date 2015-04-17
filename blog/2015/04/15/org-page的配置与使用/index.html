@@ -80,7 +80,7 @@
 <h2 id="orgheadline1">org-page 的特点</h2>
 <div class="outline-text-2" id="text-orgheadline1">
 <p>
-这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍得起来）的静态站点生成器（static site generator），实现了 <i>org文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
+这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 <i>org文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
 </p>
 </div>
 </div>
@@ -129,7 +129,7 @@
 </dl>
 
 <p>
-中断之
+<span class="underline">悬停卡片</span><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
 </p>
 
 <ol class="org-ol">
@@ -152,7 +152,7 @@
 </p>
 
 <p>
-下面讲解使用 hack 定制法时，一些有用的 hack 手法（如果不想自己 hack ，请点我右上角<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>）：
+下面讲解使用 hack 定制法时，一些有用的 hack 手法（如果不想自己 hack ，请点我右上角<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>）：
 </p>
 </div>
 
@@ -193,7 +193,7 @@
                op/site-main-title <span style="color: #7fffd4; font-style: italic;">"EMACS-CHINA"</span>
                op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"=============&gt;&#38598;&#24605;&#24191;&#30410;"</span>)
          )
-        (t nil)))
+        (t (message <span style="color: #7fffd4; font-style: italic;">"error! no repository"</span>))))
 </pre>
 </div>
 
@@ -235,7 +235,7 @@
          (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
          (httpd-serve-directory <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
          )
-        (t nil)))
+        (t (message <span style="color: #7fffd4; font-style: italic;">"error! no repository"</span>))))
 </pre>
 </div>
 
@@ -293,7 +293,7 @@
 </div>
 
 <p>
-代码的最后一行相信聪明的人已经看懂了，傻的人还没反应过来<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>。
+代码的最后一行相信聪明的人已经看懂了，傻的人还没反应过来<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>。
 </p>
 </div>
 </div>
@@ -306,7 +306,7 @@
 </p>
 
 <p>
-这个我上报了 org-mode 制作组的 maillist，目前好像还没添加进代码库
+这个我上报了 org-mode 制作组的 maillist，目前好像还没添加进代码库，可以在配置文件里写下以下代码以修正。
 </p>
 
 <div class="org-src-container">
@@ -344,10 +344,14 @@
 </p></div>
 
 <div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
-（新手提示：想回去继续阅读博客本体，请点本句最左边）如果不想自己 hack 一个主题，可以使用博主自己的主题 <a href="https://github.com/kuangdash/emacs_love">emacs_love</a> ，下载后放置于 org-page 的 themes 文件夹下，再用 <code>M-x customize-group RET org-page</code> 修改 <code>op/themes</code> 项为 emacs_love 即可。
+这里是悬停卡片的内容哦~~~
 </p></div>
 
 <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+（新手提示：想回去继续阅读博客本体，请点本句最左边）如果不想自己 hack 一个主题，可以使用博主自己的主题 <a href="https://github.com/kuangdash/emacs_love">emacs_love</a> ，下载后放置于 org-page 的 themes 文件夹下，再用 <code>M-x customize-group RET org-page</code> 修改 <code>op/themes</code> 项为 emacs_love 即可。
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
 参见 emacs manual 的 <a href="http://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Advising-Functions">advice-add</a> 函数。
 </p></div>
 
@@ -359,7 +363,7 @@
 <div>
   <div class="post-meta">
     <span title="post date" class="post-info">2015-04-15</span>
-    <span title="last modification date" class="post-info">2015-04-16</span>
+    <span title="last modification date" class="post-info">2015-04-17</span>
     <span title="tags" class="post-info"><a href="/tags/org-page/">org-page</a></span>
     <span title="author" class="post-info">皐月中二</span>
   </div>
