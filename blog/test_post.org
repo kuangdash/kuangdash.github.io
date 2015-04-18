@@ -1,0 +1,35 @@
+#+TITLE:       测试新blog的功能
+#+AUTHOR:      皐月中二
+#+EMAIL:       kuangdash@163.com
+#+DATE:        2015-04-18 周六
+#+URI:         /blog/%y/%m/%d/测试新blog的功能
+#+KEYWORDS:    test, org-page
+#+TAGS:        test, org-page
+#+LANGUAGE:    zh-CN
+#+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 测试新功能
+
+#+CAPTION: 开头先放图
+#+ATTR_HTML: :class center
+[[./org_imgs/spiral.svg]]
+
+* 其实这个标题的 html 标签是 h2
+虽然在org-mode里面看好像是 h1 的样子。
+
+* 悬停卡片到底有多大的作用？
+所以这就来测试一下：
+
+_鼠标请停在我这个位置_[fn:1]
+
+如果只是一般的脚注的话[fn:2]
+
+* 还需要的功能：
+“编辑本页”吧
+
+* Footnotes
+
+[fn:1] [[./org_img/marisa_kuang.gif]] 自己截的gif图，图文可结合
+       这段是否能看到呢？
+
+[fn:2] 就是这个样子而已。
+

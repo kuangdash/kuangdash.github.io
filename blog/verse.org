@@ -6,7 +6,7 @@
 #+OPTIONS: num:nil
 
 #+ATTR_HTML: :class center
-[[./img/dragon2.svg]]
+[[./org_imgs/dragon2.svg]]
 
 * 改唐寅《花月》句
 
