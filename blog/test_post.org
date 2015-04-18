@@ -29,6 +29,7 @@ _鼠标请停在我这个位置_[fn:1]
 * Footnotes
 
 [fn:1] [[./org_imgs/marisa_kuang.gif]] 自己截的gif图，图文可结合
+       
        这段是否能看到呢？
 
 [fn:2] 就是这个样子而已。
