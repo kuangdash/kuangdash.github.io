@@ -28,7 +28,7 @@ _鼠标请停在我这个位置_[fn:1]
 
 * Footnotes
 
-[fn:1] [[./org_imgs/marisa_kuang.gif]] 自己截的gif图，图文可结合。不过不可分段写哟（一大段放悬停卡片里是什么鬼。
+[fn:1] [[./org_imgs/marisa_kuang.gif]] 自己截的gif图，图文可结合。\\不过不可分段写哟（一大段放悬停卡片里是什么鬼。
 
 [fn:2] 就是这个样子而已。
 
