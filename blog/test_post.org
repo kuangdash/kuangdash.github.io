@@ -33,6 +33,8 @@ org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑�
 : 以上功能仅限本blog写权限成员使用，需要登录github账号。
 : </p>
 
+那么所有功能都完整了。
+
 * Footnotes
 
 [fn:1] [[./org_imgs/marisa_kuang.gif]] 自己截的gif图，图文可结合。\\
