@@ -23,8 +23,15 @@ _鼠标请停在我这个位置_[fn:1]
 
 如果只是一般的脚注的话[fn:2]
 
-* 还需要的功能：
-“编辑本页”吧
+* "编辑本页"的功能：
+和别人合作的时候，很有用的功能，怎么办呢？……
+org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑吧：
+
+: <p class="center">
+: 觉得咱（博客）还不够好，想修改咱？请点击以下按钮：<br/>
+: <a href="https://github.com/kuangdash/kuangdash.github.io/edit/source/blog/test_page.org">点我修改</a><br/>
+: 以上功能仅限本blog写权限成员使用，需要登录github账号。
+: </p>
 
 * Footnotes
 
