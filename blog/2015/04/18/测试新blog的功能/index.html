@@ -36,7 +36,6 @@
       </div>
       <ul class="trigger">
         <li><a href="/blog/">Blog</a></li>
-        <li><a href="/webfun/">Webfun</a></li>
         <li><a href="/tags/">Tags</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="https://github.com/kuangdash">GitHub</a></li>
@@ -59,7 +58,7 @@
 <ul>
 <li><a href="#orgheadline1">其实这个标题的 html 标签是 h2</a></li>
 <li><a href="#orgheadline2">悬停卡片到底有多大的作用？</a></li>
-<li><a href="#orgheadline3">还需要的功能：</a></li>
+<li><a href="#orgheadline3">"编辑本页"的功能：</a></li>
 </ul>
 </div>
 </div>
@@ -97,10 +96,23 @@
 </div>
 
 <div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3">还需要的功能：</h2>
+<h2 id="orgheadline3">"编辑本页"的功能：</h2>
 <div class="outline-text-2" id="text-orgheadline3">
 <p>
-“编辑本页”吧
+和别人合作的时候，很有用的功能，怎么办呢？……
+org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑吧：
+</p>
+
+<pre class="example">
+&lt;p class="center"&gt;
+觉得咱（博客）还不够好，想修改咱？请点击以下按钮：&lt;br/&gt;
+&lt;a href="https://github.com/kuangdash/kuangdash.github.io/edit/source/blog/test_page.org"&gt;点我修改&lt;/a&gt;&lt;br/&gt;
+以上功能仅限本blog写权限成员使用，需要登录github账号。
+&lt;/p&gt;
+</pre>
+
+<p>
+那么所有功能都完整了。
 </p>
 </div>
 </div>
