@@ -124,7 +124,7 @@ ls_init();
 /* change style*/ 
 
 $('.post-meta').insertAfter('.title').css('margin-bottom','15px').css('text-align','center');
-$('window').resize(function(){
+$(window).resize(function(){
     if(window.innerHeight > document.body.clientHeight){
         $('body').addClass("centerVertical");
     }
