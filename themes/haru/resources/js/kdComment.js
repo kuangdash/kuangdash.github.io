@@ -121,9 +121,17 @@ var balloon;
 
 ls_init();
 
-/* change style*/ 
+/* change style*/
 
 $('.post-meta').insertAfter('.title').css('margin-bottom','15px').css('text-align','center');
+
+if(window.innerHeight > document.body.clientHeight){
+    $('body').addClass("centerVertical");
+}
+else{
+    $('body').removeClass("centerVertical");
+}
+
 $(window).resize(function(){
     if(window.innerHeight > document.body.clientHeight){
         $('body').addClass("centerVertical");
