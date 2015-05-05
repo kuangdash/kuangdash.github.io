@@ -450,7 +450,6 @@ table th.right, table td.right {
 
 /* site-nav*/
 @media screen and (max-width: 512px) {
-    body {background-size: auto, 100%;}
   .site-nav {border-top: 1px solid #e8e8e8; text-align: left; }
   .site-nav .menu-icon { display: block; width: 36px; height: 21px; line-height: 0; margin-top: 10px; margin-bottom: 5px; text-align: center;
                          }
