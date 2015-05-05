@@ -67,7 +67,7 @@ function popupActivate (evt) {
     balloon.style.position="fixed";
     balloon.style.left= coordX.toString() + "px";
     balloon.style.top= (coordY + 30).toString() + "px";
-    balloon.style.width=(window.innerWidth-coordX).toString()+"px";
+    //balloon.style.width=(window.innerWidth-coordX).toString()+"px";
 
     if(evt.target.firstChild.parentNode.nextSibling.tagName == "SUP"){
         var footRef = evt.target.nextSibling.childNodes[0].id;
