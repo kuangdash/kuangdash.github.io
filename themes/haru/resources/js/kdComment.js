@@ -67,7 +67,6 @@ function popupActivate (evt) {
     balloon.style.position="fixed";
     balloon.style.left= coordX.toString() + "px";
     balloon.style.top= (coordY + 30).toString() + "px";
-    //balloon.style.width=(window.innerWidth-coordX).toString()+"px";
 
     if(evt.target.firstChild.parentNode.nextSibling.tagName == "SUP"){
         var footRef = evt.target.nextSibling.childNodes[0].id;
@@ -75,6 +74,9 @@ function popupActivate (evt) {
         var nodeNew = docNode.parentNode.parentNode.lastChild.cloneNode(true);
         balloon.replaceChild(nodeNew,balloon.lastChild);
         balloon.style.visibility="visible";
+    }
+    if(balloon.getBoundingClientRect().right > window.innerWidth){
+        balloon.style.width=(window.innerWidth-coordX).toString()+"px";
     }
 }
 
