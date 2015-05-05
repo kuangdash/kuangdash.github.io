@@ -35,7 +35,6 @@ html {
     font-size: 62.5%;
 }
 body {
-    padding: 20px;
     font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
     /*Menlo, Monaco, monospace*/
     font-size: 14px;
@@ -237,6 +236,7 @@ table th.right, table td.right {
 .container {
     margin: 0 auto;
     max-width: 770px;
+    padding: 20px;
     background: rgba(0,128,128,0.5);
     border-radius: 25px;
 }
