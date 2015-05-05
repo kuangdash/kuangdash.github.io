@@ -125,19 +125,19 @@ ls_init();
 
 $('.post-meta').insertAfter('.title').css('margin-bottom','15px').css('text-align','center');
 
-if(window.innerHeight > document.body.clientHeight){
-    $('body').addClass("centerVertical");
+if(window.innerHeight > $('.container').height()){
+    $('.container').addClass("centerVertical");
 }
 else{
-    $('body').removeClass("centerVertical");
+    $('.container').removeClass("centerVertical");
 }
 
 $(window).resize(function(){
-    if(window.innerHeight > document.body.clientHeight){
-        $('body').addClass("centerVertical");
+    if(window.innerHeight > $('.container').height()){
+        $('.container').addClass("centerVertical");
     }
     else{
-        $('body').removeClass("centerVertical");
+        $('.container').removeClass("centerVertical");
     }
 });
 

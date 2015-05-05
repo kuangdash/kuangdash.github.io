@@ -33,18 +33,15 @@ html, body {
 }
 html {
     font-size: 62.5%;
-    background: #10103f url(../img/sakura.jpg) no-repeat fixed;
-    background-size: cover;
 }
 body {
-    padding: 20px;
     font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
     /*Menlo, Monaco, monospace*/
     font-size: 14px;
     line-height: 1.5;
     color: #f0fff0;
-    background: rgba(0,128,128,0.5);
-    border-radius: 25px;
+    background: #10103f url(../img/sakura.jpg) no-repeat fixed;
+    background-size: cover;
 }
 p {
     margin: 0 0 20px;
@@ -235,10 +232,13 @@ table th.right, table td.right {
 }
 
 /******************************************************/
-/* body */
+/* container */
 .container {
     margin: 0 auto;
     max-width: 770px;
+    padding: 20px;
+    background: rgba(0,128,128,0.5);
+    border-radius: 25px;
 }
 /* head */
 .masthead {
@@ -446,7 +446,7 @@ table th.right, table td.right {
 
 /* site-nav*/
 @media screen and (max-width: 512px) {
-    html {background-size: auto, 100%;}
+    body {background-size: auto, 100%;}
   .site-nav {border-top: 1px solid #e8e8e8; text-align: left; }
   .site-nav .menu-icon { display: block; width: 36px; height: 21px; line-height: 0; margin-top: 10px; margin-bottom: 5px; text-align: center;
                          }
@@ -460,7 +460,7 @@ table th.right, table td.right {
 /* whole page */
 @media (min-width: 768px) {
     /* Increase body padding and font-sizes */
-    body {
+    .container {
         padding: 30px;
         font-size: 18px;
         line-height: 1.75;
@@ -468,7 +468,7 @@ table th.right, table td.right {
 }
 
 @media (min-width: 1024px) {
-    body {
+    .container {
         padding: 30px;
     }
 }
