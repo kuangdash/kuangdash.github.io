@@ -323,6 +323,9 @@ table th.right, table td.right {
 .post img {
     max-width: 100%;
 }
+.footpara img {
+    max-width: 100%;
+}
 .post li {
     list-style: none outside none;
 }
