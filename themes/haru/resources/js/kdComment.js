@@ -62,10 +62,10 @@ $(window).scroll(function () {
 /* floating card */
 function popupActivate (evt) {
     var boundBox = evt.target.getBoundingClientRect();
-//    var coordX = boundBox.left;
+    var coordX = boundBox.left;
     var coordY = boundBox.top;
     balloon.style.position="fixed";
-//    balloon.style.left= (coordX + 30).toString() + "px";
+    balloon.style.left= (coordX + 30).toString() + "px";
     balloon.style.top= (coordY + 30).toString() + "px";
 
     if(evt.target.firstChild.parentNode.nextSibling.tagName == "SUP"){
