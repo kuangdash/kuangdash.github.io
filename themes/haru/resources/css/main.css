@@ -365,6 +365,7 @@ table th.right, table td.right {
     top: 50%;
     left: 50%;
     margin-right: -50%;
+    margin-top: 0px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
