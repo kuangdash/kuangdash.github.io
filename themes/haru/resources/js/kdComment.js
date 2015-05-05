@@ -76,7 +76,7 @@ function popupActivate (evt) {
         balloon.style.visibility="visible";
     }
     if(balloon.getBoundingClientRect().right > window.innerWidth){
-        balloon.style.width=(window.innerWidth-coordX).toString()+"px";
+        balloon.style.width=(window.innerWidth-coordX-5).toString()+"px";
     }
 }
 
