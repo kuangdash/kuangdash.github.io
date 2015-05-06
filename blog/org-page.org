@@ -1,4 +1,4 @@
-#+TITLE:       org-page的配置与使用
+#+TITLE:       org-page 的配置与使用
 #+AUTHOR:      皐月中二
 #+EMAIL:       kuangdash@163.com
 #+DATE:        2015-04-15 周三

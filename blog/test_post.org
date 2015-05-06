@@ -1,4 +1,4 @@
-#+TITLE:       测试新blog的功能
+#+TITLE:       测试新 blog 的功能
 #+AUTHOR:      皐月中二
 #+EMAIL:       kuangdash@163.com
 #+DATE:        2015-04-18 周六
