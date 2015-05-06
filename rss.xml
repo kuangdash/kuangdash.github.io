@@ -4,10 +4,17 @@
     <title>彼の一存</title>
     <link>http://kuangdash.github.io</link>
     <description>It&#39;s only when it is truly dark that we can see the stars</description>
-    <pubDate>周三, 06 五月 2015 04:07:58 中国标准时间</pubDate>
-    <lastBuildDate>周三, 06 五月 2015 04:07:58 中国标准时间</lastBuildDate>
+    <pubDate>周三, 06 五月 2015 10:02:57 中国标准时间</pubDate>
+    <lastBuildDate>周三, 06 五月 2015 10:02:57 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>org-webpage static site generator (https://github.com/tumashu/org-webpage)</generator>
+<item>
+<title>堵住 lisp 宏的漏洞</title>
+<link>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</link>
+<description>How to write a robust common lisp macro? </description>
+<pubDate>2015-05-06</pubDate>
+<guid>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</guid>
+</item>
 <item>
 <title>org-page的配置与使用</title>
 <link>http://kuangdash.github.io/blog/2015/04/15/org-page的配置与使用</link>
