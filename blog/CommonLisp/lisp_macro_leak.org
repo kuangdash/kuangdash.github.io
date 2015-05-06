@@ -9,7 +9,7 @@
 #+DESCRIPTION: How to write a robust common lisp macro? 
 
 #+LANGUAGE:    zh-CN
-#+OPTIONS:     H:4 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 
 本文的内容来自于 [[http://gigamonkeys.com/book/][Practical Common Lisp]]
 
