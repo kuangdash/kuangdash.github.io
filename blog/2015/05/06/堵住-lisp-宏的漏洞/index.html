@@ -120,6 +120,11 @@
 </pre>
 </div>
 
+<pre class="example">
+(DO-PRIMES (P 0 (RANDOM 100)) (FORMAT T "~d " P))
+NIL
+</pre>
+
 <p>
 可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="orgtarget1"></a>
 </p>
@@ -168,6 +173,11 @@
 <pre class="src src-lisp">(macroexpand-1 '(do-primes (ending-value 0 10) (print ending-value)))
 </pre>
 </div>
+
+<pre class="example">
+(DO-PRIMES (ENDING-VALUE 0 10) (PRINT ENDING-VALUE))
+NIL
+</pre>
 
 <p>
 见鬼， <code>ending-value</code> 和宏定义里的 <code>ending-value</code> 重合了！ <code>ending-value</code> 会一直停留在 10 这个值上，导致死循环！
