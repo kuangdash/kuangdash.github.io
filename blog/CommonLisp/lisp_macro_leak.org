@@ -41,7 +41,7 @@
 什么漏洞？看起来好像很正常。
 
 用宏展开的命令一探以上代码的究竟：
-#+BEGIN_SRC lisp :results value scalar
+#+BEGIN_SRC lisp :results value scalar :exports both
   (macroexpand-1 '(do-primes (p 0 (random 100)) (format t "~d " p)))
 #+END_SRC
 
@@ -76,7 +76,7 @@
 #+END_SRC
 
 宏展开看看：
-#+BEGIN_SRC lisp :results value scalar
+#+BEGIN_SRC lisp :results value scalar :exports both
   (macroexpand-1 '(do-primes (ending-value 0 10) (print ending-value)))
 #+END_SRC
 
