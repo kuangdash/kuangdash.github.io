@@ -121,8 +121,8 @@
 </div>
 
 <pre class="example">
-(DO-PRIMES (P 0 (RANDOM 100)) (FORMAT T "~d " P))
-NIL
+(DO ((P (NEXT-PRIME 0) (NEXT-PRIME (1+ P)))) ((&gt; P (RANDOM 100))) (FORMAT T "~d " P))
+T
 </pre>
 
 <p>
@@ -175,8 +175,8 @@ NIL
 </div>
 
 <pre class="example">
-(DO-PRIMES (ENDING-VALUE 0 10) (PRINT ENDING-VALUE))
-NIL
+(DO ((ENDING-VALUE (NEXT-PRIME 0) (NEXT-PRIME (1+ ENDING-VALUE))) (ENDING-VALUE 10)) ((&gt; ENDING-VALUE 10)) (PRINT ENDING-VALUE))
+T
 </pre>
 
 <p>
