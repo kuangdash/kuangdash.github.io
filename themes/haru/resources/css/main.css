@@ -426,7 +426,8 @@ table th.right, table td.right {
 #table-of-contents:hover #text-table-of-contents {
     display: block;
     padding: 0.5em;
-    margin-top: -1.5em; 
+    margin-top: -1.5em;
+    padding-top: 2em;
 }
 
 
