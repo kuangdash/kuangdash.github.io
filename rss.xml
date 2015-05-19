@@ -4,36 +4,36 @@
     <title>彼の一存</title>
     <link>http://kuangdash.github.io</link>
     <description>The place where the past meets the present to contemplate the future</description>
-    <pubDate>周六, 16 五月 2015 18:55:07 中国标准时间</pubDate>
-    <lastBuildDate>周六, 16 五月 2015 18:55:07 中国标准时间</lastBuildDate>
+    <pubDate>周二, 19 五月 2015 18:49:17 中国标准时间</pubDate>
+    <lastBuildDate>周二, 19 五月 2015 18:49:17 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>org-webpage static site generator (https://github.com/tumashu/org-webpage)</generator>
 <item>
 <title>堵住 lisp 宏的漏洞</title>
 <link>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</link>
 <description>How to write a robust common lisp macro? </description>
-<pubDate>2015-05-12</pubDate>
+<pubDate>2015-05-19</pubDate>
 <guid>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</guid>
 </item>
 <item>
 <title>org-page 的配置与使用</title>
 <link>http://kuangdash.github.io/blog/2015/04/15/org-page的配置与使用</link>
 <description>org-page的配置与使用</description>
-<pubDate>2015-05-12</pubDate>
+<pubDate>2015-05-19</pubDate>
 <guid>http://kuangdash.github.io/blog/2015/04/15/org-page的配置与使用</guid>
 </item>
 <item>
 <title>测试新 blog 的功能</title>
 <link>http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</link>
 <description>测试新功能</description>
-<pubDate>2015-05-12</pubDate>
+<pubDate>2015-05-19</pubDate>
 <guid>http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</guid>
 </item>
 <item>
 <title>个人诗集</title>
 <link>http://kuangdash.github.io/blog/2015/03/23/个人诗集/</link>
 <description>No Description</description>
-<pubDate>2015-05-12</pubDate>
+<pubDate>2015-05-19</pubDate>
 <guid>http://kuangdash.github.io/blog/2015/03/23/个人诗集/</guid>
 </item>
 </channel>
