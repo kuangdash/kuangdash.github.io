@@ -19,7 +19,7 @@ window.kd_toc = $('#text-table-of-contents ul li');
 window.kd_toc_h = $('#table-of-contents h2');
 window.kd_n = 1;
 window.kd_tmp = kd_n;
-window.kd_head = $('div[id*=\\\'orgheadline\\\']');
+window.kd_head = $('div[id*=\'orgheadline\']');
 $(window).scroll(function () {
     //kd_str=\"#orgheadline\" + kd_n.toString();
     //var top1=kd_head.find(kd_str).offset().top;
