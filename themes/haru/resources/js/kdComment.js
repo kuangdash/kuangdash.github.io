@@ -15,35 +15,31 @@ $('.ds-label').click(function(){
 });
 
 /* navigate */
-var kd_toc = $('#text-table-of-contents ul li');
-var kd_n = 1;
-var kd_tmp = kd_n;
-var kd_head = $('div[id*=\'text-orgheadline\']');
-var topArray = [];
-while(kd_n <= kd_head.length){
-    topArray.push(kd_head.eq(kd_n-1).offset().top);
-    kd_n++;
-}
+window.kd_toc = $('#text-table-of-contents ul li');
+window.kd_toc_h = $('#table-of-contents h2');
+window.kd_n = 1;
+window.kd_tmp = kd_n;
+window.kd_head = $('div[id*=\\\'orgheadline\\\']');
 $(window).scroll(function () {
-    //kd_str="#orgheadline" + kd_n.toString();
+    //kd_str=\"#orgheadline\" + kd_n.toString();
     //var top1=kd_head.find(kd_str).offset().top;
     var startPoint=0;
-    var endPoint=topArray.length-1;
-    var offsetValue=window.pageYOffset+60;
-    if(topArray[kd_tmp]>offsetValue || offsetValue>topArray[kd_tmp+1]){
+    var endPoint=kd_head.length-1;
+    var offsetValue=window.pageYOffset+20;
+    if(kd_head.eq(kd_tmp)[0].offsetTop>offsetValue || offsetValue>kd_head.eq((kd_tmp+1)>(kd_head.length-1)?(kd_head.length-1):(kd_tmp+1))[0].offsetTop){
         while((startPoint+1) < endPoint){
-            if(topArray[Math.floor((startPoint+endPoint)/2)] > offsetValue){
+            if(kd_head.eq(Math.floor((startPoint+endPoint)/2))[0].offsetTop > offsetValue){
                 endPoint = Math.floor((startPoint+endPoint)/2);
             }
-            else if(topArray[Math.floor((startPoint+endPoint)/2)] < offsetValue){
+            else if(kd_head.eq(Math.floor((startPoint+endPoint)/2))[0].offsetTop < offsetValue){
                 startPoint = Math.floor((startPoint+endPoint)/2);
             }
             else{
                 break;
             }
         }
-        if(offsetValue>topArray[topArray.length-1]){
-            kd_n=topArray.length-1;
+        if(offsetValue>kd_head.eq(kd_head.length-1)[0].offsetTop){
+            kd_n=kd_head.length-1;
         }
         else{
             kd_n = startPoint;
@@ -52,6 +48,7 @@ $(window).scroll(function () {
         kd_toc.eq(kd_tmp).children('a').css('color', '#ffff00');
         kd_tmp = kd_n;
         kd_toc.eq(kd_tmp).children('a').css('color', '#22ff22');
+        kd_toc_h[0].textContent=kd_toc.eq(kd_tmp)[0].children.item(0).textContent;
         //kd_n = parseInt(kd_str.slice(-1));
     }
 });
