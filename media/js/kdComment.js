@@ -17,7 +17,7 @@ $('.ds-label').click(function(){
 /* navigate */
 window.kd_toc = $('#text-table-of-contents ul li');
 window.kd_toc_h = $('#table-of-contents h2');
-window.kd_toc_h_text = window.kd_toc_h[0].textContent;
+window.kd_toc_h_text = window.kd_toc_h.text();
 window.kd_n = 1;
 window.kd_tmp = kd_n;
 window.kd_head = $('div[id*=\'text-orgheadline\']');
