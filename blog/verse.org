@@ -1,4 +1,4 @@
-#+title: 个人诗集
+#+title: 花与月
 #+author: 皐月中二
 #+email: kuangdash@163.com
 #+date: 2015-03-23 周一
@@ -6,7 +6,35 @@
 #+OPTIONS: num:nil
 
 #+ATTR_HTML: :class center
-[[./org_imgs/dragon2.svg]]
+[[./org_imgs/image.svg]]
+
+* 醉花月
+
+#+BEGIN_CENTER
+#+BEGIN_VERSE
+今日醉，今日醉
+行云流水倒一杯
+眼看窗外花纷飞
+别是美丽切莫睡
+
+月照水，月照水
+水月交映美胜美
+湖上浩瀚真瑰丽
+银河漫天星光翠
+
+月光下澈浸入酒中杯，哎呀诶？
+#+END_VERSE
+#+END_CENTER
+
+* 无题
+#+BEGIN_CENTER
+#+BEGIN_VERSE
+向晚意不适，
+徒望烟波痴；
+轻风拂月夜，
+细雨润花枝。
+#+END_VERSE
+#+END_CENTER
 
 * 改唐寅《花月》句
 
@@ -38,22 +66,3 @@
 慕此花香与月阴
 #+END_VERSE
 #+END_CENTER
-
-* 《醉花月》
-
-#+BEGIN_CENTER
-#+BEGIN_VERSE
-今日醉，今日醉
-行云流水倒一杯
-眼看窗外花纷飞
-别是美丽切莫睡
-
-月照水，月照水
-水月交映美胜美
-湖上浩瀚真瑰丽
-银河漫天星光翠
-
-月光下澈浸入酒中杯，哎呀诶？
-#+END_VERSE
-#+END_CENTER
-
