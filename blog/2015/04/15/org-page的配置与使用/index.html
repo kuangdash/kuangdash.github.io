@@ -177,10 +177,10 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 (<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">org-page</span>)
 (<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/custom-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
   <span style="font-weight: bold;">"choose the org-page's main repository"</span>
-  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+  (<span style="color: #00ffff; font-weight: bold;">interactive</span> (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
                  (list sitet)))
   (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
-         (setq op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/kuangdash.github.io"</span>
+         (<span style="color: #00ffff; font-weight: bold;">setq</span> op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/kuangdash.github.io"</span>
                op/site-domain <span style="color: #7fffd4; font-style: italic;">"kuangdash.github.io"</span>
                op/theme 'kd_mdo
                op/personal-github-link <span style="color: #7fffd4; font-style: italic;">"https://github.com/kuangdash"</span>
@@ -192,7 +192,7 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 
         <span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">emacs-china</span>
         ((equal site <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
-         (setq op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/emacs-china.github.io"</span>
+         (<span style="color: #00ffff; font-weight: bold;">setq</span> op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/emacs-china.github.io"</span>
                op/site-domain <span style="color: #7fffd4; font-style: italic;">"emacs-china.github.io"</span>
                op/theme 'emacs_love
                op/personal-github-link <span style="color: #7fffd4; font-style: italic;">"https://github.com/emacs-china"</span>
@@ -231,7 +231,7 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 <pre class="src src-emacs-lisp">(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">simple-httpd</span>)
 (<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/test-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
   <span style="font-weight: bold;">"test the org-page's main repository"</span>
-  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#27979;&#35797;&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+  (<span style="color: #00ffff; font-weight: bold;">interactive</span> (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#27979;&#35797;&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
                  (list sitet)))
   (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
          (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/kuangdash.github.io"</span>)
@@ -371,7 +371,7 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 <div>
   <div class="post-meta">
         <span title="post date" class="post-info">2015-04-15</span>
-    <span title="last modification date" class="post-info">2015-05-20</span>
+    <span title="last modification date" class="post-info">2015-06-07</span>
     <span title="tags" class="post-info"><a href="http://kuangdash.github.io/tags/org-page/">org-page</a></span>
     <span title="author" class="post-info">皐月中二</span>
     </div>
