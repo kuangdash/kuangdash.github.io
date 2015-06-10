@@ -263,8 +263,28 @@ ypedef 有另外一个重要的用途，那就是定义机器无关的类型，�
 <h3 id="orgheadline10">注意事项二</h3>
 <div class="outline-text-3" id="text-orgheadline10">
 <p>
-待添加
+typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这里也是举个栗子说明：
 </p>
+
+<p>
+定义有 81 个字符元素的数组，无 typedef 版本：
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #98fb98; font-weight: bold;">char</span>&#12288;line[81];
+<span style="color: #98fb98; font-weight: bold;">char</span>&#12288;text[81];
+</pre>
+</div>
+
+<p>
+定义有 81 个字符元素的数组，有 typedef 版本：
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #00ffff; font-weight: bold;">typedef</span> <span style="color: #98fb98; font-weight: bold;">char</span> <span style="color: #98fb98; font-weight: bold;">Line</span>[81];
+<span style="color: #98fb98; font-weight: bold;">Line</span> <span style="color: #eedd82; font-weight: bold; font-style: italic;">text</span>,<span style="color: #eedd82; font-weight: bold; font-style: italic;">line</span>;
+</pre>
+</div>
 </div>
 </div>
 </div>
