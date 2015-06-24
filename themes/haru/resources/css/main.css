@@ -326,13 +326,16 @@ table th.right, table td.right {
 .footpara img {
     max-width: 100%;
 }
-.post li {
+.post li{
     list-style: none outside none;
 }
 .post ul > li:before {
     content: "- ";
     margin-left: -0.25em;
     color: #cfc;
+}
+.post .org-ul > li:before {
+    content: "";
 }
 .post ol {
     counter-reset: o-list;

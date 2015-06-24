@@ -5,7 +5,7 @@
 
 #+URI:         /blog/%y/%m/%d/typedef-的那些事儿
 #+KEYWORDS:    typedef, c_language
-#+TAGS:        typedef, c_language
+#+TAGS:        c_language
 #+DESCRIPTION: typedef 的小技巧
 
 #+LANGUAGE:    zh-CN

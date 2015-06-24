@@ -5,7 +5,7 @@
 
 # #+URI:         /blog/CommonLisp/%y/%m/%d/%t/ Or /blog/CommonLisp/%t/
 #+KEYWORDS:    common lisp, macro, abstractions
-#+TAGS:        common lisp, macro, abstractions
+#+TAGS:        common lisp, macro
 #+DESCRIPTION: How to write a robust common lisp macro? 
 
 #+LANGUAGE:    zh-CN
