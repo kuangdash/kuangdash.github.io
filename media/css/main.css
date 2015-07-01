@@ -173,7 +173,7 @@ pre.src-sh:before    { content: 'sh'; }
 pre.src-bash:before  { content: 'sh'; }
 pre.src-shell:before  { content: 'sh'; }
 pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-pre.src-C:before     { content: 'C'; }
+pre.src-C:before     { content: 'C/C++'; }
 pre.src-js:before    { content: 'js'}
 pre.src-matlab:before  { content: 'matlab'; }
 pre.src-maxima:before  { content: 'maxima'; }
@@ -326,13 +326,35 @@ table th.right, table td.right {
 .footpara img {
     max-width: 100%;
 }
-.post li {
+.post li{
     list-style: none outside none;
 }
 .post ul > li:before {
     content: "- ";
     margin-left: -0.25em;
     color: #cfc;
+}
+.post .org-ul-up > li:before {
+    content: "";
+}
+.post .org-ul-up > li > span {
+    position:relative;
+    float:left;
+    width:100%;
+}
+.post .org-ul-up > li > span > span {
+    float:right;
+    text-align:right;
+}
+.post .org-ul-down > li {
+    display: inline-block;
+}
+.post .org-ul-down > li:before {
+    content: " : ";
+    margin-left: 0em;
+}
+.post .org-ul-down > li a {
+    background: #008f0f;
 }
 .post ol {
     counter-reset: o-list;
