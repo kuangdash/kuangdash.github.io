@@ -167,6 +167,9 @@ _悬停卡片_[fn:4]
   (advice-add 'org-export-solidify-link-text :override #'kd/org-export-solidify-link-text)
 #+END_SRC
 
+<2015-07-01 周三>
+更新，该问题在 org 最新版本里已解决。\<\<target\>\> 不会被导出，仅作为一个标记。
+
 ** org-mode 的 "src"_<language>{<body>}
 <2015-04-15 周三>
 
