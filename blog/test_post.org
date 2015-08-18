@@ -36,7 +36,9 @@ org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑�
 那么所有功能都完整了。
 
 * ego-link 构筑 org-mode 到 html 的同态映射
-[[ego-link:org_page.org][Prev link]]
+[[ego-link:org_page.org][Prev link]]     [[ego-link:d:/ZballInstall/EZWinSoft/msys64/mingw64/home/github/kuangdash.github.io/blog/verse.org][Next link]]
+
+目前只实现文件跳转的功能，不能实现 “粒度” 更细的跳转。
 
 * Footnotes
 
