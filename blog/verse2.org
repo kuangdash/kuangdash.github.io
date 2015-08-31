@@ -1,0 +1,26 @@
+#+TITLE:       梦夏夜
+#+AUTHOR:      皐月中二
+#+EMAIL:       kuangdash@163.com
+#+DATE:        2014-08-31 周一
+
+# #+URI:         /blog/%y/%m/%d/梦夏夜
+# #+KEYWORDS:    poem
+# #+TAGS:        poem
+# #+DESCRIPTION: 八月的最后一天
+
+#+LANGUAGE:    zh-CN
+#+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+
+#+BEGIN_CENTER
+#+BEGIN_VERSE
+深院短径长
+孑孑寻闹巷
+细丝纷纷染屋坊
+庭水雨波觞
+
+葉月夏已凉
+薄衫映红窗
+台前何人影晃晃
+秀才嗟时光
+#+END_VERSE
+#+END_CENTER
