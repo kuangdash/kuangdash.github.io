@@ -3,10 +3,10 @@
 #+EMAIL:       kuangdash@163.com
 #+DATE:        2014-08-31 周一
 
-# #+URI:         /blog/%y/%m/%d/梦夏夜
-# #+KEYWORDS:    poem
-# #+TAGS:        poem
-# #+DESCRIPTION: 八月的最后一天
+#+URI:         /blog/%y/%m/%d/梦夏夜
+#+KEYWORDS:    poem
+#+TAGS:        poem
+#+DESCRIPTION: 八月的最后一天
 
 #+LANGUAGE:    zh-CN
 #+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
