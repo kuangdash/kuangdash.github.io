@@ -111,6 +111,8 @@
 
 事实上， _任何一种抽象手段，都有泄露抽象细节的问题_ ，即使是被视为 *史上最强抽象手段（包括未来史）* 的 lisp 宏也无法避免。关于这点可以参看 [[http://www.joelonsoftware.com/articles/LeakyAbstractions.html][The Law of Leaky Abstractions]] 。
 
+[[ego-link:201504-test_post.org][Previous-link]]
+
 * Footnotes
 
 [fn:1] 实际上对所有宏而言都是如此。
