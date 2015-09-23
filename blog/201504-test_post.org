@@ -11,7 +11,7 @@
 
 #+CAPTION: 开头先放图
 #+ATTR_HTML: :class center
-[[./org_imgs/spiral.svg]]
+[[./201504-test_post/spiral.svg]]
 
 * 其实这个标题的 html 标签是 h2
 虽然在org-mode里面看好像是 h1 的样子。
