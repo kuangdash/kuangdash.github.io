@@ -23,6 +23,7 @@ typedef register int FAST_COUNTER; // 错误
 编译通不过。问题出在你不能在声明中有多个存储类关键字。因为符号 typedef 已经占据了存储类关键字的位置，在 typedef 声明中不能用 register（或任何其它存储类关键字）。
 
 * typedef vs #define
+
 ** #define 的优势
 1) #define 宏定义有一个特别的长处：可以使用 #ifdef, #ifndef 等来进行逻辑判断，还可以使用 #undef 来取消定义。
 2) #define 宏是预处理器处理的。
@@ -32,6 +33,7 @@ typedef register int FAST_COUNTER; // 错误
 2) typedef 是编译器处理的。
 
 * typedef 实现复杂的变量声明
+
 ** 提问
 在编程实践中，尤其是看别人代码的时候，常常会遇到比较复杂的变量声明，此时可以使用typedef做化简。
 下面是三个变量的声明，如果要使用 typdef 分别给它们定义一个别名，该如何实现？
