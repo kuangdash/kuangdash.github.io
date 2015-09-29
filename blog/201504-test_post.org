@@ -44,7 +44,7 @@ org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑�
 
 * Footnotes
 
-[fn:1] [[./org_imgs/marisa_kuang.gif]] 自己截的gif图，图文可结合。\\
+[fn:1] [[./201504-test_post/marisa_kuang.gif]] 自己截的gif图，图文可结合。\\
 不过不可分段写哟（一大段放悬停卡片里是什么鬼。
 
 [fn:2] 就是这个样子而已。
