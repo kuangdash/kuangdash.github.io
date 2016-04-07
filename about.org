@@ -7,11 +7,11 @@
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+DESCRIPTION:  aboutMe
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT HTML
   <div class="center">
     <script type="text/javascript" src="//rj.revolvermaps.com/0/0/6.js?i=9i12fj4gxpw&amp;m=6&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
   </div>
-#+END_HTML
+#+END_EXPORT
 
 + C.V (Curriculum Vitae) or resume : left for the future
 + Tencent QQ : 614181616
