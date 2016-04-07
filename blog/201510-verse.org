@@ -1,0 +1,20 @@
+#+TITLE:       随笔小诗
+#+AUTHOR:      皐月中二
+#+EMAIL:       kuangdash@163.com
+#+DATE:        2015-10-27 周二
+
+#+URI:         /blog/%y/%m/%d/随笔小诗
+#+TAGS:        poem
+#+DESCRIPTION: 没事陶冶情操罢
+
+#+LANGUAGE:    zh-CN
+#+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+
+#+BEGIN_CENTER
+#+BEGIN_VERSE
+北迎雪月风
+冰花缀桥中
+南华空船渡
+镜水透星宫
+#+END_VERSE
+#+END_CENTER

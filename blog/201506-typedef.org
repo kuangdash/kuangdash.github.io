@@ -4,15 +4,14 @@
 #+DATE:        2015-06-10 周三
 
 #+URI:         /blog/%y/%m/%d/typedef-的那些事儿
-#+KEYWORDS:    typedef, c language
-#+TAGS:        c language
+#+TAGS:        typedef, c language
 #+DESCRIPTION: typedef 的小技巧
 
 #+LANGUAGE:    zh-CN
 #+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 
 * typedef 简述
-typedef 是在计算机编程语言中用来为复杂的声明定义简单的别名，与宏定义有些差异。 *它本身是一种存储类的关键字，与auto、extern、mutable、static、register等关键字不能出现在同一个表达式中。*
+typedef 是在计算机编程语言中用来为复杂的声明定义简单的别名，与宏定义有些差异。 *它本身是一种存储类的关键字，与 auto、extern、mutable、static、register 等关键字不能出现在同一个表达式中。*
 
 关于这个问题，举个栗子：
 
@@ -29,30 +28,30 @@ typedef register int FAST_COUNTER; // 错误
 2) #define 宏是预处理器处理的。
 
 ** typedef 的优势
-1) typedef 也有一个特别的长处：它符合范围规则，使用typedef定义的变量类型其作用范围限制在所定义的函数或者文件内（取决于此变量定义的位置），而宏定义则没有这种特性。
+1) typedef 也有一个特别的长处：它符合范围规则，使用 typedef 定义的变量类型其作用范围限制在所定义的函数或者文件内（取决于此变量定义的位置），而宏定义则没有这种特性。
 2) typedef 是编译器处理的。
 
 * typedef 实现复杂的变量声明
 
 ** 提问
-在编程实践中，尤其是看别人代码的时候，常常会遇到比较复杂的变量声明，此时可以使用typedef做化简。
+在编程实践中，尤其是看别人代码的时候，常常会遇到比较复杂的变量声明，此时可以使用 typedef 做化简。
 下面是三个变量的声明，如果要使用 typdef 分别给它们定义一个别名，该如何实现？
 
 #+BEGIN_SRC C
   /* 1. */ int *(*a[5])(int, char*);
   /* 2. */ void (*b[10]) (void (*)());
-  /* 3. */ doube(*)() (*pa)[9];
+  /* 3. */ double(*)() (*pa)[9];
 #+END_SRC
 
 ** 答案与分析：
-对复杂变量建立一个类型别名的方法很简单，你只要在传统的变量声明表达式里用类型名替代变量名，然后把关键字typedef加在该语句的开头就行了。
+对复杂变量建立一个类型别名的方法很简单，你只要在传统的变量声明表达式里用类型名替代变量名，然后把关键字 typedef 加在该语句的开头就行了。
 
 #+BEGIN_SRC C
   /* 1. */
   int *(*a[5])(int, char*);
-  //pFun是我们建的一个类型别名
+  //pFun 是我们建的一个类型别名
   typedef int *(*pFun)(int, char*);
-  //使用定义的新类型来声明对象，等价于int* (*a[5])(int, char*);
+  //使用定义的新类型来声明对象，等价于 int* (*a[5])(int, char*);
   pFun a[5];
 
   /* 2. */
@@ -61,7 +60,7 @@ typedef register int FAST_COUNTER; // 错误
   typedef void (*pFunParam)();
   //整体声明一个新类型
   typedef void (*pFun)(pFunParam);
-  //使用定义的新类型来声明对象，等价于void (*b[10]) (void (*)());
+  //使用定义的新类型来声明对象，等价于 void (*b[10]) (void (*)());
   pFun b[10];
 
   /* 3. */
@@ -70,9 +69,9 @@ typedef register int FAST_COUNTER; // 错误
   typedef double(*pFun)();
   //整体声明一个新类型
   typedef pFun (*pFunParam)[9];
-  //使用定义的新类型来声明对象，等价于double(*)()(*pa)[9];
+  //使用定义的新类型来声明对象，等价于 double(*)()(*pa)[9];
   pFunParam pa;
-  //pa是一个指针，指针指向一个数组，这个数组有9个元素，每一个元素都是“doube(*)()”--也即一个指针，指向一个函数，函数参数为空，返回值是“double”。
+  //pa 是一个指针，指针指向一个数组，这个数组有 9 个元素，每一个元素都是“doube(*)()”--也即一个指针，指向一个函数，函数参数为空，返回值是“double”。
 #+END_SRC
 
 * typedef 在跨平台时的优势
@@ -98,11 +97,11 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
   int　mystrcmp(const　pstr　p1,const　pstr　p3);
 #+END_SRC
 
-用GNU的gcc和g++编译器，是会出现警告的，按照顺序， =const pstr= 被解释为 =char* const= （一个指向char的指针常量），而事实上， =const char*= 和 =char* const= 表达的并非同一意思（详见C++ Primer 第四版 P112）。
+用 GNU 的 gcc 和 g++ 编译器，是会出现警告的，按照顺序， =const pstr= 被解释为 =char* const= （一个指向 char 的指针常量），而事实上， =const char*= 和 =char* const= 表达的并非同一意思（详见 C++ Primer 第四版 P112）。
 
-+ =char * const cp= : 定义一个指向字符的指针常数，即const指针，常指针。
++ =char * const cp= : 定义一个指向字符的指针常数，即 const 指针，常指针。
 + =const char* p= : 定义一个指向字符常数的指针，即常量指针。
-+ =char const* p= : 等同于const char* p。
++ =char const* p= : 等同于 const char* p。
 
 为了得到正确的类型，应当如下声明：
 
