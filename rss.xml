@@ -4,10 +4,24 @@
     <title>彼の一存</title>
     <link>http://kuangdash.github.io</link>
     <description>The place where the past meets the present to contemplate the future</description>
-    <pubDate>周三, 30 9月 2015 07:03:47 中国标准时间</pubDate>
-    <lastBuildDate>周三, 30 9月 2015 07:03:47 中国标准时间</lastBuildDate>
+    <pubDate>周一, 09 5月 2016 06:33:38 中国标准时间</pubDate>
+    <lastBuildDate>周一, 09 5月 2016 06:33:38 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>随笔小诗</title>
+<link>http://kuangdash.github.io/blog/2016/01/27/随笔小诗</link>
+<description>没事陶冶情操罢</description>
+<pubDate>2016-05-09</pubDate>
+<guid>http://kuangdash.github.io/blog/2016/01/27/随笔小诗</guid>
+</item>
+<item>
+<title>typedef 的那些事儿</title>
+<link>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</link>
+<description>typedef 的小技巧</description>
+<pubDate>2015-12-21</pubDate>
+<guid>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</guid>
+</item>
 <item>
 <title>梦夏夜</title>
 <link>http://kuangdash.github.io/blog/2014/08/31/梦夏夜</link>
@@ -42,13 +56,6 @@
 <description>How to write a robust common lisp macro? </description>
 <pubDate>2015-09-30</pubDate>
 <guid>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</guid>
-</item>
-<item>
-<title>typedef 的那些事儿</title>
-<link>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</link>
-<description>typedef 的小技巧</description>
-<pubDate>2015-09-30</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</guid>
 </item>
 </channel>
 </rss>
