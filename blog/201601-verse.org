@@ -1,7 +1,7 @@
 #+TITLE:       随笔小诗
 #+AUTHOR:      皐月中二
 #+EMAIL:       kuangdash@163.com
-#+DATE:        2015-10-27 周二
+#+DATE:        2016-01-27 周三
 
 #+URI:         /blog/%y/%m/%d/随笔小诗
 #+TAGS:        poem
