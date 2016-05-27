@@ -53,6 +53,21 @@
       })();
     </script>
     {{/duoshuo-comment}}
+    <script>
+     /* comments */
+     var kd_disqus_thread=$('#disqus_thread');
+     var ds_label=$('.ds-thread');
+
+     $('.disqus_label').click(function(){
+         kd_disqus_thread.show();
+         ds_label.hide();
+     });
+
+     $('.ds-label').click(function(){
+         kd_disqus_thread.hide();
+         ds_label.show();
+     });
+    </script>
   </section>
 {{/show-comment}}
 {{#google-analytics}}
@@ -83,10 +98,11 @@
       <script src="/media/js/main.js"></script>
     </p>
   </div>
-</div>
+    </div>
 <script type="text/javascript"
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
 </script>
 <script type="text/x-mathjax-config">
  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
 </script>
+</div>

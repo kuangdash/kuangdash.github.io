@@ -5,9 +5,6 @@
 #+tags: poem
 #+OPTIONS: num:nil
 
-#+ATTR_HTML: :class center
-[[./201503-verse/image.svg]]
-
 * 醉花月
 #+BEGIN_CENTER
 #+BEGIN_VERSE

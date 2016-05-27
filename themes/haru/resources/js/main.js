@@ -1,19 +1,5 @@
 //(require 'jquery)
 
-/* comments */
-var kd_disqus_thread=$('#disqus_thread');
-var ds_label=$('.ds-thread');
-
-$('.disqus_label').click(function(){
-    kd_disqus_thread.show();
-    ds_label.hide();
-});
-
-$('.ds-label').click(function(){
-    kd_disqus_thread.hide();
-    ds_label.show();
-});
-
 /* navigate */
 window.ego_toc = $('#text-table-of-contents ul li');
 if(0 != window.ego_toc.length){
