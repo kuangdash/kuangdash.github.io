@@ -3,26 +3,20 @@
 <head>
   <title>堵住 lisp 宏的漏洞 - 彼の一存</title>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="皐月中二" />
   <meta name="description" content="How to write a robust common lisp macro? " />
-  <meta name="keywords" content="common lisp, macro, abstractions" />
+  <meta name="keywords" content="common lisp, macro" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/main.css" type="text/css">
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/comment.css" type="text/css">
-  <script type="text/javascript"
-          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
-  </script>
-  <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
-  </script>
+  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
@@ -60,9 +54,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">先来一个有漏洞的宏作为示例</a></li>
-<li><a href="#orgheadline2"><code>do-primes</code> 的漏洞连锁</a></li>
-<li><a href="#orgheadline3">填补 lisp 漏洞的总结</a></li>
+<li><a href="#org6de2cef">先来一个有漏洞的宏作为示例</a></li>
+<li><a href="#org21fa313"><code>do-primes</code> 的漏洞连锁</a></li>
+<li><a href="#org32e3c05">填补 lisp 漏洞的总结</a></li>
 </ul>
 </div>
 </div>
@@ -70,23 +64,22 @@
 本文的内容来自于 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a>
 </p>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1">先来一个有漏洞的宏作为示例</h2>
-<div class="outline-text-2" id="text-orgheadline1">
+<div id="outline-container-org6de2cef" class="outline-2">
+<h2 id="org6de2cef">先来一个有漏洞的宏作为示例</h2>
+<div class="outline-text-2" id="text-org6de2cef">
 <div class="org-src-container">
-
-<pre class="src src-lisp"><span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">&#21028;&#26029;&#19968;&#20010;&#25968;&#26159;&#21542;&#20026;&#36136;&#25968;</span>
-(<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">primep</span> (number)
-  (<span style="color: #00ffff; font-weight: bold;">when</span> (&gt; number 1)
-    (<span style="color: #00ffff; font-weight: bold;">loop</span> for fac from 2 to (isqrt number) never (zerop (mod number fac)))))
-<span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">&#36820;&#22238;&#19968;&#20010;&#36136;&#25968;&#30340;&#19979;&#19968;&#20010;&#36136;&#25968;&#65288;&#33509;&#24403;&#21069;&#36825;&#20010;&#25968;&#26159;&#36136;&#25968;&#21017;&#36820;&#22238;&#35813;&#25968;&#65289;</span>
-(<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">next-prime</span> (number)
-  (<span style="color: #00ffff; font-weight: bold;">loop</span> for n from number when (primep n) return n))
-<span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">&#36825;&#26159;&#19968;&#20010;&#21482;&#23545;&#21464;&#37327;&#22312; start &#33267; end &#21306;&#22495;&#20869;&#65288;&#21253;&#25324;&#36793;&#30028;&#65289;&#30340;&#36136;&#25968;&#25191;&#34892; body &#30340;&#23439;</span>
-(<span style="color: #00ffff; font-weight: bold;">defmacro</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">do-primes</span> ((var start end) <span style="color: #98fb98; font-weight: bold;">&amp;body</span> body)
-  `(<span style="color: #00ffff; font-weight: bold;">do</span> ((,var (next-prime ,start) (next-prime (1+ ,var))))
-       ((&gt; ,var ,end))
-     ,@body))
+<pre class="src src-lisp"><span style="color: #74af68;">;;</span><span style="color: #74af68;">&#21028;&#26029;&#19968;&#20010;&#25968;&#26159;&#21542;&#20026;&#36136;&#25968;</span>
+<span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">primep</span> <span style="color: #93a8c6;">(</span>number<span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">when</span> <span style="color: #b0b1a3;">(</span>&gt; number <span style="color: #008b8b;">1</span><span style="color: #b0b1a3;">)</span>
+    <span style="color: #b0b1a3;">(</span><span style="color: #ffad29; font-weight: bold;">loop</span> for fac from <span style="color: #008b8b;">2</span> to <span style="color: #97b098;">(</span>isqrt number<span style="color: #97b098;">)</span> never <span style="color: #97b098;">(</span>zerop <span style="color: #aebed8;">(</span>mod number fac<span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #74af68;">;;</span><span style="color: #74af68;">&#36820;&#22238;&#19968;&#20010;&#36136;&#25968;&#30340;&#19979;&#19968;&#20010;&#36136;&#25968;&#65288;&#33509;&#24403;&#21069;&#36825;&#20010;&#25968;&#26159;&#36136;&#25968;&#21017;&#36820;&#22238;&#35813;&#25968;&#65289;</span>
+<span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">next-prime</span> <span style="color: #93a8c6;">(</span>number<span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">loop</span> for n from number when <span style="color: #b0b1a3;">(</span>primep n<span style="color: #b0b1a3;">)</span> return n<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #74af68;">;;</span><span style="color: #74af68;">&#36825;&#26159;&#19968;&#20010;&#21482;&#23545;&#21464;&#37327;&#22312; start &#33267; end &#21306;&#22495;&#20869;&#65288;&#21253;&#25324;&#36793;&#30028;&#65289;&#30340;&#36136;&#25968;&#25191;&#34892; body &#30340;&#23439;</span>
+<span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
+  `<span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">do</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>,var <span style="color: #aebed8;">(</span>next-prime ,start<span style="color: #aebed8;">)</span> <span style="color: #aebed8;">(</span>next-prime <span style="color: #b0b0b3;">(</span><span style="color: #008b8b;">1+</span> ,var<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+       <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>&gt; ,var ,end<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+     ,@body<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -96,16 +89,15 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><code>do-primes</code> 的漏洞连锁</h2>
-<div class="outline-text-2" id="text-orgheadline2">
+<div id="outline-container-org21fa313" class="outline-2">
+<h2 id="org21fa313"><code>do-primes</code> 的漏洞连锁</h2>
+<div class="outline-text-2" id="text-org21fa313">
 <p>
 执行以下代码，来看看 <code>do-primes</code> 里的第一个漏洞：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(do-primes (p 0 (random 100))
-  (format t <span style="color: #7fffd4; font-style: italic;">"~d "</span> p))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span>do-primes <span style="color: #93a8c6;">(</span>p <span style="color: #008b8b;">0</span> <span style="color: #b0b1a3;">(</span>random <span style="color: #008b8b;">100</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span>format t <span style="color: #e67128;">"~d "</span> p<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -117,8 +109,7 @@
 用宏展开的命令一探以上代码的究竟：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(macroexpand-1 '(do-primes (p 0 (random 100)) (format t <span style="color: #7fffd4; font-style: italic;">"~d "</span> p)))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span>macroexpand-1 '<span style="color: #93a8c6;">(</span>do-primes <span style="color: #b0b1a3;">(</span>p <span style="color: #008b8b;">0</span> <span style="color: #97b098;">(</span>random <span style="color: #008b8b;">100</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">(</span>format t <span style="color: #e67128;">"~d "</span> p<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -128,32 +119,30 @@ T
 </pre>
 
 <p>
-可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="orgtarget1"></a>
+可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="org5f6434f"></a>
 </p>
 
 <p>
 那么怎么修复这个漏洞呢？很简单，想办法在宏内让 <code>(random 100)</code> 只执行一次，好，按这个思路修改 <code>do-primes</code> 宏的定义代码：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(<span style="color: #00ffff; font-weight: bold;">defmacro</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">do-primes</span> ((var start end) <span style="color: #98fb98; font-weight: bold;">&amp;body</span> body)
-  `(<span style="color: #00ffff; font-weight: bold;">do</span> ((ending-value ,end)
-        (,var (next-prime ,start) (next-prime (1+ ,var))))
-       ((&gt; ,var ,end))
-     ,@body))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
+  `<span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">do</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>ending-value ,end<span style="color: #97b098;">)</span>
+        <span style="color: #97b098;">(</span>,var <span style="color: #aebed8;">(</span>next-prime ,start<span style="color: #aebed8;">)</span> <span style="color: #aebed8;">(</span>next-prime <span style="color: #b0b0b3;">(</span><span style="color: #008b8b;">1+</span> ,var<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+       <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>&gt; ,var ,end<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+     ,@body<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
 <p>
-等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="orgtarget2"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
+等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="org54bf99a"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(<span style="color: #00ffff; font-weight: bold;">defmacro</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">do-primes</span> ((var start end) <span style="color: #98fb98; font-weight: bold;">&amp;body</span> body)
-  `(<span style="color: #00ffff; font-weight: bold;">do</span> ((,var (next-prime ,start) (next-prime (1+ ,var)))
-        (ending-value ,end))
-       ((&gt; ,var ,end))
-     ,@body))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
+  `<span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">do</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>,var <span style="color: #aebed8;">(</span>next-prime ,start<span style="color: #aebed8;">)</span> <span style="color: #aebed8;">(</span>next-prime <span style="color: #b0b0b3;">(</span><span style="color: #008b8b;">1+</span> ,var<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span>
+        <span style="color: #97b098;">(</span>ending-value ,end<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+       <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>&gt; ,var ,end<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+     ,@body<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -161,9 +150,8 @@ T
 嗯，修复这个漏洞很简单，交换一下就行了，不过目前这个 <code>do-primes</code> 形式有一个更隐秘且更严重的新漏洞，尝试以下代码：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(do-primes (ending-value 0 10)
-  (print ending-value))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span>do-primes <span style="color: #93a8c6;">(</span>ending-value <span style="color: #008b8b;">0</span> <span style="color: #008b8b;">10</span><span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span>print ending-value<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -171,8 +159,7 @@ T
 宏展开看看：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(macroexpand-1 '(do-primes (ending-value 0 10) (print ending-value)))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span>macroexpand-1 '<span style="color: #93a8c6;">(</span>do-primes <span style="color: #b0b1a3;">(</span>ending-value <span style="color: #008b8b;">0</span> <span style="color: #008b8b;">10</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">(</span>print ending-value<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -186,20 +173,19 @@ T
 </p>
 
 <p>
-为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="orgtarget3"></a>
+为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="orge2044a5"></a>
 </p>
 
 <p>
 函数 <code>GENSYM</code> 提供了答案。 <code>GENSYM</code> 每次被调用都会返回唯一的一个符号——不曾在之前的 lisp 代码中出现过——以后也不会。基于这个函数，重写 <code>do-primes</code> ！：
 </p>
 <div class="org-src-container">
-
-<pre class="src src-lisp">(<span style="color: #00ffff; font-weight: bold;">defmacro</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">do-primes</span> ((var start end) <span style="color: #98fb98; font-weight: bold;">&amp;body</span> body)
-  (<span style="color: #00ffff; font-weight: bold;">let</span> ((ending-value-name (gensym)))
-    `(<span style="color: #00ffff; font-weight: bold;">do</span> ((,var (next-prime ,start) (next-prime (1+ ,var)))
-          (,ending-value-name ,end))
-         ((&gt; ,var ,end))
-       ,@body)))
+<pre class="src src-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span><span style="color: #ffad29; font-weight: bold;">let</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>ending-value-name <span style="color: #aebed8;">(</span>gensym<span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>
+    `<span style="color: #b0b1a3;">(</span><span style="color: #ffad29; font-weight: bold;">do</span> <span style="color: #97b098;">(</span><span style="color: #aebed8;">(</span>,var <span style="color: #b0b0b3;">(</span>next-prime ,start<span style="color: #b0b0b3;">)</span> <span style="color: #b0b0b3;">(</span>next-prime <span style="color: #90a890;">(</span><span style="color: #008b8b;">1+</span> ,var<span style="color: #90a890;">)</span><span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span>
+          <span style="color: #aebed8;">(</span>,ending-value-name ,end<span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span>
+         <span style="color: #97b098;">(</span><span style="color: #aebed8;">(</span>&gt; ,var ,end<span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span>
+       ,@body<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -213,13 +199,13 @@ T
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3">填补 lisp 漏洞的总结</h2>
-<div class="outline-text-2" id="text-orgheadline3">
+<div id="outline-container-org32e3c05" class="outline-2">
+<h2 id="org32e3c05">填补 lisp 漏洞的总结</h2>
+<div class="outline-text-2" id="text-org32e3c05">
 <ol class="org-ol">
-<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#orgtarget1">看这里</a></li>
-<li>所有宏参数只应该被求值一次；<a href="#orgtarget2">看这里</a></li>
-<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#orgtarget3">看这里</a></li>
+<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#org5f6434f">看这里</a></li>
+<li>所有宏参数只应该被求值一次；<a href="#org54bf99a">看这里</a></li>
+<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#orge2044a5">看这里</a></li>
 </ol>
 
 <p>
@@ -292,12 +278,25 @@ T
          $('.ds-thread').css('display','block');
       })();
     </script>
+    <script>
+     /* comments */
+     var kd_disqus_thread=$('#disqus_thread');
+     var ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         kd_disqus_thread.show();
+         ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         kd_disqus_thread.hide();
+         ds_label.show();
+     });
+    </script>
   </section>
 <div class="footer">
-      <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 8.x)
+      <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> )
     </p>
     <p>
-        Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:kuangdash@163.com">皐月中二</a>
+        Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:kuangdash &lt;at&gt; 163 &lt;dot&gt; com">皐月中二</a>
         &nbsp;&nbsp;-&nbsp;&nbsp;
         Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
         &nbsp;&nbsp;-&nbsp;&nbsp;
@@ -308,6 +307,13 @@ T
       <script src="http://kuangdash.github.io/media/js/main.js"></script>
     </p>
   </div>
+    </div>
+<script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+</script>
 </div>
 
   </div></body>

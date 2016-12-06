@@ -54,21 +54,21 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfad12c3">org-page 的特点</a></li>
-<li><a href="#org5f00dc7">org-page 的安装</a></li>
-<li><a href="#org237b07a">org-page 的用法</a></li>
-<li><a href="#org2251cc2">org-page 效果举例</a></li>
-<li><a href="#orga3fb313">org-page 的主题定制</a>
+<li><a href="#org5606476">org-page 的特点</a></li>
+<li><a href="#org1f23012">org-page 的安装</a></li>
+<li><a href="#org5d13aa4">org-page 的用法</a></li>
+<li><a href="#org68d7d78">org-page 效果举例</a></li>
+<li><a href="#org48a303d">org-page 的主题定制</a>
 <ul>
-<li><a href="#org2c996da">使用 org-page 管理多个站点</a></li>
-<li><a href="#orga2000f5">对 org-page 生成的站点进行测试</a></li>
+<li><a href="#org3203b9d">使用 org-page 管理多个站点</a></li>
+<li><a href="#org1e71535">对 org-page 生成的站点进行测试</a></li>
 </ul>
 </li>
-<li><a href="#org05e496a">本人在 org-page 和 org-mode 间周旋的记录</a>
+<li><a href="#org9639e9e">本人在 org-page 和 org-mode 间周旋的记录</a>
 <ul>
-<li><a href="#org7d77a4c">插入 svg 图片的问题</a></li>
-<li><a href="#org47c558e">org-mode 的中文 target 和 radio target 无法导出</a></li>
-<li><a href="#org7b11c79">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
+<li><a href="#org16cb988">插入 svg 图片的问题</a></li>
+<li><a href="#orgd6f7fb8">org-mode 的中文 target 和 radio target 无法导出</a></li>
+<li><a href="#org2191ee1">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
 </ul>
 </li>
 </ul>
@@ -78,18 +78,18 @@
 CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a href="http://emacs-china.github.io/">emacs-china</a> 上查看
 <span class="ego_link"><a href="http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能">Next-Link</a></span>
 </p>
-<div id="outline-container-orgfad12c3" class="outline-2">
-<h2 id="orgfad12c3">org-page 的特点</h2>
-<div class="outline-text-2" id="text-orgfad12c3">
+<div id="outline-container-org5606476" class="outline-2">
+<h2 id="org5606476">org-page 的特点</h2>
+<div class="outline-text-2" id="text-org5606476">
 <p>
 这是一个基于 org-mode、git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 <i>org 文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5f00dc7" class="outline-2">
-<h2 id="org5f00dc7">org-page 的安装</h2>
-<div class="outline-text-2" id="text-org5f00dc7">
+<div id="outline-container-org1f23012" class="outline-2">
+<h2 id="org1f23012">org-page 的安装</h2>
+<div class="outline-text-2" id="text-org1f23012">
 <p>
 使用命令 <code>M-x package-list-packages</code> 找到 <code>org-page</code> 安装即可，或者去这个链接 <a href="https://github.com/kelvinh/org-page">org-page</a> 下载。
 </p>
@@ -100,9 +100,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org237b07a" class="outline-2">
-<h2 id="org237b07a">org-page 的用法</h2>
-<div class="outline-text-2" id="text-org237b07a">
+<div id="outline-container-org5d13aa4" class="outline-2">
+<h2 id="org5d13aa4">org-page 的用法</h2>
+<div class="outline-text-2" id="text-org5d13aa4">
 <p>
 首先，在想写 blog 的文件夹下用 <code>git init</code> 建立一个 git repository，然后创建并进入 source 分支，再新建三个基本文件： 
 </p>
@@ -122,9 +122,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org2251cc2" class="outline-2">
-<h2 id="org2251cc2">org-page 效果举例</h2>
-<div class="outline-text-2" id="text-org2251cc2">
+<div id="outline-container-org68d7d78" class="outline-2">
+<h2 id="org68d7d78">org-page 效果举例</h2>
+<div class="outline-text-2" id="text-org68d7d78">
 <dl class="org-dl">
 <dt>列表</dt><dd><del>删除线</del> <span class="underline">下划线</span> <b>强调</b> <code>代码</code></dd>
 <dt>数学公式</dt><dd>\(X(f)=\int{x(t)e^{-i 2\pi ft}dt}\)</dd>
@@ -141,9 +141,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-orga3fb313" class="outline-2">
-<h2 id="orga3fb313">org-page 的主题定制</h2>
-<div class="outline-text-2" id="text-orga3fb313">
+<div id="outline-container-org48a303d" class="outline-2">
+<h2 id="org48a303d">org-page 的主题定制</h2>
+<div class="outline-text-2" id="text-org48a303d">
 <dl class="org-dl">
 <dt>正常定制法</dt><dd>使用命令 <code>M-x customize-group</code> 再输入 <code>org-page</code> 即可。（这种定制法定制能力有限）</dd>
 <dt>hack 定制法</dt><dd>参看 themes 文件夹，里面的 template 文件夹使用了 <a href="http://mustache.github.io/">mustache 模板</a> 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。</dd>
@@ -158,9 +158,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </p>
 </div>
 
-<div id="outline-container-org2c996da" class="outline-3">
-<h3 id="org2c996da">使用 org-page 管理多个站点</h3>
-<div class="outline-text-3" id="text-org2c996da">
+<div id="outline-container-org3203b9d" class="outline-3">
+<h3 id="org3203b9d">使用 org-page 管理多个站点</h3>
+<div class="outline-text-3" id="text-org3203b9d">
 <p>
 在 emacs 的配置文件中定义如下函数：
 </p>
@@ -208,9 +208,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-orga2000f5" class="outline-3">
-<h3 id="orga2000f5">对 org-page 生成的站点进行测试</h3>
-<div class="outline-text-3" id="text-orga2000f5">
+<div id="outline-container-org1e71535" class="outline-3">
+<h3 id="org1e71535">对 org-page 生成的站点进行测试</h3>
+<div class="outline-text-3" id="text-org1e71535">
 <p>
 本人使用基于 emacs 的 <a href="https://github.com/skeeto/emacs-web-server">simple-httpd</a> 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
 </p>
@@ -246,17 +246,17 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org05e496a" class="outline-2">
-<h2 id="org05e496a">本人在 org-page 和 org-mode 间周旋的记录</h2>
-<div class="outline-text-2" id="text-org05e496a">
+<div id="outline-container-org9639e9e" class="outline-2">
+<h2 id="org9639e9e">本人在 org-page 和 org-mode 间周旋的记录</h2>
+<div class="outline-text-2" id="text-org9639e9e">
 <p>
 由于我一直用 git 更新 org-page 和 org-mode 的源，所以这里会写一些两者遇上冲突的地方：
 </p>
 </div>
 
-<div id="outline-container-org7d77a4c" class="outline-3">
-<h3 id="org7d77a4c">插入 svg 图片的问题</h3>
-<div class="outline-text-3" id="text-org7d77a4c">
+<div id="outline-container-org16cb988" class="outline-3">
+<h3 id="org16cb988">插入 svg 图片的问题</h3>
+<div class="outline-text-3" id="text-org16cb988">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -297,9 +297,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org47c558e" class="outline-3">
-<h3 id="org47c558e">org-mode 的中文 target 和 radio target 无法导出</h3>
-<div class="outline-text-3" id="text-org47c558e">
+<div id="outline-container-orgd6f7fb8" class="outline-3">
+<h3 id="orgd6f7fb8">org-mode 的中文 target 和 radio target 无法导出</h3>
+<div class="outline-text-3" id="text-orgd6f7fb8">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -325,9 +325,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org7b11c79" class="outline-3">
-<h3 id="org7b11c79">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
-<div class="outline-text-3" id="text-org7b11c79">
+<div id="outline-container-org2191ee1" class="outline-3">
+<h3 id="org2191ee1">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
+<div class="outline-text-3" id="text-org2191ee1">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
