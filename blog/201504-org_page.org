@@ -2,17 +2,17 @@
 #+AUTHOR:      皐月中二
 #+EMAIL:       kuangdash@163.com
 #+DATE:        2015-04-15 周三
-#+URI:         /blog/%y/%m/%d/org-page的配置与使用
+#+URI:         /blog/%y/%m/%d/org-page 的配置与使用
 #+TAGS:        org-page
 #+LANGUAGE:    zh-CN
 #+OPTIONS:     H:3 num:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
-#+DESCRIPTION: org-page的配置与使用
+#+DESCRIPTION: org-page 的配置与使用
 
 CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 [[http://emacs-china.github.io/][emacs-china]] 上查看
-[[ego-link:test_post.org][Next-Link]]
+[[ego-link:201504-test_post.org][Next-Link]]
 * org-page 的特点
 
-这是一个基于 org-mode 、 git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 /org文档内容/ 和 /文档修饰（主题）/ 的分离。它本身具有高度的可定制性[fn:1]。
+这是一个基于 org-mode、git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 /org 文档内容/ 和 /文档修饰（主题）/ 的分离。它本身具有高度的可定制性[fn:1]。
 
 * org-page 的安装
 
@@ -22,14 +22,14 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 [[ht
 
 * org-page 的用法
 
-首先，在想写 blog 的文件夹下用 ~git init~ 建立一个 git repository ，然后创建并进入 source 分支，再新建三个基本文件： 
+首先，在想写 blog 的文件夹下用 ~git init~ 建立一个 git repository，然后创建并进入 source 分支，再新建三个基本文件： 
 + blog 文件夹 :: 主要的 blog 文件放里面。
 + about.org 文件 :: 在这里介绍自己。
 + index.org 文件 :: 在这里写自己博客的首页。
 
 剩下的交给 ~M-x op/do-publication~ 命令。
 
-接下来，英语好的话，参考之前提到的 *quick-guide.org* ，英语不好，请 *慎用* emacs 。
+接下来，英语好的话，参考之前提到的 *quick-guide.org* ，英语不好，请 *慎用* emacs。
 
 * org-page 效果举例
 
@@ -44,11 +44,11 @@ _悬停卡片_[fn:4]
 * org-page 的主题定制
 
 + 正常定制法 :: 使用命令 ~M-x customize-group~ 再输入 =org-page= 即可。（这种定制法定制能力有限）
-+ hack定制法 :: 参看 themes 文件夹，里面的 template 文件夹使用了 [[http://mustache.github.io/][mustache模板]] 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。
++ hack 定制法 :: 参看 themes 文件夹，里面的 template 文件夹使用了 [[http://mustache.github.io/][mustache 模板]] 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。
 
 关于 org-page 的正常定制法以及 custom 页面里各个选项的含义，还请各位参照英文字典分析……
 
-下面讲解使用 hack 定制法时，一些有用的 hack 手法（如果不想自己 hack ，请点我右上角[fn:2]）：
+下面讲解使用 hack 定制法时，一些有用的 hack 手法（如果不想自己 hack，请点我右上角[fn:2]）：
 
 ** 使用 org-page 管理多个站点
 
@@ -92,7 +92,7 @@ _悬停卡片_[fn:4]
 
 ** 对 org-page 生成的站点进行测试
 
-本人使用基于emacs的 [[https://github.com/skeeto/emacs-web-server][simple-httpd]] 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
+本人使用基于 emacs 的 [[https://github.com/skeeto/emacs-web-server][simple-httpd]] 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
 
 在 =kd/custom-org-page= 的 =cond= 里面我们还可以写一些其他代码，这样就能起到测试的效果了：
 
