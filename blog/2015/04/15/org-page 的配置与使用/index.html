@@ -15,14 +15,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://kuangdash.github.io/">彼の一存</a></h1>
+    <h1 class="masthead-title"><a href="https://kuangdash.github.io/">彼の一存</a></h1>
     <p>The place where the past meets the present to contemplate the future</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -33,11 +33,11 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://kuangdash.github.io/岁月/">岁月</a></li>
-        <li><a href="http://kuangdash.github.io/tags/">标签</a></li>
-        <li><a href="http://kuangdash.github.io/about/">About</a></li>
+        <li><a href="https://kuangdash.github.io/岁月/">岁月</a></li>
+        <li><a href="https://kuangdash.github.io/tags/">标签</a></li>
+        <li><a href="https://kuangdash.github.io/about/">About</a></li>
         <li><a href="https://github.com/kuangdash">Github</a></li>
-        <li><a href="http://kuangdash.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://kuangdash.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -54,21 +54,21 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5606476">org-page 的特点</a></li>
-<li><a href="#org1f23012">org-page 的安装</a></li>
-<li><a href="#org5d13aa4">org-page 的用法</a></li>
-<li><a href="#org68d7d78">org-page 效果举例</a></li>
-<li><a href="#org48a303d">org-page 的主题定制</a>
+<li><a href="#org31a7c07">org-page 的特点</a></li>
+<li><a href="#org4955190">org-page 的安装</a></li>
+<li><a href="#org69dc50c">org-page 的用法</a></li>
+<li><a href="#org7382c40">org-page 效果举例</a></li>
+<li><a href="#org8027ae5">org-page 的主题定制</a>
 <ul>
-<li><a href="#org3203b9d">使用 org-page 管理多个站点</a></li>
-<li><a href="#org1e71535">对 org-page 生成的站点进行测试</a></li>
+<li><a href="#orga4f4f90">使用 org-page 管理多个站点</a></li>
+<li><a href="#orgd1f5a90">对 org-page 生成的站点进行测试</a></li>
 </ul>
 </li>
-<li><a href="#org9639e9e">本人在 org-page 和 org-mode 间周旋的记录</a>
+<li><a href="#orgf803706">本人在 org-page 和 org-mode 间周旋的记录</a>
 <ul>
-<li><a href="#org16cb988">插入 svg 图片的问题</a></li>
-<li><a href="#orgd6f7fb8">org-mode 的中文 target 和 radio target 无法导出</a></li>
-<li><a href="#org2191ee1">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
+<li><a href="#org29d8cfd">插入 svg 图片的问题</a></li>
+<li><a href="#org5e56683">org-mode 的中文 target 和 radio target 无法导出</a></li>
+<li><a href="#org1c98924">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
 </ul>
 </li>
 </ul>
@@ -76,20 +76,20 @@
 </div>
 <p>
 CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a href="http://emacs-china.github.io/">emacs-china</a> 上查看
-<span class="ego_link"><a href="http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能">Next-Link</a></span>
+<span class="ego_link"><a href="https://kuangdash.github.io/blog/2015/04/18/测试新blog的功能">Next-Link</a></span>
 </p>
-<div id="outline-container-org5606476" class="outline-2">
-<h2 id="org5606476">org-page 的特点</h2>
-<div class="outline-text-2" id="text-org5606476">
+<div id="outline-container-org31a7c07" class="outline-2">
+<h2 id="org31a7c07">org-page 的特点</h2>
+<div class="outline-text-2" id="text-org31a7c07">
 <p>
 这是一个基于 org-mode、git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 <i>org 文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1f23012" class="outline-2">
-<h2 id="org1f23012">org-page 的安装</h2>
-<div class="outline-text-2" id="text-org1f23012">
+<div id="outline-container-org4955190" class="outline-2">
+<h2 id="org4955190">org-page 的安装</h2>
+<div class="outline-text-2" id="text-org4955190">
 <p>
 使用命令 <code>M-x package-list-packages</code> 找到 <code>org-page</code> 安装即可，或者去这个链接 <a href="https://github.com/kelvinh/org-page">org-page</a> 下载。
 </p>
@@ -100,9 +100,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org5d13aa4" class="outline-2">
-<h2 id="org5d13aa4">org-page 的用法</h2>
-<div class="outline-text-2" id="text-org5d13aa4">
+<div id="outline-container-org69dc50c" class="outline-2">
+<h2 id="org69dc50c">org-page 的用法</h2>
+<div class="outline-text-2" id="text-org69dc50c">
 <p>
 首先，在想写 blog 的文件夹下用 <code>git init</code> 建立一个 git repository，然后创建并进入 source 分支，再新建三个基本文件： 
 </p>
@@ -122,9 +122,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org68d7d78" class="outline-2">
-<h2 id="org68d7d78">org-page 效果举例</h2>
-<div class="outline-text-2" id="text-org68d7d78">
+<div id="outline-container-org7382c40" class="outline-2">
+<h2 id="org7382c40">org-page 效果举例</h2>
+<div class="outline-text-2" id="text-org7382c40">
 <dl class="org-dl">
 <dt>列表</dt><dd><del>删除线</del> <span class="underline">下划线</span> <b>强调</b> <code>代码</code></dd>
 <dt>数学公式</dt><dd>\(X(f)=\int{x(t)e^{-i 2\pi ft}dt}\)</dd>
@@ -141,9 +141,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org48a303d" class="outline-2">
-<h2 id="org48a303d">org-page 的主题定制</h2>
-<div class="outline-text-2" id="text-org48a303d">
+<div id="outline-container-org8027ae5" class="outline-2">
+<h2 id="org8027ae5">org-page 的主题定制</h2>
+<div class="outline-text-2" id="text-org8027ae5">
 <dl class="org-dl">
 <dt>正常定制法</dt><dd>使用命令 <code>M-x customize-group</code> 再输入 <code>org-page</code> 即可。（这种定制法定制能力有限）</dd>
 <dt>hack 定制法</dt><dd>参看 themes 文件夹，里面的 template 文件夹使用了 <a href="http://mustache.github.io/">mustache 模板</a> 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。</dd>
@@ -158,9 +158,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </p>
 </div>
 
-<div id="outline-container-org3203b9d" class="outline-3">
-<h3 id="org3203b9d">使用 org-page 管理多个站点</h3>
-<div class="outline-text-3" id="text-org3203b9d">
+<div id="outline-container-orga4f4f90" class="outline-3">
+<h3 id="orga4f4f90">使用 org-page 管理多个站点</h3>
+<div class="outline-text-3" id="text-orga4f4f90">
 <p>
 在 emacs 的配置文件中定义如下函数：
 </p>
@@ -208,9 +208,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org1e71535" class="outline-3">
-<h3 id="org1e71535">对 org-page 生成的站点进行测试</h3>
-<div class="outline-text-3" id="text-org1e71535">
+<div id="outline-container-orgd1f5a90" class="outline-3">
+<h3 id="orgd1f5a90">对 org-page 生成的站点进行测试</h3>
+<div class="outline-text-3" id="text-orgd1f5a90">
 <p>
 本人使用基于 emacs 的 <a href="https://github.com/skeeto/emacs-web-server">simple-httpd</a> 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
 </p>
@@ -246,17 +246,17 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org9639e9e" class="outline-2">
-<h2 id="org9639e9e">本人在 org-page 和 org-mode 间周旋的记录</h2>
-<div class="outline-text-2" id="text-org9639e9e">
+<div id="outline-container-orgf803706" class="outline-2">
+<h2 id="orgf803706">本人在 org-page 和 org-mode 间周旋的记录</h2>
+<div class="outline-text-2" id="text-orgf803706">
 <p>
 由于我一直用 git 更新 org-page 和 org-mode 的源，所以这里会写一些两者遇上冲突的地方：
 </p>
 </div>
 
-<div id="outline-container-org16cb988" class="outline-3">
-<h3 id="org16cb988">插入 svg 图片的问题</h3>
-<div class="outline-text-3" id="text-org16cb988">
+<div id="outline-container-org29d8cfd" class="outline-3">
+<h3 id="org29d8cfd">插入 svg 图片的问题</h3>
+<div class="outline-text-3" id="text-org29d8cfd">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -297,9 +297,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-orgd6f7fb8" class="outline-3">
-<h3 id="orgd6f7fb8">org-mode 的中文 target 和 radio target 无法导出</h3>
-<div class="outline-text-3" id="text-orgd6f7fb8">
+<div id="outline-container-org5e56683" class="outline-3">
+<h3 id="org5e56683">org-mode 的中文 target 和 radio target 无法导出</h3>
+<div class="outline-text-3" id="text-org5e56683">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -325,9 +325,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org2191ee1" class="outline-3">
-<h3 id="org2191ee1">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
-<div class="outline-text-3" id="text-org2191ee1">
+<div id="outline-container-org1c98924" class="outline-3">
+<h3 id="org1c98924">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
+<div class="outline-text-3" id="text-org1c98924">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -367,10 +367,10 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
   <div class="post-meta">
         <span title="post date" class="post-info">2015-04-15</span>
     <span title="last modification date" class="post-info">2016-12-07</span>
-    <span title="tags" class="post-info"><a href="http://kuangdash.github.io/tags/org-page">org-page</a></span>
+    <span title="tags" class="post-info"><a href="https://kuangdash.github.io/tags/org-page">org-page</a></span>
     <span title="author" class="post-info">皐月中二</span>
     </div>
-<script src="http://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
+<script src="https://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
 <section>
       <h1>Comments</h1>
     <div id="comment-wrap">
@@ -382,7 +382,7 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
       //var disqus_developer = 1;
       var preempt_signal=false;
       var disqus_identifier = "/blog/2015/04/15/org-page 的配置与使用";
-      var disqus_url = "http://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用";
+      var disqus_url = "https://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用";
       var disqus_shortname = 'kuangdash';
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -433,7 +433,7 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
         <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254938647'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254938647%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script><br/>
       <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
       <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-      <script src="http://kuangdash.github.io/media/js/main.js"></script>
+      <script src="https://kuangdash.github.io/media/js/main.js"></script>
     </p>
   </div>
     </div>

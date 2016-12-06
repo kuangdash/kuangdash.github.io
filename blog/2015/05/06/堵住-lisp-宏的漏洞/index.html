@@ -15,14 +15,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://kuangdash.github.io/">彼の一存</a></h1>
+    <h1 class="masthead-title"><a href="https://kuangdash.github.io/">彼の一存</a></h1>
     <p>The place where the past meets the present to contemplate the future</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -33,11 +33,11 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://kuangdash.github.io/岁月/">岁月</a></li>
-        <li><a href="http://kuangdash.github.io/tags/">标签</a></li>
-        <li><a href="http://kuangdash.github.io/about/">About</a></li>
+        <li><a href="https://kuangdash.github.io/岁月/">岁月</a></li>
+        <li><a href="https://kuangdash.github.io/tags/">标签</a></li>
+        <li><a href="https://kuangdash.github.io/about/">About</a></li>
         <li><a href="https://github.com/kuangdash">Github</a></li>
-        <li><a href="http://kuangdash.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://kuangdash.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -54,9 +54,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6de2cef">先来一个有漏洞的宏作为示例</a></li>
-<li><a href="#org21fa313"><code>do-primes</code> 的漏洞连锁</a></li>
-<li><a href="#org32e3c05">填补 lisp 漏洞的总结</a></li>
+<li><a href="#org26bdea0">先来一个有漏洞的宏作为示例</a></li>
+<li><a href="#org4739e53"><code>do-primes</code> 的漏洞连锁</a></li>
+<li><a href="#orga174f9f">填补 lisp 漏洞的总结</a></li>
 </ul>
 </div>
 </div>
@@ -64,9 +64,9 @@
 本文的内容来自于 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a>
 </p>
 
-<div id="outline-container-org6de2cef" class="outline-2">
-<h2 id="org6de2cef">先来一个有漏洞的宏作为示例</h2>
-<div class="outline-text-2" id="text-org6de2cef">
+<div id="outline-container-org26bdea0" class="outline-2">
+<h2 id="org26bdea0">先来一个有漏洞的宏作为示例</h2>
+<div class="outline-text-2" id="text-org26bdea0">
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #74af68;">;;</span><span style="color: #74af68;">&#21028;&#26029;&#19968;&#20010;&#25968;&#26159;&#21542;&#20026;&#36136;&#25968;</span>
 <span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">primep</span> <span style="color: #93a8c6;">(</span>number<span style="color: #93a8c6;">)</span>
@@ -89,9 +89,9 @@
 </div>
 </div>
 
-<div id="outline-container-org21fa313" class="outline-2">
-<h2 id="org21fa313"><code>do-primes</code> 的漏洞连锁</h2>
-<div class="outline-text-2" id="text-org21fa313">
+<div id="outline-container-org4739e53" class="outline-2">
+<h2 id="org4739e53"><code>do-primes</code> 的漏洞连锁</h2>
+<div class="outline-text-2" id="text-org4739e53">
 <p>
 执行以下代码，来看看 <code>do-primes</code> 里的第一个漏洞：
 </p>
@@ -119,7 +119,7 @@ T
 </pre>
 
 <p>
-可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="org5f6434f"></a>
+可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="org8a48b18"></a>
 </p>
 
 <p>
@@ -135,7 +135,7 @@ T
 </div>
 
 <p>
-等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="org54bf99a"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
+等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="orgfd9c55c"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
@@ -173,7 +173,7 @@ T
 </p>
 
 <p>
-为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="orge2044a5"></a>
+为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="orgbe25173"></a>
 </p>
 
 <p>
@@ -199,13 +199,13 @@ T
 </div>
 </div>
 
-<div id="outline-container-org32e3c05" class="outline-2">
-<h2 id="org32e3c05">填补 lisp 漏洞的总结</h2>
-<div class="outline-text-2" id="text-org32e3c05">
+<div id="outline-container-orga174f9f" class="outline-2">
+<h2 id="orga174f9f">填补 lisp 漏洞的总结</h2>
+<div class="outline-text-2" id="text-orga174f9f">
 <ol class="org-ol">
-<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#org5f6434f">看这里</a></li>
-<li>所有宏参数只应该被求值一次；<a href="#org54bf99a">看这里</a></li>
-<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#orge2044a5">看这里</a></li>
+<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#org8a48b18">看这里</a></li>
+<li>所有宏参数只应该被求值一次；<a href="#orgfd9c55c">看这里</a></li>
+<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#orgbe25173">看这里</a></li>
 </ol>
 
 <p>
@@ -217,7 +217,7 @@ T
 </p>
 
 <p>
-<span class="ego_link"><a href="http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能">Prev link</a></span>
+<span class="ego_link"><a href="https://kuangdash.github.io/blog/2015/04/18/测试新blog的功能">Prev link</a></span>
 </p>
 </div>
 </div>
@@ -238,10 +238,10 @@ T
   <div class="post-meta">
         <span title="post date" class="post-info">2015-05-06</span>
     <span title="last modification date" class="post-info">2015-09-23</span>
-    <span title="tags" class="post-info"><a href="http://kuangdash.github.io/tags/common-lisp">common lisp</a> : <a href="http://kuangdash.github.io/tags/macro">macro</a></span>
+    <span title="tags" class="post-info"><a href="https://kuangdash.github.io/tags/common-lisp">common lisp</a> : <a href="https://kuangdash.github.io/tags/macro">macro</a></span>
     <span title="author" class="post-info">皐月中二</span>
     </div>
-<script src="http://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
+<script src="https://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
 <section>
       <h1>Comments</h1>
     <div id="comment-wrap">
@@ -253,7 +253,7 @@ T
       //var disqus_developer = 1;
       var preempt_signal=false;
       var disqus_identifier = "/blog/2015/05/06/堵住-lisp-宏的漏洞/";
-      var disqus_url = "http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/";
+      var disqus_url = "https://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/";
       var disqus_shortname = 'kuangdash';
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -304,7 +304,7 @@ T
         <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254938647'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254938647%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script><br/>
       <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
       <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-      <script src="http://kuangdash.github.io/media/js/main.js"></script>
+      <script src="https://kuangdash.github.io/media/js/main.js"></script>
     </p>
   </div>
     </div>

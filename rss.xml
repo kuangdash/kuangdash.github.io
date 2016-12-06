@@ -2,60 +2,60 @@
 <rss version="2.0">
   <channel>
     <title>彼の一存</title>
-    <link>http://kuangdash.github.io</link>
+    <link>https://kuangdash.github.io</link>
     <description>The place where the past meets the present to contemplate the future</description>
-    <pubDate>周三, 07 12月 2016 01:13:07 中国标准时间</pubDate>
-    <lastBuildDate>周三, 07 12月 2016 01:13:07 中国标准时间</lastBuildDate>
+    <pubDate>周三, 07 12月 2016 01:18:16 中国标准时间</pubDate>
+    <lastBuildDate>周三, 07 12月 2016 01:18:16 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
 <title>org-page 的配置与使用</title>
-<link>http://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用</link>
+<link>https://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用</link>
 <description>org-page 的配置与使用</description>
 <pubDate>2016-12-07</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用</guid>
+<guid>https://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用</guid>
 </item>
 <item>
 <title>花与月</title>
-<link>http://kuangdash.github.io/blog/2015/03/23/花与月/</link>
+<link>https://kuangdash.github.io/blog/2015/03/23/花与月/</link>
 <description>No Description</description>
 <pubDate>2016-05-27</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/03/23/花与月/</guid>
+<guid>https://kuangdash.github.io/blog/2015/03/23/花与月/</guid>
 </item>
 <item>
 <title>随笔小诗</title>
-<link>http://kuangdash.github.io/blog/2016/01/27/随笔小诗</link>
+<link>https://kuangdash.github.io/blog/2016/01/27/随笔小诗</link>
 <description>没事陶冶情操罢</description>
 <pubDate>2016-05-09</pubDate>
-<guid>http://kuangdash.github.io/blog/2016/01/27/随笔小诗</guid>
+<guid>https://kuangdash.github.io/blog/2016/01/27/随笔小诗</guid>
 </item>
 <item>
 <title>typedef 的那些事儿</title>
-<link>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</link>
+<link>https://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</link>
 <description>typedef 的小技巧</description>
 <pubDate>2016-04-07</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</guid>
+<guid>https://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿</guid>
 </item>
 <item>
 <title>测试新 blog 的功能</title>
-<link>http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</link>
+<link>https://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</link>
 <description>测试新功能</description>
 <pubDate>2015-09-30</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</guid>
+<guid>https://kuangdash.github.io/blog/2015/04/18/测试新blog的功能</guid>
 </item>
 <item>
 <title>梦夏夜</title>
-<link>http://kuangdash.github.io/blog/2014/08/31/梦夏夜</link>
+<link>https://kuangdash.github.io/blog/2014/08/31/梦夏夜</link>
 <description>八月的最后一天</description>
 <pubDate>2015-09-23</pubDate>
-<guid>http://kuangdash.github.io/blog/2014/08/31/梦夏夜</guid>
+<guid>https://kuangdash.github.io/blog/2014/08/31/梦夏夜</guid>
 </item>
 <item>
 <title>堵住 lisp 宏的漏洞</title>
-<link>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</link>
+<link>https://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</link>
 <description>How to write a robust common lisp macro? </description>
 <pubDate>2015-09-23</pubDate>
-<guid>http://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</guid>
+<guid>https://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/</guid>
 </item>
 </channel>
 </rss>

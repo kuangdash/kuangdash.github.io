@@ -15,14 +15,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://kuangdash.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://kuangdash.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://kuangdash.github.io/">彼の一存</a></h1>
+    <h1 class="masthead-title"><a href="https://kuangdash.github.io/">彼の一存</a></h1>
     <p>The place where the past meets the present to contemplate the future</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -33,11 +33,11 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://kuangdash.github.io/岁月/">岁月</a></li>
-        <li><a href="http://kuangdash.github.io/tags/">标签</a></li>
-        <li><a href="http://kuangdash.github.io/about/">About</a></li>
+        <li><a href="https://kuangdash.github.io/岁月/">岁月</a></li>
+        <li><a href="https://kuangdash.github.io/tags/">标签</a></li>
+        <li><a href="https://kuangdash.github.io/about/">About</a></li>
         <li><a href="https://github.com/kuangdash">Github</a></li>
-        <li><a href="http://kuangdash.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://kuangdash.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -54,33 +54,33 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org01ff897">typedef 简述</a></li>
-<li><a href="#org6f4a8aa">typedef vs #define</a>
+<li><a href="#org96c8756">typedef 简述</a></li>
+<li><a href="#org601854b">typedef vs #define</a>
 <ul>
-<li><a href="#org0ded0ed">#define 的优势</a></li>
-<li><a href="#orga9a0f74">typedef 的优势</a></li>
+<li><a href="#org2c43736">#define 的优势</a></li>
+<li><a href="#orge378cc7">typedef 的优势</a></li>
 </ul>
 </li>
-<li><a href="#orgd527b06">typedef 实现复杂的变量声明</a>
+<li><a href="#orgfd6e325">typedef 实现复杂的变量声明</a>
 <ul>
-<li><a href="#orgf82a6b3">提问</a></li>
-<li><a href="#org9cf1b18">答案与分析：</a></li>
+<li><a href="#org2627a09">提问</a></li>
+<li><a href="#org38a881e">答案与分析：</a></li>
 </ul>
 </li>
-<li><a href="#orgea694a5">typedef 在跨平台时的优势</a></li>
-<li><a href="#org4ed871d">typedef 的一些注意事项</a>
+<li><a href="#org9935959">typedef 在跨平台时的优势</a></li>
+<li><a href="#orgbbd6a61">typedef 的一些注意事项</a>
 <ul>
-<li><a href="#orgadf7ec0">注意事项一</a></li>
-<li><a href="#orgcc61b75">注意事项二</a></li>
+<li><a href="#org37e9704">注意事项一</a></li>
+<li><a href="#org862f4a2">注意事项二</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org01ff897" class="outline-2">
-<h2 id="org01ff897">typedef 简述</h2>
-<div class="outline-text-2" id="text-org01ff897">
+<div id="outline-container-org96c8756" class="outline-2">
+<h2 id="org96c8756">typedef 简述</h2>
+<div class="outline-text-2" id="text-org96c8756">
 <p>
 typedef 是在计算机编程语言中用来为复杂的声明定义简单的别名，与宏定义有些差异。 <b>它本身是一种存储类的关键字，与 auto、extern、mutable、static、register 等关键字不能出现在同一个表达式中。</b>
 </p>
@@ -100,12 +100,12 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-org6f4a8aa" class="outline-2">
-<h2 id="org6f4a8aa">typedef vs #define</h2>
-<div class="outline-text-2" id="text-org6f4a8aa">
-</div><div id="outline-container-org0ded0ed" class="outline-3">
-<h3 id="org0ded0ed">#define 的优势</h3>
-<div class="outline-text-3" id="text-org0ded0ed">
+<div id="outline-container-org601854b" class="outline-2">
+<h2 id="org601854b">typedef vs #define</h2>
+<div class="outline-text-2" id="text-org601854b">
+</div><div id="outline-container-org2c43736" class="outline-3">
+<h3 id="org2c43736">#define 的优势</h3>
+<div class="outline-text-3" id="text-org2c43736">
 <ol class="org-ol">
 <li>#define 宏定义有一个特别的长处：可以使用 #ifdef, #ifndef 等来进行逻辑判断，还可以使用 #undef 来取消定义。</li>
 <li>#define 宏是预处理器处理的。</li>
@@ -113,9 +113,9 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-orga9a0f74" class="outline-3">
-<h3 id="orga9a0f74">typedef 的优势</h3>
-<div class="outline-text-3" id="text-orga9a0f74">
+<div id="outline-container-orge378cc7" class="outline-3">
+<h3 id="orge378cc7">typedef 的优势</h3>
+<div class="outline-text-3" id="text-orge378cc7">
 <ol class="org-ol">
 <li>typedef 也有一个特别的长处：它符合范围规则，使用 typedef 定义的变量类型其作用范围限制在所定义的函数或者文件内（取决于此变量定义的位置），而宏定义则没有这种特性。</li>
 <li>typedef 是编译器处理的。</li>
@@ -124,12 +124,12 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-orgd527b06" class="outline-2">
-<h2 id="orgd527b06">typedef 实现复杂的变量声明</h2>
-<div class="outline-text-2" id="text-orgd527b06">
-</div><div id="outline-container-orgf82a6b3" class="outline-3">
-<h3 id="orgf82a6b3">提问</h3>
-<div class="outline-text-3" id="text-orgf82a6b3">
+<div id="outline-container-orgfd6e325" class="outline-2">
+<h2 id="orgfd6e325">typedef 实现复杂的变量声明</h2>
+<div class="outline-text-2" id="text-orgfd6e325">
+</div><div id="outline-container-org2627a09" class="outline-3">
+<h3 id="org2627a09">提问</h3>
+<div class="outline-text-3" id="text-org2627a09">
 <p>
 在编程实践中，尤其是看别人代码的时候，常常会遇到比较复杂的变量声明，此时可以使用 typedef 做化简。下面是三个变量的声明，如果要使用 typdef 分别给它们定义一个别名，该如何实现？
 </p>
@@ -143,9 +143,9 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-org9cf1b18" class="outline-3">
-<h3 id="org9cf1b18">答案与分析：</h3>
-<div class="outline-text-3" id="text-org9cf1b18">
+<div id="outline-container-org38a881e" class="outline-3">
+<h3 id="org38a881e">答案与分析：</h3>
+<div class="outline-text-3" id="text-org38a881e">
 <p>
 对复杂变量建立一个类型别名的方法很简单，你只要在传统的变量声明表达式里用类型名替代变量名，然后把关键字 typedef 加在该语句的开头就行了。
 </p>
@@ -182,9 +182,9 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-orgea694a5" class="outline-2">
-<h2 id="orgea694a5">typedef 在跨平台时的优势</h2>
-<div class="outline-text-2" id="text-orgea694a5">
+<div id="outline-container-org9935959" class="outline-2">
+<h2 id="org9935959">typedef 在跨平台时的优势</h2>
+<div class="outline-text-2" id="text-org9935959">
 <p>
 typedef 有另外一个重要的用途，那就是定义机器无关的类型，例如，你可以定义一个叫 REAL 的浮点类型，在目标机器上它可以获得最高的精度：
 </p>
@@ -215,12 +215,12 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
 </div>
 </div>
 
-<div id="outline-container-org4ed871d" class="outline-2">
-<h2 id="org4ed871d">typedef 的一些注意事项</h2>
-<div class="outline-text-2" id="text-org4ed871d">
-</div><div id="outline-container-orgadf7ec0" class="outline-3">
-<h3 id="orgadf7ec0">注意事项一</h3>
-<div class="outline-text-3" id="text-orgadf7ec0">
+<div id="outline-container-orgbbd6a61" class="outline-2">
+<h2 id="orgbbd6a61">typedef 的一些注意事项</h2>
+<div class="outline-text-2" id="text-orgbbd6a61">
+</div><div id="outline-container-org37e9704" class="outline-3">
+<h3 id="org37e9704">注意事项一</h3>
+<div class="outline-text-3" id="text-org37e9704">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #ffad29; font-weight: bold;">typedef</span>&#12288;<span style="color: #34cae2;">char</span>*&#12288;pstr;   
 <span style="color: #34cae2;">int</span>&#12288;mystrcmp<span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">const</span>&#12288;pstr&#12288;p1,<span style="color: #ffad29; font-weight: bold;">const</span>&#12288;pstr&#12288;p3<span style="color: #8c8c8c;">)</span>;
@@ -247,9 +247,9 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
 </div>
 </div>
 
-<div id="outline-container-orgcc61b75" class="outline-3">
-<h3 id="orgcc61b75">注意事项二</h3>
-<div class="outline-text-3" id="text-orgcc61b75">
+<div id="outline-container-org862f4a2" class="outline-3">
+<h3 id="org862f4a2">注意事项二</h3>
+<div class="outline-text-3" id="text-org862f4a2">
 <p>
 typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这里也是举个栗子说明：
 </p>
@@ -291,10 +291,10 @@ typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这
   <div class="post-meta">
         <span title="post date" class="post-info">2015-06-10</span>
     <span title="last modification date" class="post-info">2016-04-07</span>
-    <span title="tags" class="post-info"><a href="http://kuangdash.github.io/tags/typedef">typedef</a> : <a href="http://kuangdash.github.io/tags/c-language">c language</a></span>
+    <span title="tags" class="post-info"><a href="https://kuangdash.github.io/tags/typedef">typedef</a> : <a href="https://kuangdash.github.io/tags/c-language">c language</a></span>
     <span title="author" class="post-info">皐月中二</span>
     </div>
-<script src="http://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
+<script src="https://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
 <section>
       <h1>Comments</h1>
     <div id="comment-wrap">
@@ -306,7 +306,7 @@ typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这
       //var disqus_developer = 1;
       var preempt_signal=false;
       var disqus_identifier = "/blog/2015/06/10/typedef-的那些事儿";
-      var disqus_url = "http://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿";
+      var disqus_url = "https://kuangdash.github.io/blog/2015/06/10/typedef-的那些事儿";
       var disqus_shortname = 'kuangdash';
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -357,7 +357,7 @@ typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这
         <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254938647'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254938647%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script><br/>
       <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
       <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-      <script src="http://kuangdash.github.io/media/js/main.js"></script>
+      <script src="https://kuangdash.github.io/media/js/main.js"></script>
     </p>
   </div>
     </div>
