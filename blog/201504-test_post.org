@@ -2,7 +2,7 @@
 #+AUTHOR:      皐月中二
 #+EMAIL:       kuangdash@163.com
 #+DATE:        2015-04-18 周六
-#+URI:         /blog/%y/%m/%d/测试新blog的功能
+#+URI:         /blog/%y/%m/%d/测试新 blog 的功能
 #+KEYWORDS:    test, org-page
 #+TAGS:        test, org-page
 #+LANGUAGE:    zh-CN
@@ -14,7 +14,7 @@
 [[./201504-test_post/spiral.svg]]
 
 * 其实这个标题的 html 标签是 h2
-虽然在org-mode里面看好像是 h1 的样子。
+虽然在 org-mode 里面看好像是 h1 的样子。
 
 * 悬停卡片到底有多大的作用？
 所以这就来测试一下：
@@ -25,12 +25,12 @@ _鼠标请停在我这个位置_[fn:1]
 
 * "编辑本页"的功能：
 和别人合作的时候，很有用的功能，怎么办呢？……
-org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑吧：
+org-mode 支持内嵌 HTML 的功能，这样就让 blog 的作者决定能否编辑吧：
 
 : <p class="center">
 : 觉得咱（博客）还不够好，想修改咱？请点击以下按钮：<br/>
 : <a href="https://github.com/kuangdash/kuangdash.github.io/edit/source/blog/test_page.org">点我修改</a><br/>
-: 以上功能仅限本blog写权限成员使用，需要登录github账号。
+: 以上功能仅限本 blog 写权限成员使用，需要登录 github 账号。
 : </p>
 
 那么所有功能都完整了。
@@ -44,7 +44,7 @@ org-mode支持内嵌HTML的功能，这样就让blog的作者决定能否编辑�
 
 * Footnotes
 
-[fn:1] [[./201504-test_post/marisa_kuang.gif]] 自己截的gif图，图文可结合。\\
+[fn:1] [[./201504-test_post/marisa_kuang.gif]] 自己截的 gif 图，图文可结合。\\
 不过不可分段写哟（一大段放悬停卡片里是什么鬼。
 
 [fn:2] 就是这个样子而已。
