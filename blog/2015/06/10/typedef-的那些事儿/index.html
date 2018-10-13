@@ -54,33 +54,33 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org110d595">typedef 简述</a></li>
-<li><a href="#orge5e5ccc">typedef vs #define</a>
+<li><a href="#orgab70462">typedef 简述</a></li>
+<li><a href="#orgf33d455">typedef vs #define</a>
 <ul>
-<li><a href="#orgd975302">#define 的优势</a></li>
-<li><a href="#org08208f8">typedef 的优势</a></li>
+<li><a href="#org4d7d6b8">#define 的优势</a></li>
+<li><a href="#org92db234">typedef 的优势</a></li>
 </ul>
 </li>
-<li><a href="#org7005689">typedef 实现复杂的变量声明</a>
+<li><a href="#orgea487e2">typedef 实现复杂的变量声明</a>
 <ul>
-<li><a href="#org455e502">提问</a></li>
-<li><a href="#orgf6e4b0e">答案与分析：</a></li>
+<li><a href="#org5b468c5">提问</a></li>
+<li><a href="#org2ff95dc">答案与分析：</a></li>
 </ul>
 </li>
-<li><a href="#orgf5416bf">typedef 在跨平台时的优势</a></li>
-<li><a href="#org1907383">typedef 的一些注意事项</a>
+<li><a href="#org20b75a9">typedef 在跨平台时的优势</a></li>
+<li><a href="#org9d64783">typedef 的一些注意事项</a>
 <ul>
-<li><a href="#org13622f6">注意事项一</a></li>
-<li><a href="#org710123f">注意事项二</a></li>
+<li><a href="#org5c9c2d5">注意事项一</a></li>
+<li><a href="#org98f2903">注意事项二</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org110d595" class="outline-2">
-<h2 id="org110d595">typedef 简述</h2>
-<div class="outline-text-2" id="text-org110d595">
+<div id="outline-container-orgab70462" class="outline-2">
+<h2 id="orgab70462">typedef 简述</h2>
+<div class="outline-text-2" id="text-orgab70462">
 <p>
 typedef 是在计算机编程语言中用来为复杂的声明定义简单的别名，与宏定义有些差异。 <b>它本身是一种存储类的关键字，与 auto、extern、mutable、static、register 等关键字不能出现在同一个表达式中。</b>
 </p>
@@ -100,12 +100,13 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-orge5e5ccc" class="outline-2">
-<h2 id="orge5e5ccc">typedef vs #define</h2>
-<div class="outline-text-2" id="text-orge5e5ccc">
-</div><div id="outline-container-orgd975302" class="outline-3">
-<h3 id="orgd975302">#define 的优势</h3>
-<div class="outline-text-3" id="text-orgd975302">
+<div id="outline-container-orgf33d455" class="outline-2">
+<h2 id="orgf33d455">typedef vs #define</h2>
+<div class="outline-text-2" id="text-orgf33d455">
+</div>
+<div id="outline-container-org4d7d6b8" class="outline-3">
+<h3 id="org4d7d6b8">#define 的优势</h3>
+<div class="outline-text-3" id="text-org4d7d6b8">
 <ol class="org-ol">
 <li>#define 宏定义有一个特别的长处：可以使用 #ifdef, #ifndef 等来进行逻辑判断，还可以使用 #undef 来取消定义。</li>
 <li>#define 宏是预处理器处理的。</li>
@@ -113,9 +114,9 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-org08208f8" class="outline-3">
-<h3 id="org08208f8">typedef 的优势</h3>
-<div class="outline-text-3" id="text-org08208f8">
+<div id="outline-container-org92db234" class="outline-3">
+<h3 id="org92db234">typedef 的优势</h3>
+<div class="outline-text-3" id="text-org92db234">
 <ol class="org-ol">
 <li>typedef 也有一个特别的长处：它符合范围规则，使用 typedef 定义的变量类型其作用范围限制在所定义的函数或者文件内（取决于此变量定义的位置），而宏定义则没有这种特性。</li>
 <li>typedef 是编译器处理的。</li>
@@ -124,46 +125,47 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-org7005689" class="outline-2">
-<h2 id="org7005689">typedef 实现复杂的变量声明</h2>
-<div class="outline-text-2" id="text-org7005689">
-</div><div id="outline-container-org455e502" class="outline-3">
-<h3 id="org455e502">提问</h3>
-<div class="outline-text-3" id="text-org455e502">
+<div id="outline-container-orgea487e2" class="outline-2">
+<h2 id="orgea487e2">typedef 实现复杂的变量声明</h2>
+<div class="outline-text-2" id="text-orgea487e2">
+</div>
+<div id="outline-container-org5b468c5" class="outline-3">
+<h3 id="org5b468c5">提问</h3>
+<div class="outline-text-3" id="text-org5b468c5">
 <p>
 在编程实践中，尤其是看别人代码的时候，常常会遇到比较复杂的变量声明，此时可以使用 typedef 做化简。下面是三个变量的声明，如果要使用 typdef 分别给它们定义一个别名，该如何实现？
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #74af68;">/* </span><span style="color: #74af68;">1. </span><span style="color: #74af68;">*/</span> <span style="color: #34cae2;">int</span> *<span style="color: #8c8c8c;">(</span>*<span style="color: #00ede1; font-weight: bold;">a</span><span style="color: #93a8c6;">[</span><span style="color: #008b8b;">5</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">int</span>, <span style="color: #34cae2;">char</span>*<span style="color: #8c8c8c;">)</span>;
-<span style="color: #74af68;">/* </span><span style="color: #74af68;">2. </span><span style="color: #74af68;">*/</span> <span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*<span style="color: #00ede1; font-weight: bold;">b</span><span style="color: #93a8c6;">[</span><span style="color: #008b8b;">10</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">(</span><span style="color: #34cae2;">void</span> <span style="color: #93a8c6;">(</span>*<span style="color: #93a8c6;">)()</span><span style="color: #8c8c8c;">)</span>;
+<pre class="src src-C"><span style="color: #74af68;">/* </span><span style="color: #74af68;">1. </span><span style="color: #74af68;">*/</span> <span style="color: #34cae2;">int</span> *<span style="color: #8c8c8c;">(</span>*a<span style="color: #93a8c6;">[</span><span style="color: #008b8b;">5</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">int</span>, <span style="color: #34cae2;">char</span>*<span style="color: #8c8c8c;">)</span>;
+<span style="color: #74af68;">/* </span><span style="color: #74af68;">2. </span><span style="color: #74af68;">*/</span> <span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*b<span style="color: #93a8c6;">[</span><span style="color: #008b8b;">10</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">(</span><span style="color: #34cae2;">void</span> <span style="color: #93a8c6;">(</span>*<span style="color: #93a8c6;">)()</span><span style="color: #8c8c8c;">)</span>;
 <span style="color: #74af68;">/* </span><span style="color: #74af68;">3. </span><span style="color: #74af68;">*/</span> <span style="color: #34cae2;">double</span><span style="color: #8c8c8c;">(</span>*<span style="color: #8c8c8c;">)()</span> <span style="color: #8c8c8c;">(</span>*pa<span style="color: #8c8c8c;">)[</span><span style="color: #008b8b;">9</span><span style="color: #8c8c8c;">]</span>;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf6e4b0e" class="outline-3">
-<h3 id="orgf6e4b0e">答案与分析：</h3>
-<div class="outline-text-3" id="text-orgf6e4b0e">
+<div id="outline-container-org2ff95dc" class="outline-3">
+<h3 id="org2ff95dc">答案与分析：</h3>
+<div class="outline-text-3" id="text-org2ff95dc">
 <p>
 对复杂变量建立一个类型别名的方法很简单，你只要在传统的变量声明表达式里用类型名替代变量名，然后把关键字 typedef 加在该语句的开头就行了。
 </p>
 
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #74af68;">/* </span><span style="color: #74af68;">1. </span><span style="color: #74af68;">*/</span>
-<span style="color: #34cae2;">int</span> *<span style="color: #8c8c8c;">(</span>*<span style="color: #00ede1; font-weight: bold;">a</span><span style="color: #93a8c6;">[</span><span style="color: #008b8b;">5</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">int</span>, <span style="color: #34cae2;">char</span>*<span style="color: #8c8c8c;">)</span>;
+<span style="color: #34cae2;">int</span> *<span style="color: #8c8c8c;">(</span>*a<span style="color: #93a8c6;">[</span><span style="color: #008b8b;">5</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">int</span>, <span style="color: #34cae2;">char</span>*<span style="color: #8c8c8c;">)</span>;
 <span style="color: #74af68;">//</span><span style="color: #74af68;">pFun &#26159;&#25105;&#20204;&#24314;&#30340;&#19968;&#20010;&#31867;&#22411;&#21035;&#21517;</span>
 <span style="color: #ffad29; font-weight: bold;">typedef</span> <span style="color: #34cae2;">int</span> *<span style="color: #8c8c8c;">(</span>*<span style="color: #34cae2;">pFun</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">int</span>, <span style="color: #34cae2;">char</span>*<span style="color: #8c8c8c;">)</span>;
 <span style="color: #74af68;">//</span><span style="color: #74af68;">&#20351;&#29992;&#23450;&#20041;&#30340;&#26032;&#31867;&#22411;&#26469;&#22768;&#26126;&#23545;&#35937;&#65292;&#31561;&#20215;&#20110; int* (*a[5])(int, char*);</span>
 <span style="color: #34cae2;">pFun</span> <span style="color: #dbdb95;">a</span><span style="color: #8c8c8c;">[</span><span style="color: #008b8b;">5</span><span style="color: #8c8c8c;">]</span>;
 
 <span style="color: #74af68;">/* </span><span style="color: #74af68;">2. </span><span style="color: #74af68;">*/</span>
-<span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*<span style="color: #00ede1; font-weight: bold;">b</span><span style="color: #93a8c6;">[</span><span style="color: #008b8b;">10</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">(</span><span style="color: #34cae2;">void</span> <span style="color: #93a8c6;">(</span>*<span style="color: #93a8c6;">)()</span><span style="color: #8c8c8c;">)</span>;
+<span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*b<span style="color: #93a8c6;">[</span><span style="color: #008b8b;">10</span><span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">(</span><span style="color: #34cae2;">void</span> <span style="color: #93a8c6;">(</span>*<span style="color: #93a8c6;">)()</span><span style="color: #8c8c8c;">)</span>;
 <span style="color: #74af68;">//</span><span style="color: #74af68;">&#39318;&#20808;&#20026;&#19978;&#38754;&#34920;&#36798;&#24335;&#34013;&#33394;&#37096;&#20998;&#22768;&#26126;&#19968;&#20010;&#26032;&#31867;&#22411;</span>
 <span style="color: #ffad29; font-weight: bold;">typedef</span> <span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*<span style="color: #34cae2;">pFunParam</span><span style="color: #8c8c8c;">)()</span>;
 <span style="color: #74af68;">//</span><span style="color: #74af68;">&#25972;&#20307;&#22768;&#26126;&#19968;&#20010;&#26032;&#31867;&#22411;</span>
-<span style="color: #ffad29; font-weight: bold;">typedef</span> <span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*<span style="color: #34cae2;">pFun</span><span style="color: #8c8c8c;">)(</span><span style="color: #34cae2;">pFunParam</span><span style="color: #8c8c8c;">)</span>;
+<span style="color: #ffad29; font-weight: bold;">typedef</span> <span style="color: #34cae2;">void</span> <span style="color: #8c8c8c;">(</span>*<span style="color: #34cae2;">pFun</span><span style="color: #8c8c8c;">)(</span>pFunParam<span style="color: #8c8c8c;">)</span>;
 <span style="color: #74af68;">//</span><span style="color: #74af68;">&#20351;&#29992;&#23450;&#20041;&#30340;&#26032;&#31867;&#22411;&#26469;&#22768;&#26126;&#23545;&#35937;&#65292;&#31561;&#20215;&#20110; void (*b[10]) (void (*)());</span>
 <span style="color: #34cae2;">pFun</span> <span style="color: #dbdb95;">b</span><span style="color: #8c8c8c;">[</span><span style="color: #008b8b;">10</span><span style="color: #8c8c8c;">]</span>;
 
@@ -182,9 +184,9 @@ typedef 是在计算机编程语言中用来为复杂的声明定义简单的别
 </div>
 </div>
 
-<div id="outline-container-orgf5416bf" class="outline-2">
-<h2 id="orgf5416bf">typedef 在跨平台时的优势</h2>
-<div class="outline-text-2" id="text-orgf5416bf">
+<div id="outline-container-org20b75a9" class="outline-2">
+<h2 id="org20b75a9">typedef 在跨平台时的优势</h2>
+<div class="outline-text-2" id="text-org20b75a9">
 <p>
 typedef 有另外一个重要的用途，那就是定义机器无关的类型，例如，你可以定义一个叫 REAL 的浮点类型，在目标机器上它可以获得最高的精度：
 </p>
@@ -215,12 +217,13 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
 </div>
 </div>
 
-<div id="outline-container-org1907383" class="outline-2">
-<h2 id="org1907383">typedef 的一些注意事项</h2>
-<div class="outline-text-2" id="text-org1907383">
-</div><div id="outline-container-org13622f6" class="outline-3">
-<h3 id="org13622f6">注意事项一</h3>
-<div class="outline-text-3" id="text-org13622f6">
+<div id="outline-container-org9d64783" class="outline-2">
+<h2 id="org9d64783">typedef 的一些注意事项</h2>
+<div class="outline-text-2" id="text-org9d64783">
+</div>
+<div id="outline-container-org5c9c2d5" class="outline-3">
+<h3 id="org5c9c2d5">注意事项一</h3>
+<div class="outline-text-3" id="text-org5c9c2d5">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #ffad29; font-weight: bold;">typedef</span>&#12288;<span style="color: #34cae2;">char</span>*&#12288;pstr;   
 <span style="color: #34cae2;">int</span>&#12288;mystrcmp<span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">const</span>&#12288;pstr&#12288;p1,<span style="color: #ffad29; font-weight: bold;">const</span>&#12288;pstr&#12288;p3<span style="color: #8c8c8c;">)</span>;
@@ -247,9 +250,9 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
 </div>
 </div>
 
-<div id="outline-container-org710123f" class="outline-3">
-<h3 id="org710123f">注意事项二</h3>
-<div class="outline-text-3" id="text-org710123f">
+<div id="outline-container-org98f2903" class="outline-3">
+<h3 id="org98f2903">注意事项二</h3>
+<div class="outline-text-3" id="text-org98f2903">
 <p>
 typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这里也是举个栗子说明：
 </p>
@@ -346,7 +349,7 @@ typedef 遵循着和 #define 不一样的定义规则。规则比较奇怪，这
     </script>
   </section>
 <div class="footer">
-      <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> )
+      <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)
     </p>
     <p>
         Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:kuangdash &lt;at&gt; 163 &lt;dot&gt; com">皐月中二</a>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>梦夏夜 - 彼の一存</title>
+  <title>测试新 blog 的功能 - 彼の一存</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="皐月中二" />
-  <meta name="description" content="八月的最后一天" />
-  <meta name="keywords" content="poem" />
+  <meta name="description" content="测试新功能" />
+  <meta name="keywords" content="test, org-page" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
@@ -49,28 +49,113 @@
 
 <div>
 <div class="post">
-<h1 class="title">梦夏夜</h1>
-<div class="org-center">
-<p class="verse">
-深院短径长<br />
-孑孑寻闹巷<br />
-细丝纷纷染屋坊<br />
-庭水雨波觞<br />
-<br />
-葉月夏已凉<br />
-薄衫映红窗<br />
-台前何人影晃晃<br />
-秀才嗟时光<br />
-</p>
+<h1 class="title">测试新 blog 的功能</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge88531a">其实这个标题的 html 标签是 h2</a></li>
+<li><a href="#org9179d44">悬停卡片到底有多大的作用？</a></li>
+<li><a href="#orge9bdaf9">"编辑本页"的功能：</a></li>
+<li><a href="#orgf30665c">ego-link 构筑 org-mode 到 html 的同态映射</a></li>
+</ul>
+</div>
 </div>
 
+<div class="figure">
+<p><img src="https://kuangdash.github.io/assets/blog/2015/04/18/测试新 blog 的功能/spiral.svg" alt="spiral.svg" class="center" />
+</p>
+<p><span class="figure-number">&#22270;1&nbsp; </span>开头先放图</p>
+</div>
+
+<div id="outline-container-orge88531a" class="outline-2">
+<h2 id="orge88531a">其实这个标题的 html 标签是 h2</h2>
+<div class="outline-text-2" id="text-orge88531a">
+<p>
+虽然在 org-mode 里面看好像是 h1 的样子。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9179d44" class="outline-2">
+<h2 id="org9179d44">悬停卡片到底有多大的作用？</h2>
+<div class="outline-text-2" id="text-org9179d44">
+<p>
+所以这就来测试一下：
+</p>
+
+<p>
+<span class="underline">鼠标请停在我这个位置</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<p>
+如果只是一般的脚注的话<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9bdaf9" class="outline-2">
+<h2 id="orge9bdaf9">"编辑本页"的功能：</h2>
+<div class="outline-text-2" id="text-orge9bdaf9">
+<p>
+和别人合作的时候，很有用的功能，怎么办呢？……
+org-mode 支持内嵌 HTML 的功能，这样就让 blog 的作者决定能否编辑吧：
+</p>
+
+<pre class="example">
+&lt;p class="center"&gt;
+觉得咱（博客）还不够好，想修改咱？请点击以下按钮：&lt;br/&gt;
+&lt;a href="https://github.com/kuangdash/kuangdash.github.io/edit/source/blog/test_page.org"&gt;点我修改&lt;/a&gt;&lt;br/&gt;
+以上功能仅限本 blog 写权限成员使用，需要登录 github 账号。
+&lt;/p&gt;
+
+</pre>
+
+<p>
+那么所有功能都完整了。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf30665c" class="outline-2">
+<h2 id="orgf30665c">ego-link 构筑 org-mode 到 html 的同态映射</h2>
+<div class="outline-text-2" id="text-orgf30665c">
+<p>
+<span class="ego_link"><a href="https://kuangdash.github.io/blog/2015/04/15/org-page 的配置与使用">Prev link</a></span>
+</p>
+
+<p>
+<span class="ego_link"><a href="https://kuangdash.github.io/blog/2015/05/06/堵住-lisp-宏的漏洞/">Next-Link</a></span>
+</p>
+
+<p>
+目前只实现文件跳转的功能，不能实现 “粒度” 更细的跳转。
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">&#33050;&#27880;: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<img src="https://kuangdash.github.io/assets/blog/2015/04/18/测试新 blog 的功能/marisa_kuang.gif" alt="marisa_kuang.gif" /> 自己截的 gif 图，图文可结合。<br />
+不过不可分段写哟（一大段放悬停卡片里是什么鬼。
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+就是这个样子而已。
+</p></div></div>
+
+
+</div>
+</div>
 </div>
 </div>
 <div>
   <div class="post-meta">
-        <span title="post date" class="post-info">2014-08-31</span>
-    <span title="last modification date" class="post-info">2015-09-23</span>
-    <span title="tags" class="post-info"><a href="https://kuangdash.github.io/tags/poem">poem</a></span>
+        <span title="post date" class="post-info">2015-04-18</span>
+    <span title="last modification date" class="post-info">2017-12-10</span>
+    <span title="tags" class="post-info"><a href="https://kuangdash.github.io/tags/test">test</a> : <a href="https://kuangdash.github.io/tags/org-page">org-page</a></span>
     <span title="author" class="post-info">皐月中二</span>
     </div>
 <script src="https://kuangdash.github.io/media/js/jquery-2.1.3.min.js"></script>
@@ -84,8 +169,8 @@
     <script type="text/javascript">
       //var disqus_developer = 1;
       var preempt_signal=false;
-      var disqus_identifier = "/blog/2014/08/31/梦夏夜";
-      var disqus_url = "https://kuangdash.github.io/blog/2014/08/31/梦夏夜";
+      var disqus_identifier = "/blog/2015/04/18/测试新 blog 的功能";
+      var disqus_url = "https://kuangdash.github.io/blog/2015/04/18/测试新 blog 的功能";
       var disqus_shortname = 'kuangdash';
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
