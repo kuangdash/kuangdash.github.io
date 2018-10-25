@@ -54,9 +54,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf82215f">先来一个有漏洞的宏作为示例</a></li>
-<li><a href="#org53e607d"><code>do-primes</code> 的漏洞连锁</a></li>
-<li><a href="#org137be6e">填补 lisp 漏洞的总结</a></li>
+<li><a href="#orgf453907">先来一个有漏洞的宏作为示例</a></li>
+<li><a href="#orgb1033ec"><code>do-primes</code> 的漏洞连锁</a></li>
+<li><a href="#org9b7908d">填补 lisp 漏洞的总结</a></li>
 </ul>
 </div>
 </div>
@@ -64,9 +64,9 @@
 本文的内容来自于 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a>
 </p>
 
-<div id="outline-container-orgf82215f" class="outline-2">
-<h2 id="orgf82215f">先来一个有漏洞的宏作为示例</h2>
-<div class="outline-text-2" id="text-orgf82215f">
+<div id="outline-container-orgf453907" class="outline-2">
+<h2 id="orgf453907">先来一个有漏洞的宏作为示例</h2>
+<div class="outline-text-2" id="text-orgf453907">
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #74af68;">;;</span><span style="color: #74af68;">&#21028;&#26029;&#19968;&#20010;&#25968;&#26159;&#21542;&#20026;&#36136;&#25968;</span>
 <span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">primep</span> <span style="color: #93a8c6;">(</span>number<span style="color: #93a8c6;">)</span>
@@ -89,9 +89,9 @@
 </div>
 </div>
 
-<div id="outline-container-org53e607d" class="outline-2">
-<h2 id="org53e607d"><code>do-primes</code> 的漏洞连锁</h2>
-<div class="outline-text-2" id="text-org53e607d">
+<div id="outline-container-orgb1033ec" class="outline-2">
+<h2 id="orgb1033ec"><code>do-primes</code> 的漏洞连锁</h2>
+<div class="outline-text-2" id="text-orgb1033ec">
 <p>
 执行以下代码，来看看 <code>do-primes</code> 里的第一个漏洞：
 </p>
@@ -120,7 +120,7 @@ T
 </pre>
 
 <p>
-可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="org4f21dd7"></a>
+可以看到，在每次判定结束的时候，都重新生成了一个 100 以内的随机数。在宏 <code>do-primes</code> 里， <code>(RANDOM 100)</code> 并未在传进去的时候就计算，而是 <span class="underline">按原样传进去了</span><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，然后在 <code>do-primes</code> 宏展开后再考虑计算问题！<a id="orgf5cf8af"></a>
 </p>
 
 <p>
@@ -136,7 +136,7 @@ T
 </div>
 
 <p>
-等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="org1f877ad"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
+等会儿，这个修改引入了一个 <del>不算太严重的</del> 问题： <b>end 比 start 先求值了</b> <a id="orgaa1f11f"></a>，这在这段代码里可能不算什么问题，但是考虑到通用性，还是应该这样写：
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #ffad29; font-weight: bold;">defmacro</span> <span style="color: #00ede1; font-weight: bold;">do-primes</span> <span style="color: #93a8c6;">(</span><span style="color: #b0b1a3;">(</span>var start end<span style="color: #b0b1a3;">)</span> <span style="color: #34cae2;">&amp;body</span> body<span style="color: #93a8c6;">)</span>
@@ -175,7 +175,7 @@ T
 </p>
 
 <p>
-为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="org1a3df88"></a>
+为了修复这个漏洞，我们需要在宏定义里使用永远不会在宏定义外面被用到的符号。但是考虑到外界的无限可能性，这种符号在哪里找呢？<a id="org898e2cb"></a>
 </p>
 
 <p>
@@ -201,13 +201,13 @@ T
 </div>
 </div>
 
-<div id="outline-container-org137be6e" class="outline-2">
-<h2 id="org137be6e">填补 lisp 漏洞的总结</h2>
-<div class="outline-text-2" id="text-org137be6e">
+<div id="outline-container-org9b7908d" class="outline-2">
+<h2 id="org9b7908d">填补 lisp 漏洞的总结</h2>
+<div class="outline-text-2" id="text-org9b7908d">
 <ol class="org-ol">
-<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#org4f21dd7">看这里</a></li>
-<li>所有宏参数只应该被求值一次；<a href="#org1f877ad">看这里</a></li>
-<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#org1a3df88">看这里</a></li>
+<li>宏定义式内参数的展开执行应该与参数的传入顺序一致；<a href="#orgf5cf8af">看这里</a></li>
+<li>所有宏参数只应该被求值一次；<a href="#orgaa1f11f">看这里</a></li>
+<li>使用 <code>GENSYM</code> 创建宏定义式中的临时变量名。<a href="#org898e2cb">看这里</a></li>
 </ol>
 
 <p>
@@ -248,7 +248,6 @@ T
       <h1>Comments</h1>
     <div id="comment-wrap">
       <a class="disqus_label">使用Disqus评论</a>
-      <a class="ds-label">使用多说评论</a>
     </ul>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -267,19 +266,6 @@ T
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    <div class="ds-thread"></div>
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:'kuangdash'};
-      (function() {
-         var ds = document.createElement('script');
-         ds.type = 'text/javascript';ds.async = true;
-         ds.src = 'https://static.duoshuo.com/embed.js';
-         ds.charset = 'UTF-8';
-         (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-         $('.ds-thread').css('display','block');
-      })();
-    </script>
     <script>
      /* comments */
      var kd_disqus_thread=$('#disqus_thread');

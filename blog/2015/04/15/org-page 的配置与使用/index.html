@@ -54,21 +54,21 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2bac04b">org-page 的特点</a></li>
-<li><a href="#org3e730bd">org-page 的安装</a></li>
-<li><a href="#org1da6168">org-page 的用法</a></li>
-<li><a href="#org90c0cae">org-page 效果举例</a></li>
-<li><a href="#org68eff48">org-page 的主题定制</a>
+<li><a href="#orgca8e396">org-page 的特点</a></li>
+<li><a href="#org3ce61da">org-page 的安装</a></li>
+<li><a href="#orgf08c226">org-page 的用法</a></li>
+<li><a href="#orgf6b1dc4">org-page 效果举例</a></li>
+<li><a href="#orge0fb9f4">org-page 的主题定制</a>
 <ul>
-<li><a href="#org3f3fae1">使用 org-page 管理多个站点</a></li>
-<li><a href="#org27d604d">对 org-page 生成的站点进行测试</a></li>
+<li><a href="#org8aa7ff2">使用 org-page 管理多个站点</a></li>
+<li><a href="#org462f816">对 org-page 生成的站点进行测试</a></li>
 </ul>
 </li>
-<li><a href="#orgd555c68">本人在 org-page 和 org-mode 间周旋的记录</a>
+<li><a href="#org069139a">本人在 org-page 和 org-mode 间周旋的记录</a>
 <ul>
-<li><a href="#orgedf45f8">插入 svg 图片的问题</a></li>
-<li><a href="#org23eab4c">org-mode 的中文 target 和 radio target 无法导出</a></li>
-<li><a href="#org1b47c14">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
+<li><a href="#org0caef58">插入 svg 图片的问题</a></li>
+<li><a href="#org98d242f">org-mode 的中文 target 和 radio target 无法导出</a></li>
+<li><a href="#org9a0d9eb">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</a></li>
 </ul>
 </li>
 </ul>
@@ -78,18 +78,18 @@
 CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a href="http://emacs-china.github.io/">emacs-china</a> 上查看
 <span class="ego_link"><a href="https://kuangdash.github.io/blog/2015/04/18/测试新 blog 的功能">Next-Link</a></span>
 </p>
-<div id="outline-container-org2bac04b" class="outline-2">
-<h2 id="org2bac04b">org-page 的特点</h2>
-<div class="outline-text-2" id="text-org2bac04b">
+<div id="outline-container-orgca8e396" class="outline-2">
+<h2 id="orgca8e396">org-page 的特点</h2>
+<div class="outline-text-2" id="text-orgca8e396">
 <p>
 这是一个基于 org-mode、git 和 emacs 自身（这三个你都得耍的起来）的静态站点生成器（static site generator），实现了 <i>org 文档内容</i> 和 <i>文档修饰（主题）</i> 的分离。它本身具有高度的可定制性<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3e730bd" class="outline-2">
-<h2 id="org3e730bd">org-page 的安装</h2>
-<div class="outline-text-2" id="text-org3e730bd">
+<div id="outline-container-org3ce61da" class="outline-2">
+<h2 id="org3ce61da">org-page 的安装</h2>
+<div class="outline-text-2" id="text-org3ce61da">
 <p>
 使用命令 <code>M-x package-list-packages</code> 找到 <code>org-page</code> 安装即可，或者去这个链接 <a href="https://github.com/kelvinh/org-page">org-page</a> 下载。
 </p>
@@ -100,9 +100,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org1da6168" class="outline-2">
-<h2 id="org1da6168">org-page 的用法</h2>
-<div class="outline-text-2" id="text-org1da6168">
+<div id="outline-container-orgf08c226" class="outline-2">
+<h2 id="orgf08c226">org-page 的用法</h2>
+<div class="outline-text-2" id="text-orgf08c226">
 <p>
 首先，在想写 blog 的文件夹下用 <code>git init</code> 建立一个 git repository，然后创建并进入 source 分支，再新建三个基本文件： 
 </p>
@@ -122,9 +122,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org90c0cae" class="outline-2">
-<h2 id="org90c0cae">org-page 效果举例</h2>
-<div class="outline-text-2" id="text-org90c0cae">
+<div id="outline-container-orgf6b1dc4" class="outline-2">
+<h2 id="orgf6b1dc4">org-page 效果举例</h2>
+<div class="outline-text-2" id="text-orgf6b1dc4">
 <dl class="org-dl">
 <dt>列表</dt><dd><del>删除线</del> <span class="underline">下划线</span> <b>强调</b> <code>代码</code></dd>
 <dt>数学公式</dt><dd>\(X(f)=\int{x(t)e^{-i 2\pi ft}dt}\)</dd>
@@ -141,9 +141,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org68eff48" class="outline-2">
-<h2 id="org68eff48">org-page 的主题定制</h2>
-<div class="outline-text-2" id="text-org68eff48">
+<div id="outline-container-orge0fb9f4" class="outline-2">
+<h2 id="orge0fb9f4">org-page 的主题定制</h2>
+<div class="outline-text-2" id="text-orge0fb9f4">
 <dl class="org-dl">
 <dt>正常定制法</dt><dd>使用命令 <code>M-x customize-group</code> 再输入 <code>org-page</code> 即可。（这种定制法定制能力有限）</dd>
 <dt>hack 定制法</dt><dd>参看 themes 文件夹，里面的 template 文件夹使用了 <a href="http://mustache.github.io/">mustache 模板</a> 。而另外一个 source 文件夹有 css、js 等文件，这些东西各位懂的……如果你是一个好的前端设计师的话，这些就能让你制作一个漂亮的界面了，毕竟标签不多。</dd>
@@ -158,9 +158,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </p>
 </div>
 
-<div id="outline-container-org3f3fae1" class="outline-3">
-<h3 id="org3f3fae1">使用 org-page 管理多个站点</h3>
-<div class="outline-text-3" id="text-org3f3fae1">
+<div id="outline-container-org8aa7ff2" class="outline-3">
+<h3 id="org8aa7ff2">使用 org-page 管理多个站点</h3>
+<div class="outline-text-3" id="text-org8aa7ff2">
 <p>
 在 emacs 的配置文件中定义如下函数：
 </p>
@@ -208,9 +208,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org27d604d" class="outline-3">
-<h3 id="org27d604d">对 org-page 生成的站点进行测试</h3>
-<div class="outline-text-3" id="text-org27d604d">
+<div id="outline-container-org462f816" class="outline-3">
+<h3 id="org462f816">对 org-page 生成的站点进行测试</h3>
+<div class="outline-text-3" id="text-org462f816">
 <p>
 本人使用基于 emacs 的 <a href="https://github.com/skeeto/emacs-web-server">simple-httpd</a> 来进行站点测试，根据实际情况，各位也可以用自己喜欢的 web 服务器来进行测试。
 </p>
@@ -246,17 +246,17 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-orgd555c68" class="outline-2">
-<h2 id="orgd555c68">本人在 org-page 和 org-mode 间周旋的记录</h2>
-<div class="outline-text-2" id="text-orgd555c68">
+<div id="outline-container-org069139a" class="outline-2">
+<h2 id="org069139a">本人在 org-page 和 org-mode 间周旋的记录</h2>
+<div class="outline-text-2" id="text-org069139a">
 <p>
 由于我一直用 git 更新 org-page 和 org-mode 的源，所以这里会写一些两者遇上冲突的地方：
 </p>
 </div>
 
-<div id="outline-container-orgedf45f8" class="outline-3">
-<h3 id="orgedf45f8">插入 svg 图片的问题</h3>
-<div class="outline-text-3" id="text-orgedf45f8">
+<div id="outline-container-org0caef58" class="outline-3">
+<h3 id="org0caef58">插入 svg 图片的问题</h3>
+<div class="outline-text-3" id="text-org0caef58">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -297,9 +297,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org23eab4c" class="outline-3">
-<h3 id="org23eab4c">org-mode 的中文 target 和 radio target 无法导出</h3>
-<div class="outline-text-3" id="text-org23eab4c">
+<div id="outline-container-org98d242f" class="outline-3">
+<h3 id="org98d242f">org-mode 的中文 target 和 radio target 无法导出</h3>
+<div class="outline-text-3" id="text-org98d242f">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -325,9 +325,9 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
 </div>
 </div>
 
-<div id="outline-container-org1b47c14" class="outline-3">
-<h3 id="org1b47c14">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
-<div class="outline-text-3" id="text-org1b47c14">
+<div id="outline-container-org9a0d9eb" class="outline-3">
+<h3 id="org9a0d9eb">org-mode 的 "src"_&lt;language&gt;{&lt;body&gt;}</h3>
+<div class="outline-text-3" id="text-org9a0d9eb">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-04-15 周三&gt;</span></span>
 </p>
@@ -375,7 +375,6 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
       <h1>Comments</h1>
     <div id="comment-wrap">
       <a class="disqus_label">使用Disqus评论</a>
-      <a class="ds-label">使用多说评论</a>
     </ul>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -394,19 +393,6 @@ CAUTION: 本文已过时并不再更新，想了解更新信息，请转到 <a h
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    <div class="ds-thread"></div>
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:'kuangdash'};
-      (function() {
-         var ds = document.createElement('script');
-         ds.type = 'text/javascript';ds.async = true;
-         ds.src = 'https://static.duoshuo.com/embed.js';
-         ds.charset = 'UTF-8';
-         (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-         $('.ds-thread').css('display','block');
-      })();
-    </script>
     <script>
      /* comments */
      var kd_disqus_thread=$('#disqus_thread');
