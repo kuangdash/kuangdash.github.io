@@ -56,7 +56,7 @@
   (defmacro do-primes ((var start end) &body body)
     `(do ((ending-value ,end)
           (,var (next-prime ,start) (next-prime (1+ ,var))))
-         ((> ,var ,end))
+         ((> ,var ending-value))
        ,@body))
 #+END_SRC
 
@@ -65,7 +65,7 @@
   (defmacro do-primes ((var start end) &body body)
     `(do ((,var (next-prime ,start) (next-prime (1+ ,var)))
           (ending-value ,end))
-         ((> ,var ,end))
+         ((> ,var ending-value))
        ,@body))
 #+END_SRC
 
@@ -94,7 +94,7 @@
     (let ((ending-value-name (gensym)))
       `(do ((,var (next-prime ,start) (next-prime (1+ ,var)))
             (,ending-value-name ,end))
-           ((> ,var ,end))
+           ((> ,var ,ending-value-name))
          ,@body)))
 #+END_SRC
 
@@ -103,8 +103,8 @@
 之后，对 =var= =start= 做和 =end= 一样的处理，这些漏洞就补上了。
 
 * 填补 lisp 漏洞的总结
-1) 宏定义式内参数的展开执行应该与参数的传入顺序一致；[[bug1][看这里]]
-2) 所有宏参数只应该被求值一次；[[bug2][看这里]]
+1) 所有宏参数只应该被求值一次；[[bug2][看这里]]
+2) 宏定义式内参数的展开执行应该与参数的传入顺序一致；[[bug1][看这里]]
 3) 使用 =GENSYM= 创建宏定义式中的临时变量名。[[bug3][看这里]]
 
 使用上述三方法，就能消除一些大部分的 lisp 宏漏洞，减少宏抽象的细节泄露。
